@@ -22,6 +22,8 @@ import mkoff14 from '../../public/images/about/mkoff14.jpg'
 import mkoff15 from '../../public/images/about/mkoff15.jpg' 
 import mkoff16 from '../../public/images/about/mkoff16.jpg'
 import mkoff17 from '../../public/images/about/mkoff17.jpg'
+import cm1 from '../../public/images/about/IMG_2092.jpg'
+import cm2 from '../../public/images/about/Photo-10.jpg'
 //import abimg2 from '../../public/images/about/LOGOWEDDING-NOIR.png'
 import abimg2 from '../../public/images/THEPLUG-WEGGING_logo.png'
 import Link from 'next/link'
@@ -78,6 +80,12 @@ const HeroArray = [
     },
     {
         hImg: abimg3
+    },
+    {
+        hImg: cm1
+    },
+    {
+        hImg: cm2
     }
 ]
 

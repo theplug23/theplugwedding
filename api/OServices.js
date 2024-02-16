@@ -6,140 +6,8 @@ import photo_video from '/public/images/service/photo-video.jpg'
 const OServices = [
     {
         id: 1,
-        title:'Angebot 1:       für 2 Stunden',
-        slug:'Angebot 1:       für 2 Stunden',
-        packages: [
-            {
-                id: 1,
-                slug: '• Beratungsgespräch / Video Call'
-            },
-            {
-                id: 2,
-                slug: '• Fotovertrag'
-            },
-            {
-                id: 3,
-                slug: '• Anfahrt'
-            },
-            {
-                id: 4,
-                slug: '• Bis zu 2h Hochzeitsbegleitung'
-            },
-            {
-                id: 5,
-                slug: '• Professionelle Selektion & Bearbeitung aller Bilder'
-            },
-            {
-                id: 6,
-                slug: '• Mindestens 100 Bilder - unbegrenzt'
-            },
-            {
-                id: 7,
-                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
-            },
-            {
-                id: 8,
-                slug: '• Eigener Ordner für Social Media Content'
-            },
-            {
-                id: 9,
-                slug: '• Luftaufnahme mit Drohne falls benötigt.'
-            }
-        ],
-        img: photo_video
-    },
-    {
-        id: 2,
-        title:'Angebot 2:       für 3 Stunden',
-        slug:'Angebot 2:       für 3 Stunden',
-        packages: [
-            {
-                id: 1,
-                slug: '• Beratungsgespräch / Video Call'
-            },
-            {
-                id: 2,
-                slug: '• Fotovertrag'
-            },
-            {
-                id: 3,
-                slug: '• Anfahrt'
-            },
-            {
-                id: 4,
-                slug: '• Bis zu 3h Hochzeitsbegleitung'
-            },
-            {
-                id: 5,
-                slug: '• Professionelle Selektion & Bearbeitung aller Bilder'
-            },
-            {
-                id: 6,
-                slug: '• Mindestens 200 Bilder - unbegrenzt'
-            },
-            {
-                id: 7,
-                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
-            },
-            {
-                id: 8,
-                slug: '• Eigener Ordner für Social Media Content'
-            },
-            {
-                id: 9,
-                slug: '• Luftaufnahme mit Drohne falls benötigt.'
-            }
-        ],
-        img: photo_video
-    },
-    {
-        id: 3,
-        title:'Angebot 3:       für 4 Stunden',
-        slug:'Angebot 3:       für 4 Stunden',
-        packages: [
-            {
-                id: 1,
-                slug: '• Beratungsgespräch / Video Call'
-            },
-            {
-                id: 2,
-                slug: '• Fotovertrag'
-            },
-            {
-                id: 3,
-                slug: '• Anfahrt'
-            },
-            {
-                id: 4,
-                slug: '• Bis zu 4h Hochzeitsbegleitung'
-            },
-            {
-                id: 5,
-                slug: '• Professionelle Selektion & Bearbeitung aller Bilder'
-            },
-            {
-                id: 6,
-                slug: '• Mindestens 300 Bilder - unbegrenzt'
-            },
-            {
-                id: 7,
-                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
-            },
-            {
-                id: 8,
-                slug: '• Eigener Ordner für Social Media Content'
-            },
-            {
-                id: 9,
-                slug: '• Luftaufnahme mit Drohne falls benötigt.'
-            }
-        ],
-        img: photo_video
-    },
-    {
-        id: 4,
-        title:'Angebot 4:       für 5 Stunden',
-        slug:'Angebot 4:       für 5 Stunden',
+        title:'Angebot 1:  2099€ für 2 Stunden',
+        slug:'Angebot 1:  2099€ für 2 Stunden',
         packages: [
             {
                 id: 1,
@@ -159,31 +27,43 @@ const OServices = [
             },
             {
                 id: 5,
-                slug: '• Professionelle Selektion & Bearbeitung aller Bilder'
+                slug: '• Filmen mit DSLR Kamera und verschiedenen Objektiven'
             },
             {
                 id: 6,
-                slug: '• Mindestens 400 Bilder - unbegrenzt'
+                slug: '• Paarshooting gefilmt aus mehreren Perspektiven'
             },
             {
                 id: 7,
-                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+                slug: '• Professionelle Selektion & Bearbeitung aller Bilderr'
             },
             {
                 id: 8,
-                slug: '• Eigener Ordner für Social Media Content'
+                slug: '• Mindestens 400 Bilder - unbegrenzt'
             },
             {
                 id: 9,
-                slug: '• Luftaufnahme mit Drohne falls benötigt.'
+                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+            },
+            {
+                id: 10,
+                slug: '• Eigener Ordner für Social Media Content'
+            },
+            {
+                id: 11,
+                slug: '• Luftaufnahme mit Drohne falls benötigt'
+            },
+            {
+                id: 12,
+                slug: '• Highlight Clip Full HD der schönsten Momente, ca. 3 bis 15 Minuten'
             }
         ],
         img: photo_video
     },
     {
-        id: 5,
-        title:'Angebot 5:       für 6 Stunden',
-        slug:'Angebot 5:       für 6 Stunden',
+        id: 2,
+        title:'Angebot 2: 2499€ für 3 Stunden',
+        slug:'Angebot 2: 2499€ für 3 Stunden',
         packages: [
             {
                 id: 1,
@@ -203,31 +83,43 @@ const OServices = [
             },
             {
                 id: 5,
-                slug: '• Professionelle Selektion & Bearbeitung aller Bilder'
+                slug: '• Filmen mit DSLR Kamera und verschiedenen Objektiven'
             },
             {
                 id: 6,
-                slug: '• Mindestens 500 Bilder - unbegrenzt'
+                slug: '• Paarshooting gefilmt aus mehreren Perspektiven'
             },
             {
                 id: 7,
-                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+                slug: '• Professionelle Selektion & Bearbeitung aller Bilderr'
             },
             {
                 id: 8,
-                slug: '• Eigener Ordner für Social Media Content'
+                slug: '• Mindestens 500 Bilder - unbegrenzt'
             },
             {
                 id: 9,
-                slug: '• Luftaufnahme mit Drohne falls benötigt.'
+                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+            },
+            {
+                id: 10,
+                slug: '• Eigener Ordner für Social Media Content'
+            },
+            {
+                id: 11,
+                slug: '• Luftaufnahme mit Drohne falls benötigt'
+            },
+            {
+                id: 12,
+                slug: '• Highlight Clip Full HD der schönsten Momente, ca. 3 bis 15 Minuten'
             }
         ],
         img: photo_video
     },
     {
-        id: 6,
-        title:'Angebot 6:       für 7 Stunden',
-        slug:'Angebot 6:       für 7 Stunden',
+        id: 3,
+        title:'Angebot 3: 2999€ für 4 Stunden',
+        slug:'Angebot 3: 2999€ für 4 Stunden',
         packages: [
             {
                 id: 1,
@@ -247,31 +139,43 @@ const OServices = [
             },
             {
                 id: 5,
-                slug: '• Professionelle Selektion & Bearbeitung aller Bilder'
+                slug: '• Filmen mit DSLR Kamera und verschiedenen Objektiven'
             },
             {
                 id: 6,
-                slug: '• Mindestens 600 Bilder - unbegrenzt'
+                slug: '• Paarshooting gefilmt aus mehreren Perspektiven'
             },
             {
                 id: 7,
-                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+                slug: '• Professionelle Selektion & Bearbeitung aller Bilderr'
             },
             {
                 id: 8,
-                slug: '• Eigener Ordner für Social Media Content'
+                slug: '• Mindestens 600 Bilder - unbegrenzt'
             },
             {
                 id: 9,
-                slug: '• Luftaufnahme mit Drohne falls benötigt.'
+                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+            },
+            {
+                id: 10,
+                slug: '• Eigener Ordner für Social Media Content'
+            },
+            {
+                id: 11,
+                slug: '• Luftaufnahme mit Drohne falls benötigt'
+            },
+            {
+                id: 12,
+                slug: '• Highlight Clip Full HD der schönsten Momente, ca. 3 bis 15 Minuten'
             }
         ],
         img: photo_video
     },
     {
-        id: 7,
-        title:'Angebot 7:       für 8 Stunden',
-        slug:'Angebot 7:       für 8 Stunden',
+        id: 4,
+        title:'Angebot 4: 3499€ für 5 Stunden',
+        slug:'Angebot 4: 3499€ für 5 Stunden',
         packages: [
             {
                 id: 1,
@@ -291,31 +195,43 @@ const OServices = [
             },
             {
                 id: 5,
-                slug: '• Professionelle Selektion & Bearbeitung aller Bilder'
+                slug: '• Filmen mit DSLR Kamera und verschiedenen Objektiven'
             },
             {
                 id: 6,
-                slug: '• Mindestens 700 Bilder - unbegrenzt'
+                slug: '• Paarshooting gefilmt aus mehreren Perspektiven'
             },
             {
                 id: 7,
-                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+                slug: '• Professionelle Selektion & Bearbeitung aller Bilderr'
             },
             {
                 id: 8,
-                slug: '• Eigener Ordner für Social Media Content'
+                slug: '• Mindestens 700 Bilder - unbegrenzt'
             },
             {
                 id: 9,
-                slug: '• Luftaufnahme mit Drohne falls benötigt.'
+                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+            },
+            {
+                id: 10,
+                slug: '• Eigener Ordner für Social Media Content'
+            },
+            {
+                id: 11,
+                slug: '• Luftaufnahme mit Drohne falls benötigt'
+            },
+            {
+                id: 12,
+                slug: '• Highlight Clip Full HD der schönsten Momente, ca. 3 bis 15 Minuten'
             }
         ],
         img: photo_video
     },
     {
-        id: 8,
-        title:'Angebot 8:       für 9 Stunden',
-        slug:'Angebot 8:       für 9 Stunden',
+        id: 5,
+        title:'Angebot 5: 3999€ für 6 Stunden',
+        slug:'Angebot 5: 3999€ für 6 Stunden',
         packages: [
             {
                 id: 1,
@@ -335,31 +251,43 @@ const OServices = [
             },
             {
                 id: 5,
-                slug: '• Professionelle Selektion & Bearbeitung aller Bilder'
+                slug: '• Filmen mit DSLR Kamera und verschiedenen Objektiven'
             },
             {
                 id: 6,
-                slug: '• Mindestens 800 Bilder - unbegrenzt'
+                slug: '• Paarshooting gefilmt aus mehreren Perspektiven'
             },
             {
                 id: 7,
-                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+                slug: '• Professionelle Selektion & Bearbeitung aller Bilderr'
             },
             {
                 id: 8,
-                slug: '• Eigener Ordner für Social Media Content'
+                slug: '• Mindestens 800 Bilder - unbegrenzt'
             },
             {
                 id: 9,
-                slug: '• Luftaufnahme mit Drohne falls benötigt.'
+                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+            },
+            {
+                id: 10,
+                slug: '• Eigener Ordner für Social Media Content'
+            },
+            {
+                id: 11,
+                slug: '• Luftaufnahme mit Drohne falls benötigt'
+            },
+            {
+                id: 12,
+                slug: '• Highlight Clip Full HD der schönsten Momente, ca. 3 bis 15 Minuten'
             }
         ],
         img: photo_video
     },
     {
-        id: 9,
-        title:'Angebot 9:       für 10 Stunden',
-        slug:'Angebot 9:       für 10 Stunden',
+        id: 6,
+        title:'Angebot 6: 4489€ für 7 Stunden',
+        slug:'Angebot 6: 4489€ für 7 Stunden',
         packages: [
             {
                 id: 1,
@@ -379,31 +307,43 @@ const OServices = [
             },
             {
                 id: 5,
-                slug: '• Professionelle Selektion & Bearbeitung aller Bilder'
+                slug: '• Filmen mit DSLR Kamera und verschiedenen Objektiven'
             },
             {
                 id: 6,
-                slug: '• Mindestens 900 Bilder - unbegrenzt'
+                slug: '• Paarshooting gefilmt aus mehreren Perspektiven'
             },
             {
                 id: 7,
-                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+                slug: '• Professionelle Selektion & Bearbeitung aller Bilderr'
             },
             {
                 id: 8,
-                slug: '• Eigener Ordner für Social Media Content'
+                slug: '• Mindestens 900 Bilder - unbegrenzt'
             },
             {
                 id: 9,
-                slug: '• Luftaufnahme mit Drohne falls benötigt.'
+                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+            },
+            {
+                id: 10,
+                slug: '• Eigener Ordner für Social Media Content'
+            },
+            {
+                id: 11,
+                slug: '• Luftaufnahme mit Drohne falls benötigt'
+            },
+            {
+                id: 12,
+                slug: '• Highlight Clip Full HD der schönsten Momente, ca. 3 bis 15 Minuten'
             }
         ],
         img: photo_video
     },
     {
-        id: 10,
-        title:'Angebot 10:       für 11 Stunden',
-        slug:'Angebot 10:       für 11 Stunden',
+        id: 7,
+        title:'Angebot 7: 4990€ für 8 Stunden',
+        slug:'Angebot 7: 4990€ für 8 Stunden',
         packages: [
             {
                 id: 1,
@@ -423,31 +363,43 @@ const OServices = [
             },
             {
                 id: 5,
-                slug: '• Professionelle Selektion & Bearbeitung aller Bilder'
+                slug: '• Filmen mit DSLR Kamera und verschiedenen Objektiven'
             },
             {
                 id: 6,
-                slug: '• Mindestens 1000 Bilder - unbegrenzt'
+                slug: '• Paarshooting gefilmt aus mehreren Perspektiven'
             },
             {
                 id: 7,
-                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+                slug: '• Professionelle Selektion & Bearbeitung aller Bilderr'
             },
             {
                 id: 8,
-                slug: '• Eigener Ordner für Social Media Content'
+                slug: '• Mindestens 1000 Bilder - unbegrenzt'
             },
             {
                 id: 9,
-                slug: '• Luftaufnahme mit Drohne falls benötigt.'
+                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+            },
+            {
+                id: 10,
+                slug: '• Eigener Ordner für Social Media Content'
+            },
+            {
+                id: 11,
+                slug: '• Luftaufnahme mit Drohne falls benötigt'
+            },
+            {
+                id: 12,
+                slug: '• Highlight Clip Full HD der schönsten Momente, ca. 3 bis 20 Minuten'
             }
         ],
         img: photo_video
     },
     {
-        id: 11,
-        title:'Angebot 11:       für 12 Stunden',
-        slug:'Angebot 11:       für 12 Stunden',
+        id: 8,
+        title:'Angebot 8: 5589€ für 9 Stunden',
+        slug:'Angebot 8: 5589€ für 9 Stunden',
         packages: [
             {
                 id: 1,
@@ -467,23 +419,35 @@ const OServices = [
             },
             {
                 id: 5,
-                slug: '• Professionelle Selektion & Bearbeitung aller Bilder'
+                slug: '• Filmen mit DSLR Kamera und verschiedenen Objektiven'
             },
             {
                 id: 6,
-                slug: '• Mindestens 1100 Bilder - unbegrenzt'
+                slug: '• Paarshooting gefilmt aus mehreren Perspektiven'
             },
             {
                 id: 7,
-                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+                slug: '• Professionelle Selektion & Bearbeitung aller Bilderr'
             },
             {
                 id: 8,
-                slug: '• Eigener Ordner für Social Media Content'
+                slug: '• Mindestens 1100 Bilder - unbegrenzt'
             },
             {
                 id: 9,
-                slug: '• Luftaufnahme mit Drohne falls benötigt.'
+                slug: '• Passwortgeschützte Online-Galerie für Gäste und Brautpaar'
+            },
+            {
+                id: 10,
+                slug: '• Eigener Ordner für Social Media Content'
+            },
+            {
+                id: 11,
+                slug: '• Luftaufnahme mit Drohne falls benötigt'
+            },
+            {
+                id: 12,
+                slug: '• Highlight Clip Full HD der schönsten Momente, ca. 3 bis 20 Minuten'
             }
         ],
         img: photo_video
