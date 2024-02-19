@@ -116,20 +116,6 @@ const Header = (props) => {
                                         </li>
 
                                         <li className="menu-item-has-children">
-                                            <Link className='item-menu' href="/Dienstleistungen">DIENSTLEISTUNGEN</Link>
-                                            {/* <ul className="sub-menu">
-                                                <li><Link onClick={ClickHandler} href="/shop">Shop</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/product-single/Wedding-Cake">Shop Single</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/cart">Cart</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/wishlist">Wishlist</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/checkout">Checkout</Link></li>
-                                            </ul> */}
-                                        </li>
-                                                                
-                                        <li className='brand-logo'><Link onClick={ClickHandler} className="navbar-brand" href="/"><img src='/images/THEPLUG-WEGGING_logo.png' style={{width:'200px', height:'200px', marginTop: '-40px', marginBottom: '-20px'}}
-                                            alt="Logo The PLUG" /></Link></li>
-
-<li className="menu-item-has-children">
                                             <Link className='item-menu' href="/Hochzeitfotografie" style={{cursor: 'default'}}>Portfolio</Link>
                                             <ul className="sub-menu">
                                                 {/* <li><Link onClick={ClickHandler} href="/portfolio-grid">Portfolio Grid</Link></li>
@@ -143,6 +129,20 @@ const Header = (props) => {
                                                 <li><Link onClick={ClickHandler} href='/Eventsfotografie'>Eventsfotografie</Link></li>
                                                 <li><Link onClick={ClickHandler} href="/Hochzeitsvideos">Hochzeitsvideos</Link></li>
                                             </ul>
+                                        </li>
+                                                                
+                                        <li className='brand-logo'><Link onClick={ClickHandler} className="navbar-brand" href="/"><img src='/images/THEPLUG-WEGGING_logo.png' style={{width:'200px', height:'200px', marginTop: '-40px', marginBottom: '-20px'}}
+                                            alt="Logo The PLUG" /></Link></li>
+
+                                        <li className="menu-item-has-children">
+                                            <Link className='item-menu' href="/Dienstleistungen">ANGEBOTE</Link>
+                                            {/* <ul className="sub-menu">
+                                                <li><Link onClick={ClickHandler} href="/shop">Shop</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/product-single/Wedding-Cake">Shop Single</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/cart">Cart</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/wishlist">Wishlist</Link></li>
+                                                <li><Link onClick={ClickHandler} href="/checkout">Checkout</Link></li>
+                                            </ul> */}
                                         </li>
                                         
                                 

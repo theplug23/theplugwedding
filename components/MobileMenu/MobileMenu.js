@@ -152,7 +152,7 @@ const menus = [
     },  
     {
         id: 3,
-        title: 'DIENSTLEISTUNGEN',
+        title: 'ANGEBOTE',
         link: '/Dienstleistungen',
       /*   submenu: [
             {

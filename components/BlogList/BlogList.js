@@ -44,10 +44,12 @@ const BlogList = (props) => {
             <h1 className="" style={{textAlign:'center', fontWeight:'bold', marginBottom:'50px'}}>You can see all posts here</h1><br/>
         </div> */}
             <div className="container">
+                <h1 className="" style={{textAlign:'center', fontWeight:'bold', marginBottom:'50px'}}>Alle Beiträge könnt ihr hier sehen</h1><br/>
                 <div className="row">
                     <div className={`col col-lg-8 col-12 ${props.blRight}`}>
                         <div className="wpo-blog-content">
-                            {!isSearched ?
+                            {posts.length > 0 ?
+                                !isSearched ?
                                 posts.map((post, bitem) => (
                                     <div className={`post  ${post.blClass}`} key={bitem}>
                                         <div className="entry-media video-holder">
@@ -96,7 +98,10 @@ const BlogList = (props) => {
                                             <h1 style={{textAlign:'center'}}>Leider entspricht kein Artikel Ihrer Suche !<br/><br/> Bitte versuche es erneut !</h1>
                                         </div>
                                     )
-                                )
+                                ) :
+                                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                                    <p style={{fontSize: '20px', textAlign: 'center'}}>Zur Zeit sind keine Beiträge verfügbar</p>
+                                </div>
                             }
                         </div>
                     </div>

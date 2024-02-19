@@ -23,8 +23,8 @@ const ServiceSection = (props) => {
 
         <section className={`wpo-Service-section section-padding ${props.pbClass}`} id="Service">
             <div className="container ff">
-                <SectionTitle MainTitle={'Erkunden Sie unser umfassendes Angebot an Leistungen, die auf Ihre einzigartigen Bedürfnisse zugeschnitten sind.'} subTitle={'Unsere Dienstleistungen'} />
-                <h2>Angebot für Fotos</h2><br/>
+                <SectionTitle MainTitle={'Erkunden Sie unser umfassendes Angebot an Leistungen, die auf Ihre einzigartigen Bedürfnisse zugeschnitten sind.'} subTitle={'Unsere Angebote'} />
+                <h2 style={{color:'#b99256'}}>Angebote für Fotos</h2><br/>
                 <div className="wpo-Service-wrap">
                     <div className="row">
                         {Services.map((service, sitem) => (
@@ -49,7 +49,7 @@ const ServiceSection = (props) => {
 
                     </div>
                 </div>
-                <h2>Angebot für Fotos und Videos</h2><br/>
+                <h2 style={{color:'#b99256'}}>Angebote für Fotos und Videos</h2><br/>
                 <div className="wpo-Service-wrap">
                     <div className="row">
                         {OServices.map((oservice, ositem) => (
@@ -74,7 +74,7 @@ const ServiceSection = (props) => {
 
                     </div>
                 </div>
-                <h2>Angebot für Videos</h2><br/>
+                <h2 style={{color:'#b99256'}}>Angebote für Videos</h2><br/>
                 <div className="wpo-Service-wrap">
                     <div className="row">
                         {VServices.map((vservice, vsitem) => (

@@ -95,7 +95,7 @@ const HomePage = (props) => {
             <About />
             <section className={`wpo-Service-section section-padding ${props.pbClass}`} id="Service">
                 <div className="container ff">
-                    <SectionTitle MainTitle={'Erkunden Sie unser umfassendes Angebot an Leistungen, die auf Ihre einzigartigen Bedürfnisse zugeschnitten sind.'} subTitle={'Unsere Dienstleistungen'} />   
+                    <SectionTitle MainTitle={'Erkunden Sie unser umfassendes Angebot an Leistungen, die auf Ihre einzigartigen Bedürfnisse zugeschnitten sind.'} subTitle={'Unsere Angebote'} />   
                     <div className="wpo-Service-wrap">
                         <div className="row">
                         {Services.slice(0, 4).map((service, sitem) => (
@@ -120,7 +120,7 @@ const HomePage = (props) => {
 
                     </div>
                   
-                    <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="/Dienstleistungen" className="theme-btn">MEHR DIENSTLEISTUNGEN</Link>
+                    <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="/Dienstleistungen" className="theme-btn">MEHR ANGEBOTE</Link>
                     </div>
                 </div>
             </section><br/>
