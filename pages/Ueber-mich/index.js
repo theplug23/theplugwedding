@@ -38,38 +38,37 @@ const AboutPage = () => {
             <Navbar />
             <PageTitle pageTitle={'ÜBER MICH'} pagesub={'ÜBER MICH'} /> 
             <About />
-            <section className={`wpo-Service-section section-padding`} id="Service">
+            {/* <section className={`wpo-Service-section section-padding`} id="Service">
                 <div className="container ff">
-                    <SectionTitle MainTitle={'Erkunden Sie unser umfassendes Angebot an Leistungen, die auf Ihre einzigartigen Bedürfnisse zugeschnitten sind.'} subTitle={'Unsere Dienstleistungen'} />   
+                    <SectionTitle MainTitle={'Erkunden Sie unser umfassendes Angebot an Leistungen, die auf Ihre einzigartigen Bedürfnisse zugeschnitten sind.'} subTitle={'Unsere Angebote'} />   
                     <div className="wpo-Service-wrap">
                         <div className="row">
-                            {Services.slice(0, 4).map((service, sitem) => (
-                                
-                                <div className="col-lg-3 col-md-6 col-sm-6 col-12" key={sitem}>
-                                    <div className="wpo-Service-item">
-                                        <div className="wpo-Service-img">
-                                            <Image src={service.simg1} alt="" />
-                                        </div>
-                                        <div className="wpo-Service-text text-wrap">
-                                            <Link onClick={ClickHandler} href='/service/[slug]' as={`/service/${service.slug}`}>{longueurTexte(service.title)}</Link>
-                                        </div>
+                        {Services.slice(0, 4).map((service, sitem) => (
+                            <div className="col-lg-3 col-md-6 col-sm-6 col-12" key={sitem}>
+                                <div className="wpo-Service-item">
+                                    <div className="wpo-Service-img">
+                                        <Image src={service.img} alt="" />
                                     </div>
-                                    <div className="wpo-Service-item item-service">
-                                        <ul className="list-item">
-                                            {service.packages.map((pack) => (
-                                                <li style={{fontSize: '14px'}} key={pack.id} className="item">{pack.slug}</li>
-                                ))}
-                                        </ul>
+                                    <div className="wpo-Service-text text-wrap">
+                                        <Link onClick={ClickHandler} href='' as={``}>{longueurTexte(service.title)}</Link>
                                     </div>
-                                </div> 
+                                </div>
+                                <div className="wpo-Service-item item-service">
+                                    <ul className="list-item">
+                                        {service.packages.map((pack) => (
+                                            <li style={{fontSize: '14px'}} key={pack.id} className="item">{pack.slug}</li>
                             ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        ))}
 
                         </div>
                     
-                        <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="/shop" className="theme-btn">MEHR DIENSTLEISTUNGEN</Link>
+                        <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="/Dienstleistungen" className="theme-btn">MEHR ANGEBOTE</Link>
                     </div>
                 </div>
-            </section>
+            </section> */}
             {/* <FunFact /> 
             <ProjectSection prClass={'pt-120'} />*/}
             <BannerSec />

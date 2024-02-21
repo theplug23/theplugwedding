@@ -93,6 +93,44 @@ const HomePage = (props) => {
             <Navbar />
             <Hero />
             <About />
+            <section className={`wpo-portfolio-section-s2 section-padding ${props.prClass}`} id="gallery">
+                <div className="container-fluid">
+                    <SectionTitle MainTitle={'ENTDECKEN SIE IN BILDERN EINIGE BILDER UNSERER HOCHZEITEN'} subTitle={'Unsere Hochzeiten'}/>
+                    <div className="sortable-gallery">
+                        <div className="gallery-filters"></div>
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="portfolio-grids gallery-container clearfix">
+                                    <Gallery >
+                                        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
+                                            <Masonry columnsCount={4} gutter="30px">
+                                                {weddings.map((image, i) => (
+                                                    <div className="grid" key={i}>
+                                                        <Item
+                                                            original={image.img}
+                                                            thumbnail={image.img}
+                                                            width="100%"
+                                                            height="100%"
+                                                        >
+                                                            {({ ref, open }) => (
+                                                                <img ref={ref} onClick={open} src={image.img} />
+                                                            )}
+                                                        </Item>
+                                                    </div>
+                                                ))}
+                                            </Masonry>
+                                        </ResponsiveMasonry>
+                                    </Gallery>
+                                </div>
+                            </div>
+                        </div><br/>
+                        <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="/Portraitfotografie" className="theme-btn">WEITERE PHOTOS SEHEN...</Link>
+                    </div>
+                </div>
+            </section>
+            <VideoSection />
+            <Testimonial />
+            <FunFact />
             <section className={`wpo-Service-section section-padding ${props.pbClass}`} id="Service">
                 <div className="container ff">
                     <SectionTitle MainTitle={'Erkunden Sie unser umfassendes Angebot an Leistungen, die auf Ihre einzigartigen Bedürfnisse zugeschnitten sind.'} subTitle={'Unsere Angebote'} />   
@@ -124,43 +162,6 @@ const HomePage = (props) => {
                     </div>
                 </div>
             </section><br/>
-            <FunFact />
-            <Testimonial />
-            <section className={`wpo-portfolio-section-s2 section-padding ${props.prClass}`} id="gallery">
-                <div className="container-fluid">
-                    <SectionTitle MainTitle={'ENTDECKEN SIE IN BILDERN EINIGE BILDER UNSERER HOCHZEITEN'} subTitle={'Unsere Hochzeiten'}/>
-                    <div className="sortable-gallery">
-                        <div className="gallery-filters"></div>
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="portfolio-grids gallery-container clearfix">
-                                    <Gallery >
-                                        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
-                                            <Masonry columnsCount={4} gutter="30px">
-                                                {weddings.map((image, i) => (
-                                                    <div className="grid" key={i}>
-                                                        <Item
-                                                            original={image.img}
-                                                            thumbnail={image.img}
-                                                            width="100%"
-                                                            height="100%"
-                                                        >
-                                                            {({ ref, open }) => (
-                                                                <img ref={ref} onClick={open} src={image.img} />
-                                                            )}
-                                                        </Item>
-                                                    </div>
-                                                ))}
-                                            </Masonry>
-                                        </ResponsiveMasonry>
-                                    </Gallery>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <VideoSection />
             {/* <ProjectSection /> */}
             <BannerSec />
             <Product

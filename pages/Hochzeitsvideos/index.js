@@ -56,13 +56,13 @@ const Videos = () => {
                                         </div>
                                         <div className="entry-meta">
                                             <ul>
-                                                <li><i className="fi flaticon-user"></i> By <Link href='/about'>STEPHANE KAMWA  </Link> </li>
+                                                <li><i className="fi flaticon-user"></i> By <Link href='/Ueber-mich'>STEPHANE KAMWA  </Link> </li>
                                                 <li><i className="fi flaticon-calendar"></i>{dateParser(video.date)}</li>
                                                 <li><i className="fi fi-sr-marker"></i> {video.place}</li>
                                             </ul>
                                         </div>
                                         <div className="entry-details">
-                                            <h3><Link href='/videos'>{video.persons}</Link></h3>
+                                            <h3><Link href='/Hochzeitsvideos'>{video.persons}</Link></h3>
                                             <p>{video.description}</p>
                                         </div>
                                     </div>
