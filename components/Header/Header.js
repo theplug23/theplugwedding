@@ -135,7 +135,7 @@ const Header = (props) => {
                                             alt="Logo The PLUG" /></Link></li>
 
                                         <li className="menu-item-has-children">
-                                            <Link className='item-menu' href="/Dienstleistungen">ANGEBOTE</Link>
+                                            <Link className='item-menu' href="/Angebote">ANGEBOTE</Link>
                                             {/* <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} href="/shop">Shop</Link></li>
                                                 <li><Link onClick={ClickHandler} href="/product-single/Wedding-Cake">Shop Single</Link></li>

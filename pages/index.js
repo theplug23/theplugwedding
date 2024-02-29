@@ -158,7 +158,7 @@ const HomePage = (props) => {
 
                     </div>
                   
-                    <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="/Dienstleistungen" className="theme-btn">MEHR ANGEBOTE</Link>
+                    <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="/Angebote" className="theme-btn">MEHR ANGEBOTE</Link>
                     </div>
                 </div>
             </section><br/>

@@ -6,8 +6,8 @@ import photo_video from '/public/images/service/photo-video.jpg'
 const Services = [
     {
         id: 1,
-        title:'Angebot 1: 499€ für 2 Stunden',
-        slug:'Angebot 1: 499€ für 2 Stunden',
+        title:'Angebot 1: 599€ für 2 Stunden',
+        slug:'Angebot 1: 599€ für 2 Stunden',
         packages: [
             {
                 id: 1,
@@ -50,8 +50,8 @@ const Services = [
     },
     {
         id: 2,
-        title:'Angebot 2: 699€ für 3 Stunden',
-        slug:'Angebot 2: 699€ für 3 Stunden',
+        title:'Angebot 2: 799€ für 3 Stunden',
+        slug:'Angebot 2: 799€ für 3 Stunden',
         packages: [
             {
                 id: 1,
@@ -94,8 +94,8 @@ const Services = [
     },
     {
         id: 3,
-        title:'Angebot 3: 899€ für 4 Stunden',
-        slug:'Angebot 3: 899€ für 4 Stunden',
+        title:'Angebot 3: 999€ für 4 Stunden',
+        slug:'Angebot 3: 999€ für 4 Stunden',
         packages: [
             {
                 id: 1,
@@ -138,8 +138,8 @@ const Services = [
     },
     {
         id: 4,
-        title:'Angebot 4: 1099€ für 5 Stunden',
-        slug:'Angebot 4: 1099€ für 5 Stunden',
+        title:'Angebot 4: 1199€ für 5 Stunden',
+        slug:'Angebot 4: 1199€ für 5 Stunden',
         packages: [
             {
                 id: 1,
@@ -182,8 +182,8 @@ const Services = [
     },
     {
         id: 5,
-        title:'Angebot 5: 1299€ für 6 Stunden',
-        slug:'Angebot 5: 1299€ für 6 Stunden',
+        title:'Angebot 5: 1399€ für 6 Stunden',
+        slug:'Angebot 5: 1399€ für 6 Stunden',
         packages: [
             {
                 id: 1,
