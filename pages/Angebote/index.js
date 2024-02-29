@@ -35,17 +35,17 @@ const ShopPage = ({ addToCart, addToWishList }) => {
     ReactGA.event({
         hitType: 'pageview',
         page: window.location.pathname,
-        title: "Dienstleistungen PAGE"
+        title: "Angebote PAGE"
     })
   })
 
   return (
   <Fragment>
     <Helmet>
-      <title>DIENSTLEISTUNGEN - THEPLUG WEDDING</title>
+      <title>ANGEBOTE - THEPLUG WEDDING</title>
     </Helmet>
     <Navbar />
-    <PageTitle pageTitle={'DIENSTLEISTUNGEN'} pagesub={'Dienstleistungen'} />
+    <PageTitle pageTitle={'ANGEBOTE'} pagesub={'Angebote'} />
 
       {/* <section className="wpo-shop-page section-padding">
         <div className="container">
