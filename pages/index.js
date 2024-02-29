@@ -143,7 +143,8 @@ const HomePage = (props) => {
                                         <Image src={service.img} alt="" />
                                     </div>
                                     <div className="wpo-Service-text text-wrap">
-                                        <Link onClick={ClickHandler} href='/service/[slug]' as={`/service/${service.slug}`}>{longueurTexte(service.title)}</Link>
+                                        <Link onClick={ClickHandler} href='' as={``}>{longueurTexte(service.title)}</Link>
+                                        {/* <Link onClick={ClickHandler} href='/service/[slug]' as={`/service/${service.slug}`}>{longueurTexte(service.title)}</Link> */}
                                     </div>
                                 </div>
                                 <div className="wpo-Service-item item-service">

@@ -46,7 +46,8 @@ const Product = ({ products, addToCartProduct, addToWishListProduct }) => {
                       </ul>
                     </div>
                     <div className="wpo-product-text">
-                      <h3><Link onClick={ClickHandler} href='/product-single/[slug]' as={`/product-single/${product.slug}`}>{product.title}</Link></h3>
+                      <h3><Link onClick={ClickHandler} href='' as={``}>{product.title}</Link></h3>
+                      {/* <h3><Link onClick={ClickHandler} href='/product-single/[slug]' as={`/product-single/${product.slug}`}>{product.title}</Link></h3> */}
                       <ul>
                         <li>€{product.delPrice}</li>
                         <li>€{product.price}</li>
