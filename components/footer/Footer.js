@@ -49,7 +49,7 @@ const Footer = () => {
                         </div>
                         <div className="col-12">
                             <div className="copyright">
-                                <p>© Copyright 2023 | THEPLUG WEDDING - All rights reserved | Web Designed By <Link style={{color:'#B99226', fontWeight: 'bold'}} href="https://www.comtheplug.com/" target='_blank'>THEPLUG COM</Link></p>
+                                <p>© Copyright 2024 | THEPLUG WEDDING - All rights reserved | Web Designed By <Link style={{color:'#B99226', fontWeight: 'bold'}} href="https://www.comtheplug.com/" target='_blank'>THEPLUG COM</Link></p>
                             </div>
                         </div>
                     </div>
