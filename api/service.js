@@ -226,8 +226,8 @@ const Services = [
     },
     {
         id: 6,
-        title:'Angebot 6: 1699€ für 7 Stunden',
-        slug:'Angebot 6: 1699€ für 7 Stunden',
+        title:'Angebot 6: 1599€ für 7 Stunden',
+        slug:'Angebot 6: 1599€ für 7 Stunden',
         packages: [
             {
                 id: 1,
