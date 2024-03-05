@@ -638,7 +638,7 @@ ul.smothscroll a:hover {
   width: 120%;
   height: 1px;
   content: "";
-  background: #F3E1DB;
+  background: #b89339;
   left: -10%;
 }
 .wpo-section-title h2::before,
@@ -650,7 +650,7 @@ ul.smothscroll a:hover {
   width: 70%;
   height: 1px;
   content: "";
-  background: #F3E1DB;
+  background: #b89339;
 }
 @media (max-width: 767px) {
   .wpo-section-title h2,

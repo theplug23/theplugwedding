@@ -152,34 +152,6 @@ const menus = [
     },  
     {
         id: 3,
-        title: 'ANGEBOTE',
-        link: '/Angebote',
-      /*   submenu: [
-            {
-                id: 71,
-                title: 'Shop',
-                link: '/shop',
-            },
-            {
-                id: 75,
-                title: 'Shop Single',
-                link: '/product-single/Wedding-Cake'
-            },
-            {
-                id: 76,
-                title: 'Cart',
-                link: '/cart'
-            },
-            {
-                id: 77,
-                title: 'Checkout',
-                link: '/checkout'
-            }
-            
-        ] */
-    },
-    {
-        id: 4,
         title: 'PORTFOLIO',
         link: '/Hochzeitfotografie',
         submenu: [
@@ -235,7 +207,34 @@ const menus = [
             }
         ]
     },
-
+    {
+        id: 4,
+        title: 'ANGEBOTE',
+        link: '/Angebote',
+      /*   submenu: [
+            {
+                id: 71,
+                title: 'Shop',
+                link: '/shop',
+            },
+            {
+                id: 75,
+                title: 'Shop Single',
+                link: '/product-single/Wedding-Cake'
+            },
+            {
+                id: 76,
+                title: 'Cart',
+                link: '/cart'
+            },
+            {
+                id: 77,
+                title: 'Checkout',
+                link: '/checkout'
+            }
+            
+        ] */
+    },
 
     /*{
         id: 5,
