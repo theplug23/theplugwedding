@@ -64,66 +64,17 @@ const Header = (props) => {
                                         </li>
 
                                         <li className="menu-item-has-children">
-                                            <Link className='item-menu' href="/Ueber-mich">UEBER MICH</Link>
-                                            {/* <ul className="sub-menu">
-                                                <li><Link onClick={ClickHandler} href="/about">About</Link></li>
-                                                <li className="menu-item-has-children">
-                                                    <Link href="/tory">Our Story</Link>
-                                                    <ul className="sub-menu">
-                                                        <li><Link onClick={ClickHandler} href="/story">Our Story Style 1</Link></li>
-                                                        <li><Link onClick={ClickHandler} href="/story-2">Our Story Style 2</Link></li>
-                                                        <li><Link onClick={ClickHandler} href="/story-3">Our Story Style 3</Link></li>
-                                                        <li><Link onClick={ClickHandler} href="/story-4">Our Story Style 4</Link></li>
-                                                    </ul>
-                                                </li>
-                                                <li><Link onClick={ClickHandler} href="/accomodation">Accomodation</Link></li>
-                                                <li className="menu-item-has-children">
-                                                    <Link href="/svp">RSVP</Link>
-                                                    <ul className="sub-menu">
-                                                        <li><Link onClick={ClickHandler} href="/rsvp">RSVP Style 1</Link></li>
-                                                        <li><Link onClick={ClickHandler} href="/rsvp-2">RSVP Style 2</Link></li>
-                                                        <li><Link onClick={ClickHandler} href="/rsvp-3">RSVP Style 3</Link></li>
-                                                        <li><Link onClick={ClickHandler} href="/rsvp-4">RSVP Style 4</Link></li>
-                                                        <li><Link onClick={ClickHandler} href="/rsvp-5">RSVP Style 5</Link></li>
-                                                    </ul>
-                                                </li>
-                                                <li><Link onClick={ClickHandler} href="/gallery">Gallery</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/planner">Planners</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/team-single/Robert-William">Planner Single</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/groom-bride">Brides & Grooms</Link></li>
-                                                <li className="menu-item-has-children">
-                                                    <Link href="/service">Serevice</Link>
-                                                    <ul className="sub-menu">
-                                                        <li><Link onClick={ClickHandler} href="/service">Serevice</Link></li>
-                                                        <li><Link onClick={ClickHandler} href="/service-s2">Serevice S2</Link></li>
-                                                        <li><Link onClick={ClickHandler} href="/service-s3">Serevice S3</Link></li>
-                                                        <li><Link onClick={ClickHandler} href="/service/Event-Planning">Serevice Single</Link></li>
-                                                    </ul>
-                                                </li>
-                                                <li><Link onClick={ClickHandler} href="/pricing">Pricing</Link></li>
-                                                <li className="menu-item-has-children">
-                                                    <Link href="/">Auth Pages</Link>
-                                                    <ul className="sub-menu">
-                                                        <li><Link onClick={ClickHandler} href="/login">Login</Link>
-                                                        </li>
-                                                        <li><Link onClick={ClickHandler} href="/register">Register</Link></li>
-                                                        <li><Link onClick={ClickHandler} href="/forgot-password">Forgot Password</Link></li>
-                                                    </ul>
-                                                </li>
-                                                <li><Link onClick={ClickHandler} href="/coming">Coming Soon</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/404">404 Error</Link></li>
-                                            </ul> */}
+                                            <Link className='item-menu' href="/Ueber-uns">About</Link>
+                                            <ul className="sub-menu">
+                                                <li><Link onClick={ClickHandler} href='/Ueber-uns'>Über uns</Link></li>
+                                                {/* <li><Link onClick={ClickHandler} href='/Hochzeitfotografie'>FAQ</Link></li>
+                                                <li><Link onClick={ClickHandler} href='/Eventsfotografie'>TIPPS</Link></li> */}
+                                            </ul>
                                         </li>
 
                                         <li className="menu-item-has-children">
                                             <Link className='item-menu' href="/Hochzeitfotografie" style={{cursor: 'default'}}>Portfolio</Link>
                                             <ul className="sub-menu">
-                                                {/* <li><Link onClick={ClickHandler} href="/portfolio-grid">Portfolio Grid</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/portfolio-masonary">Portfolio Masonary</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/portfolio-masonary-s2">Portfolio Masonary S2</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/portfolio-masonary-s3">Portfolio Masonary S3</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/portfolio-masonary-s4">Portfolio Masonary S4</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/project/Maria-Robin">Portfolio Single</Link></li> */}
                                                 <li><Link onClick={ClickHandler} href='/Portraitfotografie'>Portraitfotografie</Link></li>
                                                 <li><Link onClick={ClickHandler} href='/Hochzeitfotografie'>Hochzeitsfotografie</Link></li>
                                                 <li><Link onClick={ClickHandler} href='/Eventsfotografie'>Eventsfotografie</Link></li>

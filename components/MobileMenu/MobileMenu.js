@@ -60,131 +60,21 @@ const menus = [
 
 {
     id: 2,
-        title: 'ÜBER MICH',
-        link: '/Ueber-mich',
-        /*submenu: [
+        title: 'ABOUT',
+        link: '/Ueber-uns',
+        submenu: [
             {
-                id: 21,
-                title: 'About',
-                link: '/about'
-            },
-            {
-                id: 22,
-                title: 'Our story',
-                link: '/story'
-            },
-            {
-                id: 23,
-                title: 'Accomodation',
-                link: '/accomodation'
-            },
-            {
-                id: 24,
-                title: 'RSVP',
-                link: '/rsvp'
-            },
-            {
-                id: 255,
-                title: 'Gallery',
-                link: '/gallery'
-            },
-            {
-                id: 266,
-                title: 'Planners',
-                link: '/planner'
-            },
-            {
-                id: 258,
-                title: 'Planner Single',
-                link: '/team-single/Robert-William'
-            },
-            {
-                id: 267,
-                title: 'Bridesmaid & Groomsman',
-                link: '/groom-bride'
-            },
-            {
-                id: 253,
-                title: 'Serevice',
-                link: '/service'
-            },
-            {
-                id: 26,
-                title: 'Serevice S2',
-                link: '/service-s2'
-            },
-            {
-                id: 262,
-                title: 'Serevice S3',
-                link: '/service-s3'
-            },
-            {
-                id: 27,
-                title: 'Serevice Single',
-                link: '/service/Event-Planning'
-            },
-            {
-                id: 28,
-                title: 'Pricing',
-                link: '/pricing'
-            },
-            {
-                id: 29,
-                title: 'coming',
-                link: '/coming'
-            },
-            {
-                id: 221,
-                title: '404 Error',
-                link: '/404'
-            },
-            {
-                id: 251,
-                title: 'Login',
-                link: '/login'
-            },
-            {
-                id: 262,
-                title: 'Register',
-                link: '/register'
+                id: 41,
+                title: 'ÜBER UNS',
+                link: '/Ueber-uns'
             }
-        ]*/
+        ]
     },  
     {
         id: 3,
         title: 'PORTFOLIO',
         link: '/Hochzeitfotografie',
         submenu: [
-            /*{
-                id: 41,
-                title: 'Portfolio Grid',
-                link: '/portfolio-grid'
-            },
-            {
-                id: 42,
-                title: 'Portfolio Masonary',
-                link: '/portfolio-masonary'
-            },
-            {
-                id: 43,
-                title: 'Portfolio Masonary S2',
-                link: '/portfolio-masonary-s2'
-            },
-            {
-                id: 45,
-                title: 'Portfolio Masonary S3',
-                link: '/portfolio-masonary-s3'
-            },
-            {
-                id: 46,
-                title: 'Portfolio Masonary S4',
-                link: '/portfolio-masonary-s4'
-            },
-            {
-                id: 44,
-                title: 'Portfolio Single',
-                link: '"/project/Maria-Robin'
-            }*/
             {
                 id: 41,
                 title: 'PORTRAITSFOTOGRAFIE',

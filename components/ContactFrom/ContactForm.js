@@ -97,6 +97,7 @@ const ContactForm = () => {
                             name="subject">
                             <option>Fotografie</option>
                             <option>Videografie</option>
+                            <option>Photos + Videos</option>
                             <option>Albumfoto</option>
                             <option>Fotobox</option>
                         </select>

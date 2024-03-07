@@ -27,7 +27,7 @@ const VideoSection = (props) => {
                                         </div>
                                         <div className="entry-meta">
                                             <ul>
-                                                <li><i className="fi flaticon-user"></i> By <Link href='/about'>STEPHANE KAMWA</Link> </li>
+                                                <li><i className="fi flaticon-user"></i> By <Link href='/Ueber-uns'>theplug-wedding team</Link> </li>
                                                 <li><i className="fi flaticon-calendar"></i>{dateParser(video.date)}</li>
                                                 <li><i className="fi flaticon-location"></i> {video.place}</li>
                                             </ul>

@@ -20,7 +20,7 @@ const videos = [
     {
         id: 2,
         persons: 'Julia & Eric',
-        date: '22 September 2023',
+        date: '22 September 2022',
         bgImg: vid8,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/4a_-hAaDnGU?si=okUAiHNrd5Q3dRHC',

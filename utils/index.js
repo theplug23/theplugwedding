@@ -90,9 +90,9 @@ function dateParser(date) {
         year: 'numeric',
         month: 'long',
         day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric'
+        // hour: 'numeric',
+        // minute: 'numeric',
+        // second: 'numeric'
     })
     return newDate;
 }
