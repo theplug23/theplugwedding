@@ -6,7 +6,7 @@ import Image from 'next/image'
 import blogs from '../../api/blogs'
 import { useState, useEffect } from 'react'
 import axios from 'axios';
-import { countText, dateParser } from '../../utils/index.js';
+import { countText, dateParser, countTitle } from '../../utils/index.js';
 import logo from '/public/images/THEPLUG-WEGGING_logo.png'
 import { textAlign } from '@mui/system';
 import moment from 'moment';
@@ -66,7 +66,7 @@ const BlogList = (props) => {
                                         </div>
                                         <div className="entry-details">
                                             <h3><Link href='/Blog/[slug]' as={`/Blog/${post.slug}`}>{post.title}</Link></h3>
-                                            <p>{countText(post.title)+"..."}</p>
+                                            <p>{countTitle(post.title)+"..."}</p>
                                             <Link href='/Blog/[slug]' as={`/Blog/${post.slug}`} className="read-more">Mehr Lesen...</Link>
                                         </div>
                                     </div>
@@ -88,7 +88,7 @@ const BlogList = (props) => {
                                                 </div>
                                                 <div className="entry-details">
                                                     <h3><Link href='/Blog/[slug]' as={`/Blog/${post.slug}`}>{post.title}</Link></h3>
-                                                    <p>{post.content}</p>
+                                                    <p>{countTitle(post.title)+"..."}</p>
                                                     <Link href='/Blog/[slug]' as={`/Blog/${post.slug}`} className="read-more">Mehr Lesen...</Link>
                                                 </div>
                                             </div>

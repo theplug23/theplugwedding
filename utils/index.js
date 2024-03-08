@@ -113,7 +113,7 @@ const countText = (text) =>{
 
 const countTitle = (text) =>{
     let sentence = new String(text);
-    return sentence.substring(0, 17)
+    return sentence.substring(0, 25)
 }
 
 export {
