@@ -4,6 +4,7 @@ import blogs from '../../api/blogs'
 import PageTitle from '../../components/pagetitle/PageTitle';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/footer/Footer';
+import Scrollbar from '../../components/scrollbar/scrollbar'
 import BlogList from '../../components/BlogList/BlogList';
 import MapSection from '../../components/MapSection/MapSection';
 import FormSection from '../../components/FormSection/FormSection';
@@ -39,6 +40,7 @@ const BlogSingle = (props) => {
             <FormSection />
             <MapSection />
             <Footer />
+            <Scrollbar />
         </Fragment>
     )
 };
