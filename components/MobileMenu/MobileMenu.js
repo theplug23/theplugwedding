@@ -67,6 +67,11 @@ const menus = [
                 id: 41,
                 title: 'ÜBER UNS',
                 link: '/Ueber-uns'
+            },
+            {
+                id: 42,
+                title: 'FAQ',
+                link: '/FAQ'
             }
         ]
     },  
