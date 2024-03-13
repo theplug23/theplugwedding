@@ -2,6 +2,8 @@ import React from 'react'
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import SectionTitle from '../SectionTitle'
+import {shuffleArray} from '../../utils/index.js'
+
 
 const Portfolios = [
     // {
@@ -962,7 +964,7 @@ const PortfolioSectionS2 = (props) => {
                                 <Gallery >
                                     <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
                                         <Masonry columnsCount={4} gutter="30px">
-                                            {Portfolios.map((image, i) => (
+                                            {shuffleArray(Portfolios).map((image, i) => (
                                                 <div className="grid" key={i}>
                                                     <Item
                                                         original={image.Pimg}
