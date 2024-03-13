@@ -43,7 +43,7 @@ const FAQSection = (props) => {
             <div className="container ff">
             <SectionTitle MainTitle={''} subTitle={'Fragen & Antworten'} />
                 {/* <h2>Fragen & Antworten</h2> */}
-                <div className="col col-lg-12">
+                <div className="col col-lg-6">
                     {faqData.map((item, index) => (
                         <div key={index} className="faq-item">
                             <h3><b>{item.question}</b></h3><br/>
