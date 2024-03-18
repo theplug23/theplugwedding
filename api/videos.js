@@ -6,6 +6,7 @@ import vid5 from '/public/images/videos/Lisa&Charles.png'
 import vid6 from '/public/images/videos/vladi-&-sarah.jpg'
 import vid7 from '/public/images/videos/Stephane.png'
 import vid8 from '/public/images/videos/Julia&Eric-1.jpg'
+import vid9 from '/public/images/event/WifOR/Bild-127.jpg'
 
 const videos = [
     {
@@ -69,6 +70,15 @@ const videos = [
         bgImg: vid7,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/rzEP767qF-E',
+        place: 'Allemagne'
+    },
+    {
+        id:8,
+        persons: 'WifOR Institute GmbH feiert 15-jähriges Jubiläum im Merck-Stadion am Böllenfalltor(Darmstadt)',
+        date: '12 Mars 2024',
+        bgImg: vid9,
+        // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
+        link: 'https://www.youtube.com/embed/SzNp8ED68uM',
         place: 'Allemagne'
     },
 ]

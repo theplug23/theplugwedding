@@ -141,13 +141,13 @@ const BlogSingle = (props) => {
                                 {/* <div className="more-posts">
 
                                     <div className="previous-post">
-                                        <Link href="/blog-single/[slug]" as={`/blog-single/${title}`}>
+                                        <Link href="/blog-single/[slug]" as={`/blog-single/${post.slug}`}>
                                             <span className="post-control-link">Vorheriger Artikel</span>
                                         </Link>
                                         
                                     </div>
                                     <div className="next-post">
-                                        <Link href="/blog-single/[slug]" as={`/blog-single/${title}`}>
+                                        <Link href="/blog-single/[slug]" as={`/blog-single/${post.slug}`}>
                                             <span className="post-control-link">Nächster Artikel</span>
                                         </Link>
                                         
