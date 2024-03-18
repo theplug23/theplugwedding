@@ -60,7 +60,7 @@ const BlogList = (props) => {
                                                 <div className="entry-meta">
                                                     <ul>
                                                         <li><i className="fi flaticon-user"></i>  <Link href="https://www.comtheplug.com/" target='_blank'>{post.author}</Link> </li>
-                                                        <li><i className="fa fa-camera"></i> <Link href='/' >THEPLUG Wedding</Link> </li>
+                                                        <li><i className="fa fa-camera"></i> <Link href='/' >THEPLUG Wedding</Link> </li><br/>
                                                         <li><i className="fa fa-eye"></i> {post.vues} views </li>
                                                         <li><i className="fi flaticon-calendar"></i> {moment(post.created_at).format('DD MMMM YYYY')}</li>
                                                         
@@ -86,8 +86,8 @@ const BlogList = (props) => {
                                                     <div className="entry-meta">
                                                         <ul>
                                                             <li><i className="fi flaticon-user"></i> By <Link href="https://www.comtheplug.com/" target='_blank'>{post.author}</Link> </li>
-                                                            <li><i className="fi fa-eye"></i>  {post.vues} views </li>
                                                             <li><i className="fa fa-camera"></i> <Link href='/' >THEPLUG Wedding</Link> </li>
+                                                            <li><i className="fi fa-eye"></i>  {post.vues} views </li>
                                                             <li><i className="fi flaticon-calendar"></i> {moment(post.created_at).format('DD MMMM YYYY')}</li>
                                                         </ul>
                                                     </div>
