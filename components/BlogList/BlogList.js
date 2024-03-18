@@ -48,42 +48,22 @@ const BlogList = (props) => {
                 <div className="row">
                     <div className={`col col-lg-8 col-12 ${props.blRight}`}>
                         <div className="wpo-blog-content">
-                            {posts.length > 0 ?
-                                !isSearched ?
-                                posts.map((post, bitem) => (
-                                    <div className={`post  ${post.blClass}`} key={bitem}>
-                                        <div className="entry-media video-holder">
-                                            <Image src={post.image} alt="" width={1000} height={500}/>
-                                            {/* <VideoModal/> */}
-                                        </div>
-                                        <div className="entry-meta">
-                                            <ul>
-                                                <li><i className="fi flaticon-user"></i>  <Link href="https://www.comtheplug.com/" target='_blank'>{post.author}</Link> </li>
-                                                <li><i className="fa fa-camera"></i> <Link href='/' >THEPLUG Wedding</Link> </li>
-                                                <li><i className="fa fa-eye"></i> {post.vues} views </li>
-                                                <li><i className="fi flaticon-calendar"></i> {moment(post.created_at).format('DD MMMM YYYY')}</li>
-                                            </ul>
-                                        </div>
-                                        <div className="entry-details">
-                                            <h3><Link href='/Blog/[slug]' as={`/Blog/${post.slug}`}>{post.title}</Link></h3>
-                                            <p>{countTitle(post.title)+"..."}</p>
-                                            <Link href='/Blog/[slug]' as={`/Blog/${post.slug}`} className="read-more">Mehr Lesen...</Link>
-                                        </div>
-                                    </div>
-                                )) : (
-                                    searchPosts.length > 0 ? (
-                                        searchPosts.map((post, i) => (
-                                            <div className={`post  ${post.blClass}`} key={i}>
+                            {posts.length > 0 ? (
+                                !isSearched ? (
+                                    <div className="row">
+                                        {posts.map((post, bitem) => (
+                                            <div className={`post col-md-6 ${post.blClass}`} key={bitem}>
                                                 <div className="entry-media video-holder">
-                                                    <Image src={post.image} alt="" width={1000} height={500}/>
-                                                    {/* <VideoModal/> */}
+                                                        <Image src={post.image} alt="" width={1000} height={500}/>
+                                                                {/* <VideoModal/> */}
                                                 </div>
                                                 <div className="entry-meta">
                                                     <ul>
-                                                        <li><i className="fi flaticon-user"></i> By <Link href="https://www.comtheplug.com/" target='_blank'>{post.author}</Link> </li>
-                                                        <li><i className="fi fa-eye"></i>  {post.vues} views </li>
+                                                        <li><i className="fi flaticon-user"></i>  <Link href="https://www.comtheplug.com/" target='_blank'>{post.author}</Link> </li>
                                                         <li><i className="fa fa-camera"></i> <Link href='/' >THEPLUG Wedding</Link> </li>
+                                                        <li><i className="fa fa-eye"></i> {post.vues} views </li>
                                                         <li><i className="fi flaticon-calendar"></i> {moment(post.created_at).format('DD MMMM YYYY')}</li>
+                                                        
                                                     </ul>
                                                 </div>
                                                 <div className="entry-details">
@@ -92,17 +72,44 @@ const BlogList = (props) => {
                                                     <Link href='/Blog/[slug]' as={`/Blog/${post.slug}`} className="read-more">Mehr Lesen...</Link>
                                                 </div>
                                             </div>
-                                        ))
+                                        ))}
+                                    </div>
+                                ) : (
+                                    searchPosts.length > 0 ? (
+                                        <div className="row">
+                                            {searchPosts.map((post, i) => (
+                                                <div className={`post col-md-6 ${post.blClass}`} key={i}>
+                                                    <div className="entry-media video-holder">
+                                                        <Image src={post.image} alt="" width={1000} height={500}/>
+                                                        {/* <VideoModal/> */}
+                                                    </div>
+                                                    <div className="entry-meta">
+                                                        <ul>
+                                                            <li><i className="fi flaticon-user"></i> By <Link href="https://www.comtheplug.com/" target='_blank'>{post.author}</Link> </li>
+                                                            <li><i className="fi fa-eye"></i>  {post.vues} views </li>
+                                                            <li><i className="fa fa-camera"></i> <Link href='/' >THEPLUG Wedding</Link> </li>
+                                                            <li><i className="fi flaticon-calendar"></i> {moment(post.created_at).format('DD MMMM YYYY')}</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className="entry-details">
+                                                        <h3><Link href='/Blog/[slug]' as={`/Blog/${post.slug}`}>{post.title}</Link></h3>
+                                                        <p>{countTitle(post.title)+"..."}</p>
+                                                        <Link href='/Blog/[slug]' as={`/Blog/${post.slug}`} className="read-more">Mehr Lesen...</Link>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
                                     ) : (
                                         <div className="col col-lg-10 col-12">
-                                            <h1 style={{textAlign:'center'}}>Leider entspricht kein Artikel Ihrer Suche !<br/><br/> Bitte versuche es erneut !</h1>
+                                            <h1 style={{textAlign: 'center'}}>Leider entspricht kein Artikel Ihrer Suche !<br/><br/> Bitte versuche es erneut !</h1>
                                         </div>
                                     )
-                                ) :
+                                )
+                            ) : (
                                 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                                     <p style={{fontSize: '20px', textAlign: 'center'}}>Zur Zeit sind keine Beiträge verfügbar</p>
                                 </div>
-                            }
+                            )}
                         </div>
                     </div>
                     

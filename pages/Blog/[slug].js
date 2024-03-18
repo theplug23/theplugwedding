@@ -138,7 +138,7 @@ const BlogSingle = (props) => {
 
                                 </div>
 
-                                {/* <div className="more-posts">
+                                <div className="more-posts">
 
                                     <div className="previous-post">
                                         <Link href="/blog-single/[slug]" as={`/blog-single/${post.slug}`}>
@@ -152,7 +152,7 @@ const BlogSingle = (props) => {
                                         </Link>
                                         
                                     </div>
-                                </div> */}
+                                </div>
 
                                 <div className="comments-area">
                                     <div className="comments-section">
