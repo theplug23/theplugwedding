@@ -136,9 +136,9 @@ const BlogSingle = (props) => {
                                     <h2>{post.title}</h2>
                                     <div dangerouslySetInnerHTML={{ __html: post.content}}></div>
 
-                                </div>
+                                </div><br/>
 
-                                <div className="more-posts">
+                                {/* <div className="more-posts">
 
                                     <div className="previous-post">
                                         <Link href="/blog-single/[slug]" as={`/blog-single/${post.slug}`}>
@@ -152,7 +152,7 @@ const BlogSingle = (props) => {
                                         </Link>
                                         
                                     </div>
-                                </div>
+                                </div> */}
 
                                 <div className="comments-area">
                                     <div className="comments-section">

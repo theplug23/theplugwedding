@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SectionTitle from "../SectionTitle";
-
 
 const FAQSection = (props) => {
     const faqData = [
@@ -36,18 +35,33 @@ const FAQSection = (props) => {
             question: '8. Können wir dich nur im rhein-main-gebiet buchen ?',
             answer: 'Ich arbeite nicht nur in Darmstadt, Frankfurt, Mainz und Umgebung sondern in ganz Deutschland als Hochzeitsfotografin. Für die Hochzeitsreportage reise ich auch ins Ausland. Für genauere Informationen über die Reisekosten schreibt mir einfach.'
         },
+        {
+            question: '9. Was passiert bei schlechtem wetter ?',
+            answer: 'Auch bei Regen können schöne Fotos entstehen! Fällt euer Hochzeitstag buchstäblich ins Wasser, bin ich trotzdem vor Ort und sorge dafür, dass man euren Hochzeitsfotos das Regenwetter nicht ansieht. Außerdem biete ich euch kostenfrei ein After-Weddig-Shooting bei besserem Wetter an. Habt ihr ein Paar- oder Portrait-Shooting gebucht, biete ich euch auf Wunsch kostenfrei einen Ersatztermin an.'
+        },
     ];
+
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    const toggleAccordion = (index) => {
+        setActiveIndex(activeIndex === index ? null : index);
+    };
 
     return (
         <section className={`wpo-Service-section section-padding ${props.pbClass}`}>
             <div className="container ff">
-            <SectionTitle MainTitle={'ENTDECKEN SIE EINIGE DER HÄUFIG GESTELLTEN FRAGEN'} subTitle={'Fragen & Antworten'} />
-                {/* <h2>Fragen & Antworten</h2> */}
-                <div className="col col-lg-12">
+                <SectionTitle MainTitle={'ENTDECKEN SIE EINIGE DER HÄUFIG GESTELLTEN FRAGEN'} subTitle={'Fragen & Antworten'} />
+                <div className="col col-lg-12"><br/>
                     {faqData.map((item, index) => (
                         <div key={index} className="faq-item">
-                            <h3><b>{item.question}</b></h3><br/>
-                            <p>{item.answer}</p><br/><br/>
+                            <div className="faq-question" onClick={() => toggleAccordion(index)} style={{cursor:"pointer"}}>
+                                <h3><b>{item.question}</b></h3><hr/><br/>
+                            </div>
+                            {activeIndex === index && (
+                                <div className="faq-answer">
+                                    <p>{item.answer}</p><hr/>
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
