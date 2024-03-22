@@ -62,7 +62,7 @@ const FAQSection = (props) => {
                                     <p>{item.answer}</p><hr/>
                                 </div>
                             )}
-                        </div>
+                        </div> 
                     ))}
                 </div>
             </div>
