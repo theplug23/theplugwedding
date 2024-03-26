@@ -37,7 +37,7 @@ const Contactpage = () => {
                                         <div className="office-info-text">
                                             <h2>E-Mail Schreiben</h2>
                                             <p>Ihr könnt uns unter dieser Adresse kontaktieren und uns eure Wünsche mitteilen</p>
-                                            <p><Link className='item-menu text-link' href='mailto:contact@theplug-group.com'>contact@theplug-group.com</Link></p>
+                                            <p><Link className='item-menu text-link' href='mailto:info@theplug-wedding.com'>info@theplug-wedding.com</Link></p>
                                         </div>
                                     </div>
                                 </div> 
