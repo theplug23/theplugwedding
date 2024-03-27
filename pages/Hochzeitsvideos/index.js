@@ -47,11 +47,11 @@ const Videos = () => {
                     <SectionTitle MainTitle={'FINDEN SIE HERAUS, WIE UNSERE KUNDEN DEN BESTEN TAG IHRES LEBENS HATTEN'} subTitle={'Unsere Hochzeitsvideos'}/>
                     <div className="row">
                         <div className='col col-lg-8 col-12'>
-                            <div className="wpo-blog-content">
+                            <div className="wpo-blog-content" style={{ display: 'flex', flexWrap: 'wrap' }}>
                                 {videos.map((video) => (                          
-                                    <div key={video.id} className='post format-video'>
-                                        <div className="entry-media video-holder">
-                                            <Image src={video.bgImg} alt={video.persons} />
+                                    <div key={video.id} className='post format-video' style={{ flex: 'calc(50% - 10px)', marginBottom: '20px', boxSizing: 'border-box' }}>
+                                        <div className="entry-media video-holder" style={{ marginRight: '10px'}}>
+                                            <Image style={{width:"1882px", height:"250px"}} src={video.bgImg} alt={video.persons} />
                                             <VideoModal src={video.link} />
                                         </div>
                                         <div className="entry-meta">

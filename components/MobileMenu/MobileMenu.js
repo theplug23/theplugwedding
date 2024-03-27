@@ -261,7 +261,7 @@ const MobileMenu = () => {
                     <ul className="list-links">
                         <li className='link'><Link style={{color:'white'}}  target={'_blank'} href="tel:+4915752069252"><i className="fi flaticon-phone-call"></i></Link></li>
                         <li className='link'><Link style={{color:'white'}} href="https://wa.me/4915752069252" target={'_blank'}><i className="fa fa-whatsapp"></i></Link></li>
-                        <li className='link'><Link style={{color:'white'}} target={'_blank'} href="mailto:info@theplug-wedding.com"><i className="fi flaticon-email icon"></i></Link></li>                 
+                        <li className='link'><Link style={{color:'white'}} target={'_blank'} href="mailto:contact@theplug-group.com"><i className="fi flaticon-email icon"></i></Link></li>                 
                     </ul>
                 </div>
 

@@ -28,7 +28,16 @@ const videos = [
         place: 'Allemagne'
     },
     {
-        id: 3,
+        id:3,
+        persons: 'WifOR Institute GmbH feiert 15-jähriges Jubiläum im Merck-Stadion am Böllenfalltor(Darmstadt)',
+        date: '12 Mars 2024',
+        bgImg: vid9,
+        // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
+        link: 'https://www.youtube.com/embed/SzNp8ED68uM',
+        place: 'Allemagne'
+    },
+    {
+        id: 4,
         persons: 'Alice & Dirk',
         date: '06.05.2023',
         bgImg: vid1,
@@ -37,7 +46,7 @@ const videos = [
         place: 'Allemagne'
     },
     {
-        id: 4,
+        id: 5,
         persons: 'Phillipe & Marie',
         date: '21 August 2021',
         bgImg: vid2,
@@ -46,7 +55,7 @@ const videos = [
         place: 'Allemagne'
     },
     {
-        id: 5,
+        id: 6,
         persons: 'Maria & Maxime',
         date: '21 April 2021',
         bgImg: vid3,
@@ -55,7 +64,7 @@ const videos = [
         place: 'Allemagne'
     },
     {
-        id: 6,
+        id: 7,
         persons: 'Sarah & Vladi',
         date: '08 12 2023',
         bgImg: vid6,
@@ -64,21 +73,12 @@ const videos = [
         place: 'Allemagne'
     },
     {
-        id: 7,
+        id: 8,
         persons: 'Audrey & Stephane',
         date: '08 12 2023',
         bgImg: vid7,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/rzEP767qF-E',
-        place: 'Allemagne'
-    },
-    {
-        id:8,
-        persons: 'WifOR Institute GmbH feiert 15-jähriges Jubiläum im Merck-Stadion am Böllenfalltor(Darmstadt)',
-        date: '12 Mars 2024',
-        bgImg: vid9,
-        // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
-        link: 'https://www.youtube.com/embed/SzNp8ED68uM',
         place: 'Allemagne'
     },
 ]
