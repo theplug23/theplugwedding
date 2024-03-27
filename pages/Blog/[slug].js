@@ -23,6 +23,10 @@ import MapSection from '../../components/MapSection/MapSection';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga4';
 import { toast } from 'react-toastify';
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
+import { Gallery, Item } from 'react-photoswipe-gallery'
+import {shuffleArray} from '../../utils/index.js'
+import { imagesBlogWifor } from '../../utils/data.js';
 
 
 const BlogSingle = (props) => {
@@ -34,11 +38,14 @@ const BlogSingle = (props) => {
     const [content, setText] = useState("");
     const [email, setMail] = useState("");
     const [loading, setLoading] = useState(true)
-    
+    const valeurs = {
+        imagesBlogWifor: imagesBlogWifor
+    }
 
     const submitHandler = (e) => {
         e.preventDefault()
         const comt={name, email, content, post_id: post.id}
+        
         
         axios.post('https://api.theplug-wedding.com/api/add-comment', comt)
             .then((res) => {
@@ -134,8 +141,40 @@ const BlogSingle = (props) => {
                                         </ul>
                                     </div>
                                     <h2>{post.title}</h2>
+                                    
                                     <div dangerouslySetInnerHTML={{ __html: post.content}}></div>
 
+                                    {post.isGallery &&
+                                        <div className="sortable-gallery">
+                                            <div className="gallery-filters"></div>
+                                            <div className="row">
+                                                <div className="col-lg-12">
+                                                    <div className="portfolio-grids gallery-container clearfix">
+                                                        <Gallery >
+                                                            <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
+                                                                <Masonry columnsCount={4} gutter="30px">
+                                                                    {shuffleArray(valeurs[post.gallery]).map((image, i) => (
+                                                                        <div className="grid" key={i}>
+                                                                            <Item
+                                                                                original={image.img}
+                                                                                thumbnail={image.img}
+                                                                                width="100%"
+                                                                                height="100%"
+                                                                            >
+                                                                                {({ ref, open }) => (
+                                                                                    <img ref={ref} onClick={open} src={image.img} />
+                                                                                )}
+                                                                            </Item>
+                                                                        </div>
+                                                                    ))}
+                                                                </Masonry>
+                                                            </ResponsiveMasonry>
+                                                        </Gallery>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
                                 </div><br/>
 
                                 {/* <div className="more-posts">
