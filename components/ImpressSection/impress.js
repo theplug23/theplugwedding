@@ -5,22 +5,20 @@ const ImpressumSection = (props) => {
     return (
         <section className={`wpo-Service-section section-padding ${props.pbClass}`}>
             <div className="container ff">
-                <SectionTitle MainTitle={'IMPRESSUM'} subTitle={'Impressum'} />
+                <SectionTitle MainTitle={'IMPRESSUM'} subTitle={''} />
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="impressum-content">
                             <h1 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Impressum</h1><br/>
                             <h4 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Gemäß § 5 TMG</h4>
-                            <p>Nova Gold</p>
-                            <p>Landwehrstr. 89</p>
-                            <p>64293 Darmstadt</p><br/>
-                            <h4 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Vertreten durch:</h4>
-                            <p>Frau Hasina Osmani</p><br/>
+                            <p>Stephane Tchuente Kamwa</p>
+                            <p>Heidelberger Landstraße 52A</p>
+                            <p>64297 Darmstadt</p><br/>
                             <h4 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Kontakt</h4>
-                            <p>Telefon: 0175 / 8498497</p>
-                            <p>E-Mail: info@novaeventcenter.com</p><br/>
+                            <p>Telefon: +49 1575 2069252</p>
+                            <p>E-Mail: info@theplug-wedding.com</p><br/>
                             <h4 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Umsatzsteuer-Identifikationsnummer</h4>
-                            <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE 290 519 654</p><br/>
+                            <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE 290 519 001</p><br/>
                             <h4 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Streitschlichtung in der EU</h4>
                             <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/">https://ec.europa.eu/consumers/odr/</a>.</p>
                             <p>Die E-Mail-Adresse finden Sie oben im Impressum.</p><br/>

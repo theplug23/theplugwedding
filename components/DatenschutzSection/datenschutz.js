@@ -5,7 +5,7 @@ const DatenschutzSection = (props) => {
     return (
         <section className={`wpo-Service-section section-padding ${props.pbClass}`}>
             <div className="container ff">
-                <SectionTitle MainTitle={'Datenschutz'} subTitle={'Datenschutz'} />
+                <SectionTitle MainTitle={'Datenschutz'} subTitle={''} />
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="Datenschutz-content">
@@ -30,8 +30,8 @@ const DatenschutzSection = (props) => {
                             <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.<br/><br/>Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.<br/><br/>Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p><br/>
                             <h4 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Hinweis zur verantwortlichen Stelle</h4>
                             <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-                            <p>Nova Gold<br/>Landwehrstr. 89<br/>64293 Darmstadt</p>
-                            <p>Telefon: 0175 849 84 97<br/>E-Mail: info@novaeventcenter.com</p>
+                            <p>Stephane Tchuente Kamwa<br/>Heidelberger Landstraße 52A<br/>64297 Darmstadt</p>
+                            <p>Telefon: +49 1575 2069252<br/>E-Mail: info@theplug-wedding.com</p>
                             <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
                             <h4 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Speicherdauer</h4>
                             <p>Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.</p>

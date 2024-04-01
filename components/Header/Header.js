@@ -67,7 +67,7 @@ const Header = (props) => {
                                             <Link className='item-menu' href="/Ueber-uns">About</Link>
                                             <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} href='/Ueber-uns'>Über uns</Link></li>
-                                                {/* <li><Link onClick={ClickHandler} href='/FAQ'>FAQ</Link></li> */}
+                                                <li><Link onClick={ClickHandler} href='/FAQ'>FAQ</Link></li>
                                                 {/* <li><Link onClick={ClickHandler} href='/Eventsfotografie'>TIPPS</Link></li> */}
                                             </ul>
                                         </li>
