@@ -10,7 +10,7 @@ const ImpressumSection = (props) => {
                     <div className="col-lg-12">
                         <div className="impressum-content">
                             <h1 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Impressum</h1><br/>
-                            <h4 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Gemäß § 5 TMG</h4>
+                            <h4 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Kleinunternehmer nach § 19 UStG</h4>
                             <p>Stephane Tchuente Kamwa</p>
                             <p>Heidelberger Landstraße 52A</p>
                             <p>64297 Darmstadt</p><br/>
