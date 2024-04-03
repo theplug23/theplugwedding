@@ -10,7 +10,7 @@ const ImpressumSection = (props) => {
                     <div className="col-lg-12">
                         <div className="impressum-content">
                             <h1 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Impressum</h1><br/>
-                            <h4 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Kleinunternehmer nach § 19 UStG</h4>
+                            <h4 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Gemäß § 5 TMG</h4>
                             <p>Stephane Tchuente Kamwa</p>
                             <p>Heidelberger Landstraße 52A</p>
                             <p>64297 Darmstadt</p><br/>
@@ -18,7 +18,7 @@ const ImpressumSection = (props) => {
                             <p>Telefon: +49 1575 2069252</p>
                             <p>E-Mail: info@theplug-wedding.com</p><br/>
                             <h4 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Umsatzsteuer-Identifikationsnummer</h4>
-                            <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE 290 519 001</p><br/>
+                            <p>Kleinunternehmer nach § 19 UStG</p><br/>
                             <h4 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>Streitschlichtung in der EU</h4>
                             <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/">https://ec.europa.eu/consumers/odr/</a>.</p>
                             <p>Die E-Mail-Adresse finden Sie oben im Impressum.</p><br/>
