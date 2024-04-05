@@ -27,6 +27,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import {shuffleArray} from '../../utils/index.js'
 import { imagesBlogWifor } from '../../utils/data.js';
+import VideoModal from '../ModalVideo/VideoModal';
 
 
 const BlogSingle = (props) => {

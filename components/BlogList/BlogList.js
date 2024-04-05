@@ -32,11 +32,10 @@ const BlogList = (props) => {
 
     const SubmitHandler = (e) =>{
         e.preventDefault()
-         const searchPosts= posts.filter(post => (post.title.includes(search) || post.content.includes(search)))
-         setIssearched(true)
-         setSearchPosts(searchPosts)
-         
-     }
+        const searchPosts= posts.filter(post => (post.title.includes(search) || post.content.includes(search)))
+        setIssearched(true)
+        setSearchPosts(searchPosts)
+    }
     
     return(
         <section className="wpo-blog-pg-section section-padding">
