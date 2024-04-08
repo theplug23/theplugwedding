@@ -900,7 +900,6 @@ ul.smothscroll a:hover {
 }
 
 .wpo-page-title {
-  background: url(/images/BAN.png) no-repeat center top/cover;
   min-height: 360px;
   position: relative;
   display: flex;
@@ -1406,7 +1405,7 @@ ul.smothscroll a:hover {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(22, 57, 103, 0.9);
+  background: rgb(179, 148, 61);
   content: "";
   z-index: -1;
 }

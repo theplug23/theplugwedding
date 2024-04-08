@@ -4,7 +4,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang='de'>
         <Head>
           <title>THEPLUG WEDDING - Hochzeitsfotograf & Hochzeitsvideograf</title>
           <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -1,7 +1,6 @@
 import vid1 from '/public/images/videos/Alice&Dirk.jpg'
 import vid2 from '/public/images/videos/Philippe&Marie.jpeg'
 import vid3 from '/public/images/videos/Maxime&Maria.jpeg'
-import vid4 from '/public/images/videos/Julia&Eric.jpg'
 import vid5 from '/public/images/videos/Lisa&Charles.png'
 import vid6 from '/public/images/videos/vladi-&-sarah.jpg'
 import vid7 from '/public/images/videos/Stephane.png'

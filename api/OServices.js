@@ -1,5 +1,3 @@
-import photo from '/public/images/service/photo.jpg'
-import video from '/public/images/service/video.jpg'
 import photo_video from '/public/images/service/photo-video.jpg'
 
 

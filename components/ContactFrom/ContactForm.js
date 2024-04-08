@@ -93,7 +93,6 @@ const ContactForm = () => {
                             onBlur={(e) => changeHandler(e)}
                             onChange={(e) => changeHandler(e)}
                             value={forms.subject}
-                            type="text"
                             name="subject">
                             <option>Fotografie</option>
                             <option>Videografie</option>
