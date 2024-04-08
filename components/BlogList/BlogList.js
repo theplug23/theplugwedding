@@ -1,14 +1,10 @@
 import React from 'react';
 import Link from 'next/link'
-import BlogSidebar from '../BlogSidebar/BlogSidebar.js'
-import VideoModal from '../ModalVideo/VideoModal'
 import Image from 'next/image'
-import blogs from '../../api/blogs'
 import { useState, useEffect } from 'react'
 import axios from 'axios';
-import { countText, dateParser, countTitle } from '../../utils/index.js';
+import { countTitle } from '../../utils/index.js';
 import logo from '/public/images/THEPLUG-WEGGING_logo.png'
-import { textAlign } from '@mui/system';
 import moment from 'moment';
 
 const ClickHandler = () =>{
@@ -20,9 +16,6 @@ const BlogList = (props) => {
     const [search, setSearch] = useState("")
     const [searchPosts, setSearchPosts] = useState([]) 
     const [isSearched, setIssearched] = useState(false)
-    //const date = new Date("2023-10-23 11:28:34")
-    //const timestamp = date.getTime()
-   // const format = moment(posts.date).format('DD MMMM YYYY [À] HH:mm:ss')
     
     useEffect(() => {
         axios.get('https://api.theplug-wedding.com/api/posts')
