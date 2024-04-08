@@ -1,6 +1,4 @@
 import React, { Fragment, useEffect } from 'react';
-import { useRouter } from 'next/router'
-import blogs from '../../api/blogs'
 import PageTitle from '../../components/pagetitle/PageTitle';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/footer/Footer';
@@ -11,15 +9,8 @@ import FormSection from '../../components/FormSection/FormSection';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga4';
 
-const submitHandler = (e) => {
-    e.preventDefault()
-}
-
 
 const BlogSingle = (props) => {
-    const router = useRouter()
-
-    const BlogDetails = blogs.find(item => item.slug === router.query.slug)
 
     useEffect(() => {
         ReactGA.event({
