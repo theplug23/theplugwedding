@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import SectionTitle from '../SectionTitle'
-import Projects from '../../api/projects'
+//import Projects from '../../api/projects'
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import Image from 'next/image'
 
@@ -10,6 +10,7 @@ const ClickHandler = () => {
 }
 
 const ProjectSectionS2 = (props) => {
+    const Projects = []
     return (
         <section className={`wpo-portfolio-section-s4 section-padding ${props.prClass}`}>
             <div className="container">

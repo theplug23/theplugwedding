@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import cimg from '/public/images/contact/img-1.jpg'
-import cimg2 from '/public/images/contact/img-2.jpg'
-import shape1 from '/public/images/contact/1.png'
-import shape2 from '/public/images/contact/2.png'
+//import cimg from '/public/images/contact/img-1.jpg'
+//import cimg2 from '/public/images/contact/img-2.jpg'
+//import shape1 from '/public/images/contact/1.png'
+//import shape2 from '/public/images/contact/2.png'
 import RSVPFrom from '../RSVPFrom/RSVPFrom'
 
 
@@ -14,7 +14,7 @@ const RsvpSection = (props) => {
                 <div className="row align-items-center">
                     <div className="col col-xl-4 col-lg-3 col-md-3 col-12">
                         <div className="contact-img">
-                            <Image src={cimg} alt=""/>
+                            {/* <Image src={cimg} alt=""/> */}
                         </div>
                     </div>
                     <div className="col col-xl-4 col-lg-6 col-md-6 col-12">
@@ -26,18 +26,18 @@ const RsvpSection = (props) => {
                                 </div>
                                 <RSVPFrom/>
                             </div>
-                            <div className="vector-1">
+                            {/* <div className="vector-1">
                                 <Image src={shape1} alt=""/>
                             </div>
                             <div className="vector-2">
                                 <Image src={shape2} alt=""/>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="col col-xl-4 col-lg-3 col-md-3 col-12">
-                        <div className="contact-img">
+                        {/* <div className="contact-img">
                             <Image src={cimg2} alt=""/>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

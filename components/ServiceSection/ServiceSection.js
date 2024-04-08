@@ -14,10 +14,6 @@ const ServiceSection = (props) => {
         window.scrollTo(10, 0);
     }
 
-    const text={
-        wordWrap:"break-word"
-    }
-
 
     return (
 

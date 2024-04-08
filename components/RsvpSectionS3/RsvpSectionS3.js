@@ -2,7 +2,7 @@ import React from 'react'
 import RSVPFrom2 from '../RSVPFrom2/RSVPFrom2';
 import Link from 'next/link'
 import Image from 'next/image'
-import cimg from '/public/images/contact/img-4.jpg'
+//import cimg from '/public/images/contact/img-4.jpg'
 
 const RsvpSectionS3 = (props) => {
     return (
@@ -21,7 +21,7 @@ const RsvpSectionS3 = (props) => {
                     </div>
                     <div className="col col-xl-8 col-lg-6 col-md-12 col-12">
                         <div className="contact-img">
-                            <Image src={cimg} alt="" />
+                            {/* <Image src={cimg} alt="" /> */}
                             <div className="rsvp-info">
                                 <div className="info-left">
                                     <h2>We Are Getting Married!</h2>

@@ -8,11 +8,6 @@ import BannerSec from '../../components/BannerSec/BannerSec';
 import PartnerSection from '../../components/PartnerSection';
 import MapSection from '../../components/MapSection/MapSection';
 import FormSection from '../../components/FormSection/FormSection';
-import Services from '../../api/service';
-import SectionTitle from '../../components/SectionTitle';
-import Link from 'next/link';
-import { longueurTexte } from "../../utils";
-import Image from 'next/image';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga4';
 

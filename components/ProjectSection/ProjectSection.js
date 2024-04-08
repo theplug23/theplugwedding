@@ -242,35 +242,6 @@ const portraits = [
 
 const ProjectSection = (props) => {
     return (
-        // <section className={`wpo-portfolio-section section-padding ${props.prClass}`}>
-        //     <div className="container">
-        //         <SectionTitle subTitle={'Our Portraits'} MainTitle={'enjoy our quality portrait photos'} />
-        //         <div className="sortable-gallery">
-        //             <div className="gallery-filters"></div>
-        //             <div className="row">
-        //                 <div className="col-lg-12">
-        //                     <div className="portfolio-grids gallery-container clearfix">
-        //                         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 2 }}>
-        //                             <Masonry gutter="60px">
-        //                                 {portraits.map((portrait, index) => (
-        //                                     <div className="grid" key={index}>
-        //                                         <div className="img-holder">
-        //                                             <Image src={portrait.img} alt={portrait.img} width={500} height={500} />
-        //                                             <div className="portfolio-content">
-        //                                                 <h4><Link onClick={ClickHandler} href='/project/[slug]' as={`/project/${project.slug}`}>{project.title}</Link></h4>
-        //                                                 <span>{project.location}- {project.date}</span>
-        //                                             </div>
-        //                                         </div>
-        //                                     </div>
-        //                                 ))}
-        //                             </Masonry>
-        //                         </ResponsiveMasonry>
-        //                     </div>
-        //                 </div>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </section>
         <section className={`wpo-portfolio-section-s2 section-padding ${props.prClass}`} id="gallery">
             <div className="container-fluid">
                 <SectionTitle MainTitle={'Lassen Sie sich in die fesselnde Welt unserer fotografischen Porträts entführen, die das Wesen und die Schönheit jedes Einzelnen einfangen'} subTitle={'Unsere Porträts'}/>
@@ -291,7 +262,7 @@ const ProjectSection = (props) => {
                                                         height="100%"
                                                     >
                                                         {({ ref, open }) => (
-                                                            <img ref={ref} onClick={open} src={image.img} />
+                                                            <img ref={ref} onClick={open} src={image.img} alt={`image_portrait` + i} />
                                                         )}
                                                     </Item>
                                                 </div>

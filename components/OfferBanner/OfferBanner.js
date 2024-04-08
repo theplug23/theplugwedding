@@ -1,5 +1,6 @@
 import React from "react";
 import Link from 'next/link'
+
 const ClickHandler = () => {
     window.scrollTo(10, 0);
 }

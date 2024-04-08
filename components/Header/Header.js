@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import MobileMenu from '../MobileMenu/MobileMenu'
-import { totalPrice } from "../../utils";
 import { connect } from "react-redux";
 import { removeFromCart } from "../../store/actions/action";
 
 const Header = (props) => {
-    const [menuActive, setMenuState] = useState(false);
-    const [cartActive, setcartState] = useState(false);
+    //const [menuActive, setMenuState] = useState(false);
+    //const [cartActive, setcartState] = useState(false);
 
     const SubmitHandler = (e) => {
         e.preventDefault()

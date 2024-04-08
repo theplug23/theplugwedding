@@ -4,11 +4,9 @@ import PageTitle from '../../components/pagetitle/PageTitle'
 import Scrollbar from '../../components/scrollbar/scrollbar'
 
 import ServiceSection from '../../components/ServiceSection/ServiceSection';{/* i just added this one */}
-import TeamSection from '../../components/TeamSection/TeamSection';{/* i just added this one */}
 import PartnerSection from '../../components/PartnerSection';{/* i just added this one */}
 
 import { addToCart, addToWishList } from "../../store/actions/action";
-import ShopProduct from '../../components/ShopProduct';
 import api from "../../api";
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/footer/Footer';

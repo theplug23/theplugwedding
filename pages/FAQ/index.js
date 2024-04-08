@@ -3,7 +3,6 @@ import PageTitle from '../../components/pagetitle/PageTitle';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/footer/Footer'
 import PartnerSection from '../../components/PartnerSection';
-import FormSection from '../../components/FormSection/FormSection';
 import FAQSection from '../../components/FaqSection/FaqSection';
 import Scrollbar from '../../components/scrollbar/scrollbar'
 import { Helmet } from 'react-helmet';

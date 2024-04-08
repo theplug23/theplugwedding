@@ -1,17 +1,10 @@
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import About from '../components/about/about';
-import ServiceSection from '../components/ServiceSection/ServiceSection';
 import FunFact from '../components/FunFact/FunFact';
 import Testimonial from '../components/Testimonial/Testimonial';
-import ProjectSection from '../components/ProjectSection/ProjectSection';
 import BannerSec from '../components/BannerSec/BannerSec';
-import TeamSection from '../components/TeamSection/TeamSection';
-import PartnerSection from '../components/PartnerSection';
 import Product from '../components/Product';
-import RsvpSection from '../components/RsvpSection/RsvpSection';
-import PricingSection from '../components/PricingSection/PricingSection';
-import BlogSection from '../components/BlogSection/BlogSection';
 import Footer from '../components/footer/Footer';
 import Scrollbar from '../components/scrollbar/scrollbar';
 import { connect } from "react-redux";

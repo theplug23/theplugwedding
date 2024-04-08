@@ -1,8 +1,8 @@
 import React from 'react'
 import RSVPFrom2 from '../RSVPFrom2/RSVPFrom2';
 import Image from 'next/image'
-import cimg from '/public/images/contact/shape-1.png'
-import cimg2 from '/public/images/contact/shape-2.png'
+//import cimg from '/public/images/contact/shape-1.png'
+//import cimg2 from '/public/images/contact/shape-2.png'
 
 const RsvpSectionS4 = (props) => {
     return (
@@ -19,8 +19,8 @@ const RsvpSectionS4 = (props) => {
                                     <RSVPFrom2 />
                                 </div>
                             </div>
-                            <div className="shape-1"><Image src={cimg} alt=""/></div>
-                            <div className="shape-2"><Image src={cimg2} alt=""/></div>
+                            {/* <div className="shape-1"><Image src={cimg} alt=""/></div>
+                            <div className="shape-2"><Image src={cimg2} alt=""/></div> */}
                         </div>
                     </div>
                 </div>

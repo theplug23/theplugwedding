@@ -973,7 +973,7 @@ const PortfolioSectionS2 = (props) => {
                                                         height="100%"
                                                     >
                                                         {({ ref, open }) => (
-                                                            <img ref={ref} onClick={open} src={image.Pimg} alt='image_portfolio' />
+                                                            <img ref={ref} onClick={open} src={image.Pimg} alt={`image_portfolio` + i} />
                                                         )}
                                                     </Item>
                                                 </div>

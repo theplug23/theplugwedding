@@ -1,5 +1,4 @@
 import React from "react";
-import blogs from '../../api/blogs'
 import Link from "next/link";
 import SectionTitle from "../SectionTitle";
 import Image from 'next/image'
@@ -10,6 +9,7 @@ const ClickHandler = () => {
 }
 
 const BlogSection3 = (props) => {
+    const blogs = []
     return (
 
         <section className={`wpo-blog-section section-padding ${props.bClass}`}>

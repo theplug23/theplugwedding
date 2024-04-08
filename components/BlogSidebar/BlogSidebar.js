@@ -1,16 +1,11 @@
 import React from 'react';
 import Link from 'next/link'
-import Services from '../../api/service';
-import Projects from '../../api/projects';
-import blogs from '../../api/blogs'
-import about from '/public/images/blog/about-widget.jpg'
 import Image from 'next/image'
 import logo from '/public/images/THEPLUG-WEGGING_logo.png'
 import { useEffect ,useState } from 'react';
 import axios from 'axios';
 
 const BlogSidebar = (props) => {
-    
     const [posts, setPosts] = useState([])
     const [search, setSearch] = useState("")
 

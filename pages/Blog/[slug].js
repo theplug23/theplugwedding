@@ -1,22 +1,15 @@
 import React, { Fragment } from 'react';
 import { useRouter } from 'next/router'
-import blogs from '../../api/blogs'
 import Link from 'next/link'
 import PageTitle from '../../components/pagetitle/PageTitle';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/footer/Footer';
-import BlogSidebar from '../../components/BlogSidebar/BlogSidebar';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Image from 'next/image'
 import blog3 from '/public/images/blog-details/comments-author/wedding-user-8.png'
-import blog4 from '/public/images/blog-details/comments-author/img-2.jpg'
-import blog5 from '/public/images/blog-details/comments-author/img-3.jpg'
-import blog6 from '/public/images/blog-details/author.jpg'
-import gl1 from '/public/images/blog-details/1.jpg'
-import gl2 from '/public/images/blog-details/2.jpg'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { countText, countTitle, dateParser } from '../../utils';
+import { dateParser } from '../../utils';
 import moment from 'moment';
 import FormSection from '../../components/FormSection/FormSection';
 import MapSection from '../../components/MapSection/MapSection';
@@ -27,7 +20,6 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import {shuffleArray} from '../../utils/index.js'
 import { imagesBlogWifor } from '../../utils/data.js';
-import VideoModal from '../../components/ModalVideo/VideoModal';
 
 
 const BlogSingle = (props) => {
@@ -67,20 +59,6 @@ const BlogSingle = (props) => {
             })
     }
     
-    
-    
-    //  function nextPost(id) {
-    //     const post = posts.find(post => post.id === (id+1))
-
-    //     if (!post === null) {
-    //         console.log(post)
-    //         setTitle(post?.title)
-    //     } else {
-    //         const post = posts.find(post => post.id === (id-1))
-    //         console.log(post)
-    //         setTitle(post?.title)
-    //     }
-    // }
     
     useEffect(() => {      
         
