@@ -46,28 +46,25 @@ const Videos = () => {
                 <div className="container">
                     <SectionTitle MainTitle={'FINDEN SIE HERAUS, WIE UNSERE KUNDEN DEN BESTEN TAG IHRES LEBENS HATTEN'} subTitle={'Unsere Hochzeitsvideos'}/>
                     <div className="row">
-                        <div className='col col-lg-8 col-12'>
-                            <div className="wpo-blog-content" style={{ display: 'flex', flexWrap: 'wrap' }}>
-                                {videos.map((video) => (                          
-                                    <div key={video.id} className='post format-video' style={{ flex: 'calc(50% - 10px)', marginBottom: '20px', boxSizing: 'border-box' }}>
-                                        <div className="entry-media video-holder" style={{ marginRight: '10px'}}>
-                                            <Image style={{width:"1882px", height:"250px"}} src={video.bgImg} alt={video.persons} />
-                                            <VideoModal src={video.link} />
-                                        </div>
-                                        <div className="entry-meta">
-                                            <ul>
-                                                <li><i className="fi flaticon-user"></i> By <Link href='/Ueber-uns'>theplug-wedding team</Link> </li>
-                                                <li><i className="fi flaticon-calendar"></i>{dateParser(video.date)}</li>
-                                                <li><i className="fi fi-sr-marker"></i> {video.place}</li>
-                                            </ul>
-                                        </div>
-                                        <div className="entry-details">
-                                            <h3><Link href='/Hochzeitsvideos'>{video.persons}</Link></h3>
-                                            <p>{video.description}</p>
-                                        </div>
+                        <div className="row col-lg-8 wpo-blog-content">                        
+                            {videos.map((video) => (                          
+                                <div key={video.id} className='post format-video col-lg-6'>
+                                    <div className="entry-media video-holder">
+                                        <Image style={{ minHeight: '250px' }} src={video.bgImg} alt={video.persons} />
+                                        <VideoModal src={video.link} />
                                     </div>
-                                ))}
-                            </div>
+                                    <div className="entry-meta">
+                                        <ul>
+                                            <li><i className="fi flaticon-user"></i> By <Link href='/Ueber-uns'>theplug-wedding team</Link></li>
+                                            <li><i className="fi flaticon-calendar"></i>{dateParser(video.date)}</li>
+                                            <li><i className="fi flaticon-location"></i> {video.place}</li>
+                                        </ul>
+                                    </div>
+                                    <div className="entry-details">
+                                        <h3><Link href='/Hochzeitsvideos'>{video.persons}</Link></h3>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                         <div className="col col-lg-4 col-12">
                             <div className="blog-sidebar">

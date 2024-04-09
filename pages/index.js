@@ -24,6 +24,7 @@ import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import VideoSection from '../components/VideoSection';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga4';
+import PartnerSection from '../components/PartnerSection';
 
 
 const HomePage = (props) => {
@@ -65,7 +66,7 @@ const HomePage = (props) => {
             img: '/images/portfolio/p/p228.jpg'
         },
         {
-            img: '/images/portfolio/p/p329.jpeg'
+            img: '/images/portfolio/p/p329.jpg'
         },
         {
             img: '/images/portfolio/p/p327.jpg'

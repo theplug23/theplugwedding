@@ -4,7 +4,7 @@ import vid3 from '/public/images/videos/Maxime&Maria.jpeg'
 import vid5 from '/public/images/videos/Lisa&Charles.png'
 import vid6 from '/public/images/videos/vladi-&-sarah.jpg'
 import vid7 from '/public/images/videos/Stephane.png'
-import vid8 from '/public/images/videos/Julia&Eric-1.jpg'
+import vid8 from '/public/images/videos/Julia&Eric.jpg'
 import vid9 from '/public/images/event/WifOR/Bild-127.jpg'
 
 const videos = [

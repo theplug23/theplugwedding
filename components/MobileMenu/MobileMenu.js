@@ -202,13 +202,13 @@ const menus = [
     }*/
     {
         id: 6,
-        title: 'KONTAKT',
-        link: '/Kontakt'
+        title: 'BLOG',
+        link: '/Blogs'
     },
     {
         id: 7,
-        title: 'BLOG',
-        link: '/Blogs'
+        title: 'KONTAKT',
+        link: '/Kontakt'
     }
 ]
 
