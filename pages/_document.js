@@ -35,13 +35,13 @@ export default class MyDocument extends Document {
           <meta property="og:locale" content="de_DE" />
           <meta property="og:url" content="https://www.theplug-wedding.com/" /> 
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="../public/assets/images/portfolio/p/p20.jpg" />
+          <meta property="og:image" content="/images/portfolio/p/p20.jpg" />
           <meta property="og:image:width" content="3000" />
           <meta property="og:image:height" content="2000" />
           <meta property="og:image:alt" content="Theplug Communication" />
           <meta property="og:image:type" content="image/jpg" />
           <meta property="og:site_name" content="THEPLUG WEDDING - Hochzeitsfotograf & Hochzeitsvideograf" />
-          <meta property="og:image:secure_url" content="../public/assets/images/portfolio/p/p20.jpg" />
+          <meta property="og:image:secure_url" content="/images/portfolio/p/p20.jpg" />
           <meta property="og:title" 
             content="Theplug Wedding - Event & Hochzeitsfotograf - Event & Hochzeitsvideograf | in Darmstadt, Frankfurt am Main, Rhein-Main-Gebiet, Odenwald, Baden-Württemberg, Rheinland-Pfalz, Saarland, deutschlandweit und international." />
           <meta
