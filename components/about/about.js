@@ -22,6 +22,10 @@ import mkoff14 from '../../public/images/about/mkoff14.jpg'
 import mkoff15 from '../../public/images/about/mkoff15.jpg' 
 import mkoff16 from '../../public/images/about/mkoff16.jpg'
 import mkoff17 from '../../public/images/about/mkoff17.jpg'
+import mkoff18 from '../../public/images/about/mkoff18.jpg'
+import mkoff19 from '../../public/images/about/mkoff19.jpg'
+import mkoff20 from '../../public/images/about/mkoff20.jpg'
+import mkoff21 from '../../public/images/about/mkoff21.jpg'
 import cm1 from '../../public/images/about/IMG_2092.jpg'
 import cm2 from '../../public/images/about/Photo-10.jpg'
 import abimg2 from '../../public/images/THEPLUG-WEGGING_logo.png'
@@ -151,6 +155,18 @@ const MkoffArray = [
     },
     {
         hImg: mkoff17
+    },
+    {
+        hImg: mkoff18
+    },
+    {
+        hImg: mkoff19
+    },
+    {
+        hImg: mkoff20
+    },
+    {
+        hImg: mkoff21
     }
 ]
 
