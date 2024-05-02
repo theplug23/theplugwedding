@@ -26,6 +26,7 @@ import mkoff18 from '../../public/images/about/mkoff18.jpg'
 import mkoff19 from '../../public/images/about/mkoff19.jpg'
 import mkoff20 from '../../public/images/about/mkoff20.jpg'
 import mkoff21 from '../../public/images/about/mkoff21.jpg'
+import mkoff23 from '../../public/images/about/mkoff23.jpg'
 import cm1 from '../../public/images/about/IMG_2092.jpg'
 import cm2 from '../../public/images/about/Photo-10.jpg'
 import abimg2 from '../../public/images/THEPLUG-WEGGING_logo.png'
@@ -167,6 +168,9 @@ const MkoffArray = [
     },
     {
         hImg: mkoff21
+    },
+    {
+        hImg: mkoff23
     }
 ]
 
