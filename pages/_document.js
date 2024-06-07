@@ -65,6 +65,8 @@ export default class MyDocument extends Document {
             }}
           />
           <script  async src="https://www.googletagmanager.com/gtag/js?id=G-B5PGZNWSDD"></script>
+            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+            <div class="elfsight-app-d7ac4587-d61c-49dc-882e-bcdd704ce704" data-elfsight-app-lazy></div>
         </body>
       </Html>
     )
