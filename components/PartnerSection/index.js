@@ -11,6 +11,7 @@ import pimg7 from '/public/images/partners/Proven-Expert-Logo.webp'
 import pimg8 from '/public/images/partners/TraumFotograf.png'
 import pimg9 from '/public/images/partners/trustlocal_logo.svg'
 import pimg10 from '/public/images/partners/zankyou-logo.svg'
+import pimg11 from '/public/images/partners/cakebynoemi_logo.png'
 import SectionTitle from "../SectionTitle";
 
 const partners = [
@@ -43,7 +44,10 @@ const partners = [
     },
     {
         pImg: pimg10,
-    }
+    },
+    {
+        pImg: pimg11,
+    },
 ]
 
 
