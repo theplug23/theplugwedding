@@ -20,7 +20,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import {shuffleArray} from '../../utils/index.js'
 import { imagesBlogWifor } from '../../utils/data.js';
-
+import Newsletter from '../../components/Newsletter';
 
 const BlogSingle = (props) => {
     const router = useRouter()
@@ -122,7 +122,7 @@ const BlogSingle = (props) => {
                                     <h2>{post.title}</h2>
                                     
                                     <div dangerouslySetInnerHTML={{ __html: post.content}}></div>
-
+                                    <p style={{ cursor: 'pointer'}}>Voir les photos du mariage</p>
                                     {post.isGallery &&
                                         <div className="sortable-gallery">
                                             <div className="gallery-filters"></div>
@@ -155,6 +155,7 @@ const BlogSingle = (props) => {
                                         </div>
                                     }
                                 </div><br/>
+                                <Newsletter/><br/><br/><br/><br/>
 
                                 {/* <div className="more-posts">
 
