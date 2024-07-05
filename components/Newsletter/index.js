@@ -36,15 +36,13 @@ const styleMediumScreen = {
     width: '80%'
 }
 
-export default function Newsletter() {
-    const [open, setOpen] = useState(false);
+export default function Newsletter () {
+
     const [email, SetEmail] = useState('')
-    const [width, setWidth] = useState(window.innerWidth)
     const [forms, setForms] = useState({email: email})
     const [statusEmail, setStatusEmail] = useState(0)
     
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    
     
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -55,6 +53,7 @@ export default function Newsletter() {
             console.log(result.text)
             setStatusEmail(2)
             localStorage.setItem('tpw-newsletter', JSON.stringify({email: email}))
+            handleClose()
         })
         .catch((error) => {
             console.log(error)
@@ -64,7 +63,6 @@ export default function Newsletter() {
 
     return (
         <div>
-            {/* <Button onClick={handleOpen}>Open modal</Button> */}
             <section className="wpo-contact-pg-section">
                 <div className="container">   
                     <div className="wpo-contact-form-area"> 
