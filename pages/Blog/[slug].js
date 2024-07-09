@@ -19,7 +19,7 @@ import { toast } from 'react-toastify';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import {shuffleArray} from '../../utils/index.js'
-import { imagesBlogWifor, imagesLauraFederico } from '../../utils/data.js';
+import { imagesBlogWifor, imagesLaurafrederico } from '../../utils/data.js';
 import Newsletter from '../../components/Newsletter';
 import emailjs from '@emailjs/browser'
 
@@ -43,7 +43,7 @@ const BlogSingle = (props) => {
 
     const valeurs = {
         imagesBlogWifor: imagesBlogWifor,
-        imagesLauraFederico: imagesLauraFederico
+        imagesLaurafrederico: imagesLaurafrederico
     }
 
     const [emailNews, setEmailNews] = useState('')
@@ -71,8 +71,8 @@ const BlogSingle = (props) => {
             
         })
         .catch((error) => {
-            // setOpen(false)
-            // setShowGalleryModal(true)
+            setOpen(false)
+            setShowGalleryModal(true)
             console.log(error)
             setStatusEmail(3)
         })
