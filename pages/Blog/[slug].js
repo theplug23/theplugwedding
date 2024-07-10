@@ -137,7 +137,7 @@ const BlogSingle = (props) => {
    
     const handleParagraphClick = () => {
         setShowGalleryModal(true);
-        setOpen(true);
+        // setOpen(true);
     }
 
     return (
@@ -168,7 +168,7 @@ const BlogSingle = (props) => {
                                     <h2>{post.title}</h2>
                                     
                                     <div dangerouslySetInnerHTML={{ __html: post.content}}></div>
-                                    <p style={{ cursor: 'pointer'}} onClick={handleOpen}>Siehe Bilder</p>
+                                    <p style={{ cursor: 'pointer', display: showGalleryModal ? 'none' : 'block'}} onClick={handleOpen}>Siehe Bilder</p>
 
                                     {/* Afficher les photos apres avoir entrer un mail */}
 
