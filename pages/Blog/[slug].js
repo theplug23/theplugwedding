@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useRef } from 'react';
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import PageTitle from '../../components/pagetitle/PageTitle';
@@ -46,19 +46,19 @@ const BlogSingle = (props) => {
         imagesLaurafrederico: imagesLaurafrederico
     }
 
-    const [emailNews, setEmailNews] = useState('')
+    const [emailNews, setEmailNews] = useState({email: ''})
     const [forms, setForms] = useState({email: emailNews})
     const [statusEmail, setStatusEmail] = useState(0)
     
     
-    
+    const form = useRef()
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(e)
         setStatusEmail(1)
-        setForms({email: emailNews})
-        console.log(forms)
-        emailjs.send('service_76lbexa', 'template_bm6ewab', forms, 'AC_DTNvzmjFi3HHjs')
+        setEmailNews({email: emailNews})
+        console.log(JSON.stringify(emailNews))
+        emailjs.send('service_76lbexa', 'template_bm6ewab', {'user_email':emailNews}, 'AC_DTNvzmjFi3HHjs')
         .then((result) => {
             console.log(result.text)
             setStatusEmail(2)
@@ -71,8 +71,6 @@ const BlogSingle = (props) => {
             
         })
         .catch((error) => {
-            setOpen(false)
-            setShowGalleryModal(true)
             console.log(error)
             setStatusEmail(3)
         })
@@ -191,6 +189,7 @@ const BlogSingle = (props) => {
                                                                                     placeholder="Deine E-Mail Adresse"
                                                                                     onChange={(e) => setEmailNews(e.target.value)}
                                                                                     required
+                                                                                    name='user_email'
                                                                                 />
                                                                             </div>
                                                                         </div>
