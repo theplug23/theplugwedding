@@ -35,6 +35,17 @@ const BlogSingle = (props) => {
     const [loading, setLoading] = useState(true);
     const [showGalleryModal, setShowGalleryModal] = useState(false);
     const [open, setOpen] = useState(false);
+
+    const [isSubscribed, setIsSubscribed] = useState(false);
+
+    useEffect(() => {
+    // Vérification de l'inscription à la newsletter
+    const storedData = JSON.parse(localStorage.getItem('tpw-newsletter'));
+    if (storedData) {
+      setIsSubscribed(!!storedData.email);
+    }
+  }, []);
+
     const handleOpen = () => {
         setOpen(true);
         console.log(open);
@@ -61,6 +72,7 @@ const BlogSingle = (props) => {
         emailjs.send('service_76lbexa', 'template_bm6ewab', {'user_email':emailNews}, 'AC_DTNvzmjFi3HHjs')
         .then((result) => {
             console.log(result.text)
+            setIsSubscribed(true)
             setStatusEmail(2)
             localStorage.setItem('tpw-newsletter', JSON.stringify({email: emailNews}))
             setOpen(false)
@@ -168,11 +180,11 @@ const BlogSingle = (props) => {
                                     <h2>{post.title}</h2>
                                     
                                     <div dangerouslySetInnerHTML={{ __html: post.content}}></div>
-                                    <p style={{ cursor: 'pointer', display: showGalleryModal ? 'none' : 'block'}} onClick={handleOpen}>Siehe Bilder</p>
+                                    <p style={{ cursor: 'pointer', display: isSubscribed ? 'none' : 'block'}} onClick={handleOpen}>Siehe Bilder</p>
 
                                     {/* Afficher les photos apres avoir entrer un mail */}
 
-                                    {open &&
+                                    {open && !isSubscribed &&
                                         <div>
                                             <section className="wpo-contact-pg-section">
                                                 <div className="container">   
@@ -209,7 +221,7 @@ const BlogSingle = (props) => {
                                             </section>
                                         </div>
                                     }<br/>
-                                    {(post.isGallery && showGalleryModal) &&
+                                    {isSubscribed && post.isGallery &&
                                         <div className="sortable-gallery">
                                             <div className="gallery-filters"></div>
                                             <div className="row">
