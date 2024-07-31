@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import abimg from '../../public/images/about/img.jpg'
 import abimg1 from '../../public/images/about/2.jpg'
 import abimg3 from '../../public/images/about/3.jpg'
@@ -36,6 +36,7 @@ import Image from 'next/image'
 
 // Things i added for the slide show
 import Slider from "react-slick";
+import { Button } from '@mui/material'
 
 var settings = {
     dots: false,
@@ -102,10 +103,7 @@ const PhiArray =[
     }
 ]
 
-
-
 const MkoffArray = [
-
     {
         hImg: mkoff1
     },
@@ -182,6 +180,8 @@ const ClickHandler = () => {
 }
 
 const About = (props) => {
+    const [showMore, setShowMore] = useState(true)
+
     return (
         <section className="wpo-about-section section-padding">
             <div className="container">
@@ -211,16 +211,19 @@ const About = (props) => {
                             <div className="wpo-about-text">
                                 <h2 style={{color:'#b99226'}} >Über Stephane</h2>
                                 
-                                <p style={{fontSize:'25px', fontFamily:'Montserrat'}}>Hey liebes Brautpaar😊,<br />
-Ich bin Fotograf-Videograf-Drohne Pilot- leidenschaftlicher "Story Teller" mit mehr als 10 Jahren Erfahrung in Hochzeitsfoto- und Videografie in Deutschland und im Ausland. Ich habe Mediengestaltung mit Schwerpunkt Foto-und Videoproduktion studiert und möchte euch dabei helfen, die bildliche Geschichte des schönsten Tages eures Lebens zu schreiben. 
-Ich spreche fließend deutsch, französisch und englisch.
-Ich würde mich sehr freuen, euch begleiten zu dürfen.
-
-Liebe Grüße
-
-Eur Stephane Kamwa (THEPLUG)
-
+                                <p style={{fontSize:'20px', fontFamily:'Montserrat'}}>Liebe Brautpaare,<br /><br />
+                                Ich bin Stéphane Kamwa, Hochzeitsfotograf und -videograf.<br /><br />
+                                Vor 13 Jahren bin ich nach Deutschland gekommen, um zu studieren. Zu Beginn meines Studiums in Medieninformatik an der Hochschule Mittelhessen habe ich die Fotografie und Videografie entdeckt. Dieser Beruf hat mir ermöglicht, mein Studium in Deutschland zu finanzieren.<br /><br />
                                 </p>
+                                {!showMore && <p style={{fontSize:'20px', fontFamily:'Montserrat', marginTop: -50}}>
+                                Mit 10 Jahren Erfahrung in der Hochzeitsfotografie und -videografie bin ich leidenschaftlich darum bemüht, die kostbarsten Momente festzuhalten. Ich liebe es, eure Geschichte des Tages durch wunderschöne bewegte Bilder zu erzählen. Meine Filme und Fotos sind die perfekten Erinnerungen an den schönsten Tag eures Lebens – ein einzigartiges Andenken, das ihr niemals vergessen werdet.<br /><br />
+                                Wenn euch ein authentischer Stil, echte Emotionen und ungestellte Posen gefallen, freue ich mich auf eure Anfrage, um eure persönliche Geschichte zu erzählen.<br /><br />
+                                Nach dem Ende meines Studiums konnte ich nicht lange in einem formellen Job bleiben, weil mir das Gefühl fehlte, Menschen durch meine Arbeit glücklich zu machen. Ich glaube, es war keine bewusste Entscheidung, Hochzeitsfotograf und -videograf zu werden. Es war das Schicksal, das mich in diese Richtung gelenkt hat. Und wisst ihr was? Ich würde nichts daran ändern. Ich halte mich für den glücklichsten Menschen auf der Welt, weil ich den Beruf ausüben kann, in den ich mich verliebt habe.<br /><br />
+                                Schaut euch gerne mein Portfolio an und entdeckt mein Universum.
+                                </p>}
+                                <Button style={{fontFamily:'Montserrat', marginTop: -50, color:'#b99226'}} onClick={() => setShowMore(!showMore)}>
+                                    {showMore ? 'Mehr sehen' : 'Siehe weniger'}
+                                </Button><br />
                                 <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="/Kontakt" className="theme-btn">KONTAKT UNS</Link>
                             </div>
                         </div>
@@ -232,7 +235,7 @@ Eur Stephane Kamwa (THEPLUG)
                             <div className="wpo-about-text">
                                 <h2 style={{color:'#b99226'}} >Über Philipp</h2>
                                 
-                                <p style={{fontSize:'25px', fontFamily:'Montserrat'}}>Mein Name ist Philipp Kopp und ich bin ein leidenschaftlicher Videograf mit einem starken Fokus auf Ästhetik und visueller Storytelling-Kunst. Seit einem Jahrzehnt habe ich die Freude, mit Unternehmen, talentierten Musikern und inspirierenden Künstlern zu arbeiten. Meine Reise führte mich von den zauberhaften Landschaften des Odenwaldes zu internationalen Bühnen und Projekten. Meine Stärke liegt darin, nicht nur Momente festzuhalten, sondern auch Emotionen in jedem Bild und jeder Sequenz einzufangen. Jedes Projekt ist für mich eine Chance, die Einzigartigkeit und Schönheit in Bewegtbildern festzuhalten. Unsere kreative Partnerschaft ermöglicht es uns, Synergien zu schaffen, die eure Projekte auf ein neues Level heben.
+                                <p style={{fontSize:'20px', fontFamily:'Montserrat'}}>Mein Name ist Philipp Kopp und ich bin ein leidenschaftlicher Videograf mit einem starken Fokus auf Ästhetik und visueller Storytelling-Kunst. Seit einem Jahrzehnt habe ich die Freude, mit Unternehmen, talentierten Musikern und inspirierenden Künstlern zu arbeiten. Meine Reise führte mich von den zauberhaften Landschaften des Odenwaldes zu internationalen Bühnen und Projekten. Meine Stärke liegt darin, nicht nur Momente festzuhalten, sondern auch Emotionen in jedem Bild und jeder Sequenz einzufangen. Jedes Projekt ist für mich eine Chance, die Einzigartigkeit und Schönheit in Bewegtbildern festzuhalten. Unsere kreative Partnerschaft ermöglicht es uns, Synergien zu schaffen, die eure Projekte auf ein neues Level heben.
 
                                 </p>
                                 <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="/Kontakt" className="theme-btn">KONTAKT UNS</Link>
@@ -267,7 +270,7 @@ Eur Stephane Kamwa (THEPLUG)
                             <div className="wpo-about-text">
                                 <h2 style={{color:'#b99226'}} >Unsere Geschichte</h2>
                                 {/* <h4 style={{fontFamily:'Montserrat'}}>Our Company Has a Great Mission & Policy</h4> */}
-                                <p className='ff' style={{fontSize:'25px'}} >Nach vielen Jahren, in denen ich mich in der Hochzeitsbranche bewegt habe, wollte ich einen Schritt weitergehen. Grund genug für mich, die besten Hochzeitsdienstleister auf dieser Plattform zu sammeln.
+                                <p className='ff' style={{fontSize:'20px'}} >Nach vielen Jahren, in denen ich mich in der Hochzeitsbranche bewegt habe, wollte ich einen Schritt weitergehen. Grund genug für mich, die besten Hochzeitsdienstleister auf dieser Plattform zu sammeln.
                                 </p>
                                 <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="/Kontakt" className="theme-btn">KONTAKT UNS</Link>
                             </div>
@@ -288,19 +291,18 @@ Eur Stephane Kamwa (THEPLUG)
                                 <div className="wpo-about-img">
                                     {/* <Image src={abimg} alt="abimg"/> */}
                                     <Slider {...settings}>
-                            {
-                                MkoffArray.map((mkoff, r) => (
-                                    <div className="wpo-hero-item" key={r}>
-                                        <div className="wpo-hero-img">
-                                            <Image src={mkoff.hImg} alt="" />
-                                            <div className="wpo-hero-text">
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))
-                            }
-                        </Slider>
- 
+                                        {
+                                            MkoffArray.map((mkoff, r) => (
+                                                <div className="wpo-hero-item" key={r}>
+                                                    <div className="wpo-hero-img">
+                                                        <Image src={mkoff.hImg} alt="" />
+                                                        <div className="wpo-hero-text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))
+                                        }
+                                    </Slider>
                                 </div>
                             </div>
                         </div>
@@ -308,7 +310,7 @@ Eur Stephane Kamwa (THEPLUG)
                             <div className="wpo-about-text">
                                 <h2 style={{color:'#b99226'}}>Making off</h2>
                                 {/* <h4 style={{fontFamily:'Montserrat'}}>We Are The Best Wedding Planner & Decor.</h4> */}
-                                <p style={{fontSize:'25px',textAlign:'justify', fontFamily:'Montserrat'}}>
+                                <p style={{fontSize:'20px',textAlign:'justify', fontFamily:'Montserrat'}}>
                                 Wie man auf den Bildern sehen kann, ist ein Tag mit mir ein Kinderspiel. Ich bin ein Mensch mit einer enormen Lebensfreude, der das Leben immer von der positiven Seite nimmt. Diese Lebensfreude kämpfe ich, um sie an alle meine Klienten weiterzugeben. Die Atmosphäre während der Fotoshootings ist sehr cool, wir lachen viel.
                                 </p>
                                 <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="/Kontakt" className="theme-btn">KONTAKT UNS</Link>
