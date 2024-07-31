@@ -34,24 +34,24 @@ const Product = ({ products, addToCartProduct, addToWishListProduct }) => {
                           </button> */}
                         </li>
                         <li>
-                          <button
+                          {/* <button
                             data-bs-toggle="tooltip"
                             data-bs-html="true"
                             title="Book now"
                             onClick={() => addToCartProduct(product)}
                           >
                             Book Now
-                          </button>
+                          </button> */}
                         </li>
                       </ul>
                     </div>
                     <div className="wpo-product-text">
-                      <h3><Link onClick={ClickHandler} href='' as={``}>{product.title}</Link></h3>
+                      <h3><Link onClick={ClickHandler} href='https://www.maman2noemi.com/' target="_blank" as={`https://www.maman2noemi.com/`}>{product.title}</Link></h3>
                       {/* <h3><Link onClick={ClickHandler} href='/product-single/[slug]' as={`/product-single/${product.slug}`}>{product.title}</Link></h3> */}
-                      <ul>
+                      {/* <ul>
                         <li>€{product.delPrice}</li>
                         <li>€{product.price}</li>
-                      </ul>
+                      </ul> */}
                     </div>
                   </div>
                 </div>

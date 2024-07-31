@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -38,7 +38,7 @@ const styleMediumScreen = {
 
 export default function RecupEmail() {
     const [open, setOpen] = useState(false);
-    const [email, SetEmail] = useState('')
+    const [email, SetEmail] = useState({email: ''})
     const [width, setWidth] = useState(window.innerWidth)
     const [forms, setForms] = useState({email: email})
     const [statusEmail, setStatusEmail] = useState(0)
@@ -62,12 +62,15 @@ export default function RecupEmail() {
             window.removeEventListener('scroll', handleScroll)
         }
     }, [open]);
-    
+
+    const form = useRef()
     const handleSubmit = (e) => {
         e.preventDefault()
+        console.log(e)
         setStatusEmail(1)
-        setForms({email: email})
-        emailjs.send('service_76lbexa', 'template_bm6ewab', forms, 'AC_DTNvzmjFi3HHjs')
+        SetEmail({email: email})
+        console.log(JSON.stringify(email))
+        emailjs.send('service_76lbexa', 'template_bm6ewab', {'user_email':email}, 'AC_DTNvzmjFi3HHjs')
         .then((result) => {
             console.log(result.text)
             setStatusEmail(2)
@@ -108,6 +111,7 @@ export default function RecupEmail() {
                                                                 placeholder="Deine E-Mail Adresse"
                                                                 onChange={(e) => SetEmail(e.target.value)}
                                                                 required
+                                                                name='user_email'
                                                             />
                                                         </div>
                                                     </div>

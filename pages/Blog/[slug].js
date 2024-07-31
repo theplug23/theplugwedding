@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useRef } from 'react';
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import PageTitle from '../../components/pagetitle/PageTitle';
@@ -19,7 +19,9 @@ import { toast } from 'react-toastify';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import {shuffleArray} from '../../utils/index.js'
-import { imagesBlogWifor } from '../../utils/data.js';
+import { imagesBlogWifor, imagesLaurafrederico } from '../../utils/data.js';
+import Newsletter from '../../components/Newsletter';
+import emailjs from '@emailjs/browser'
 
 
 const BlogSingle = (props) => {
@@ -30,9 +32,60 @@ const BlogSingle = (props) => {
     const [name, setAuthor] = useState("");
     const [content, setText] = useState("");
     const [email, setMail] = useState("");
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
+    const [showGalleryModal, setShowGalleryModal] = useState(false);
+    const [open, setOpen] = useState(false);
+
+    const [isSubscribed, setIsSubscribed] = useState(false);
+
+    useEffect(() => {
+    // Vérification de l'inscription à la newsletter
+    const storedData = JSON.parse(localStorage.getItem('tpw-newsletter'));
+    if (storedData) {
+      setIsSubscribed(!!storedData.email);
+    }
+  }, []);
+
+    const handleOpen = () => {
+        setOpen(true);
+        console.log(open);
+    }
+    const handleClose = () => setOpen(false);
+
     const valeurs = {
-        imagesBlogWifor: imagesBlogWifor
+        imagesBlogWifor: imagesBlogWifor,
+        imagesLaurafrederico: imagesLaurafrederico
+    }
+
+    const [emailNews, setEmailNews] = useState({email: ''})
+    const [forms, setForms] = useState({email: emailNews})
+    const [statusEmail, setStatusEmail] = useState(0)
+    
+    
+    const form = useRef()
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(e)
+        setStatusEmail(1)
+        setEmailNews({email: emailNews})
+        console.log(JSON.stringify(emailNews))
+        emailjs.send('service_76lbexa', 'template_bm6ewab', {'user_email':emailNews}, 'AC_DTNvzmjFi3HHjs')
+        .then((result) => {
+            console.log(result.text)
+            setIsSubscribed(true)
+            setStatusEmail(2)
+            localStorage.setItem('tpw-newsletter', JSON.stringify({email: emailNews}))
+            setOpen(false)
+            setShowGalleryModal(true)
+            console.log(open)
+
+            handleClose()
+            
+        })
+        .catch((error) => {
+            console.log(error)
+            setStatusEmail(3)
+        })
     }
 
     const submitHandler = (e) => {
@@ -94,6 +147,11 @@ const BlogSingle = (props) => {
         return response.data;
     }
    
+    const handleParagraphClick = () => {
+        setShowGalleryModal(true);
+        // setOpen(true);
+    }
+
     return (
         <Fragment>
             <Helmet>
@@ -122,8 +180,48 @@ const BlogSingle = (props) => {
                                     <h2>{post.title}</h2>
                                     
                                     <div dangerouslySetInnerHTML={{ __html: post.content}}></div>
+                                    <p style={{ cursor: 'pointer', display: isSubscribed ? 'none' : 'block'}} onClick={handleOpen}>Siehe Bilder</p>
 
-                                    {post.isGallery &&
+                                    {/* Afficher les photos apres avoir entrer un mail */}
+
+                                    {open && !isSubscribed &&
+                                        <div>
+                                            <section className="wpo-contact-pg-section">
+                                                <div className="container">   
+                                                    <div className="wpo-contact-form-area"> 
+                                                        <div className="modalBody modal-body">
+                                                            <div className="modalBody modal-body">
+                                                                <form className="contact-validation-active" onSubmit={handleSubmit}>
+                                                                    <div className="row">
+                                                                        <div className="col-lg-12 col-12">
+                                                                            <div className="form-field">
+                                                                            <label>Willst Du immer auf dem neuesten Stand sein? Newsletter abonnieren</label>
+                                                                                <input
+                                                                                    type="email"
+                                                                                    placeholder="Deine E-Mail Adresse"
+                                                                                    onChange={(e) => setEmailNews(e.target.value)}
+                                                                                    required
+                                                                                    name='user_email'
+                                                                                />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="submit-area">
+                                                                        <button type="submit" className="theme-btn">
+                                                                            {statusEmail === 1 ? 'Bearbeitung...' 
+                                                                            : (statusEmail === 2 ? 'Erfolgreich !'                      
+                                                                            : (statusEmail === 3 ? 'Fehler !' : 'Senden'))}
+                                                                        </button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    }<br/>
+                                    {isSubscribed && post.isGallery &&
                                         <div className="sortable-gallery">
                                             <div className="gallery-filters"></div>
                                             <div className="row">
@@ -155,6 +253,7 @@ const BlogSingle = (props) => {
                                         </div>
                                     }
                                 </div><br/>
+                                {/* <Newsletter/><br/><br/><br/><br/> */}
 
                                 {/* <div className="more-posts">
 
