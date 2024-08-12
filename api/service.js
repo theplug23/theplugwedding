@@ -4,8 +4,8 @@ import photo from '/public/images/service/photo.jpg'
 const Services = [
     {
         id: 1,
-        title:'Angebot 1: 499€ für 2 Stunden',
-        slug:'Angebot 1: 499€ für 2 Stunden',
+        title:'Angebot 1: 599€ für 2 Stunden',
+        slug:'Angebot 1: 599€ für 2 Stunden',
         packages: [
             {
                 id: 1,
@@ -48,8 +48,8 @@ const Services = [
     },
     {
         id: 2,
-        title:'Angebot 2: 699€ für 3 Stunden',
-        slug:'Angebot 2: 699€ für 3 Stunden',
+        title:'Angebot 2: 799€ für 3 Stunden',
+        slug:'Angebot 2: 799€ für 3 Stunden',
         packages: [
             {
                 id: 1,
@@ -92,8 +92,8 @@ const Services = [
     },
     {
         id: 3,
-        title:'Angebot 3: 899€ für 4 Stunden',
-        slug:'Angebot 3: 899€ für 4 Stunden',
+        title:'Angebot 3: 999€ für 4 Stunden',
+        slug:'Angebot 3: 999€ für 4 Stunden',
         packages: [
             {
                 id: 1,
@@ -136,8 +136,8 @@ const Services = [
     },
     {
         id: 4,
-        title:'Angebot 4: 1099€ für 5 Stunden',
-        slug:'Angebot 4: 1099€ für 5 Stunden',
+        title:'Angebot 4: 1199€ für 5 Stunden',
+        slug:'Angebot 4: 1199€ für 5 Stunden',
         packages: [
             {
                 id: 1,
@@ -180,8 +180,8 @@ const Services = [
     },
     {
         id: 5,
-        title:'Angebot 5: 1299€ für 6 Stunden',
-        slug:'Angebot 5: 1299€ für 6 Stunden',
+        title:'Angebot 5: 1399€ für 6 Stunden',
+        slug:'Angebot 5: 1399€ für 6 Stunden',
         packages: [
             {
                 id: 1,
@@ -224,8 +224,8 @@ const Services = [
     },
     {
         id: 6,
-        title:'Angebot 6: 1499€ für 7 Stunden',
-        slug:'Angebot 6: 1499€ für 7 Stunden',
+        title:'Angebot 6: 1599€ für 7 Stunden',
+        slug:'Angebot 6: 1599€ für 7 Stunden',
         packages: [
             {
                 id: 1,
@@ -268,8 +268,8 @@ const Services = [
     },
     {
         id: 7,
-        title:'Angebot 7: 1689€ für 8 Stunden',
-        slug:'Angebot 7: 1689€ für 8 Stunden',
+        title:'Angebot 7: 1789€ für 8 Stunden',
+        slug:'Angebot 7: 1789€ für 8 Stunden',
         packages: [
             {
                 id: 1,
@@ -312,8 +312,8 @@ const Services = [
     },
     {
         id: 8,
-        title:'Angebot 8: 1889€ für 9 Stunden',
-        slug:'Angebot 8: 1889€ für 9 Stunden',
+        title:'Angebot 8: 1989€ für 9 Stunden',
+        slug:'Angebot 8: 1989€ für 9 Stunden',
         packages: [
             {
                 id: 1,
@@ -356,8 +356,8 @@ const Services = [
     },
     {
         id: 9,
-        title:'Angebot 9: 1989€ für 10 Stunden',
-        slug:'Angebot 9: 1989€ für 10 Stunden',
+        title:'Angebot 9: 2089€ für 10 Stunden',
+        slug:'Angebot 9: 2089€ für 10 Stunden',
         packages: [
             {
                 id: 1,
@@ -400,8 +400,8 @@ const Services = [
     },
     {
         id: 10,
-        title:'Angebot 10: 2089€ für 11 Stunden',
-        slug:'Angebot 10: 2089€ für 11 Stunden',
+        title:'Angebot 10: 2189€ für 11 Stunden',
+        slug:'Angebot 10: 2189€ für 11 Stunden',
         packages: [
             {
                 id: 1,
@@ -444,8 +444,8 @@ const Services = [
     },
     {
         id: 11,
-        title:'Angebot 11: 2289€ für 12 Stunden',
-        slug:'Angebot 11: 2289€ für 12 Stunden',
+        title:'Angebot 11: 2389€ für 12 Stunden',
+        slug:'Angebot 11: 2389€ für 12 Stunden',
         packages: [
             {
                 id: 1,

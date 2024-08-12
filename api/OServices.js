@@ -4,8 +4,8 @@ import photo_video from '/public/images/service/photo-video.jpg'
 const OServices = [
     {
         id: 1,
-        title:'Angebot 1: 2099€ für 2 Stunden',
-        slug:'Angebot 1: 2099€ für 2 Stunden',
+        title:'Angebot 1: 2199€ für 2 Stunden',
+        slug:'Angebot 1: 2199€ für 2 Stunden',
         packages: [
             {
                 id: 1,
@@ -60,8 +60,8 @@ const OServices = [
     },
     {
         id: 2,
-        title:'Angebot 2: 2499€ für 3 Stunden',
-        slug:'Angebot 2: 2499€ für 3 Stunden',
+        title:'Angebot 2: 2599€ für 3 Stunden',
+        slug:'Angebot 2: 2599€ für 3 Stunden',
         packages: [
             {
                 id: 1,
@@ -116,8 +116,8 @@ const OServices = [
     },
     {
         id: 3,
-        title:'Angebot 3: 2999€ für 4 Stunden',
-        slug:'Angebot 3: 2999€ für 4 Stunden',
+        title:'Angebot 3: 3099€ für 4 Stunden',
+        slug:'Angebot 3: 3099€ für 4 Stunden',
         packages: [
             {
                 id: 1,
@@ -172,8 +172,8 @@ const OServices = [
     },
     {
         id: 4,
-        title:'Angebot 4: 3499€ für 5 Stunden',
-        slug:'Angebot 4: 3499€ für 5 Stunden',
+        title:'Angebot 4: 3599€ für 5 Stunden',
+        slug:'Angebot 4: 3599€ für 5 Stunden',
         packages: [
             {
                 id: 1,
@@ -228,8 +228,8 @@ const OServices = [
     },
     {
         id: 5,
-        title:'Angebot 5: 3999€ für 6 Stunden',
-        slug:'Angebot 5: 3999€ für 6 Stunden',
+        title:'Angebot 5: 4099€ für 6 Stunden',
+        slug:'Angebot 5: 4099€ für 6 Stunden',
         packages: [
             {
                 id: 1,
@@ -284,8 +284,8 @@ const OServices = [
     },
     {
         id: 6,
-        title:'Angebot 6: 4489€ für 7 Stunden',
-        slug:'Angebot 6: 4489€ für 7 Stunden',
+        title:'Angebot 6: 4589€ für 7 Stunden',
+        slug:'Angebot 6: 4589€ für 7 Stunden',
         packages: [
             {
                 id: 1,
@@ -340,8 +340,8 @@ const OServices = [
     },
     {
         id: 7,
-        title:'Angebot 7: 4990€ für 8 Stunden',
-        slug:'Angebot 7: 4990€ für 8 Stunden',
+        title:'Angebot 7: 5090€ für 8 Stunden',
+        slug:'Angebot 7: 5090€ für 8 Stunden',
         packages: [
             {
                 id: 1,
@@ -396,8 +396,8 @@ const OServices = [
     },
     {
         id: 8,
-        title:'Angebot 8: 5490€ für 9 Stunden',
-        slug:'Angebot 8: 5490€ für 9 Stunden',
+        title:'Angebot 8: 5590€ für 9 Stunden',
+        slug:'Angebot 8: 5590€ für 9 Stunden',
         packages: [
             {
                 id: 1,
