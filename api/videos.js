@@ -34,7 +34,7 @@ const videos = [
         bgImg: vid9,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/SzNp8ED68uM',
-        place: 'Allemagne'
+        place: 'Darmstadt - Allemagne'
     },
     {
         id: 4,

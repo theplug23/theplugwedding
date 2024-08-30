@@ -229,7 +229,7 @@ const About = (props) => {
                         </div>
                     </div>
                 </div> <br/>
-                <div className="wpo-about-wrap">
+                {/* <div className="wpo-about-wrap">
                     <div className="row">
                         <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-2">
                             <div className="wpo-about-text">
@@ -245,7 +245,6 @@ const About = (props) => {
                         <div className="col-lg-6 col-md-12 col-12 order-lg-2 order-1">
                              <div className="wpo-about-item">
                                 <div className="wpo-about-img">
-                                    {/* <Image src={abimg} alt="abimg"/> */}
                                     <Slider {...settings}>
                                         {
                                             PhiArray.map((phi, ph) => (
@@ -263,7 +262,7 @@ const About = (props) => {
                             </div>
                         </div>
                     </div>
-                </div> <br/>
+                </div> <br/> */}
                 <div className="wpo-about-wrap">
                     <div className="row">
                         <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-2">

@@ -6,6 +6,7 @@ import Footer from '../../components/footer/Footer'
 import Scrollbar from '../../components/scrollbar/scrollbar'
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga4';
+import AblaufSection from '../../components/AblaufSection/ablauf';
 
 
 const GalleryPage = (props) => {
@@ -25,6 +26,7 @@ const GalleryPage = (props) => {
             </Helmet>
             <Navbar/>
             <PageTitle pageTitle={'KONTAKT UNS'} pagesub={'Kontakt'}/> 
+            <AblaufSection />
             <Contactpage/>
             <Footer/>
             <Scrollbar/>

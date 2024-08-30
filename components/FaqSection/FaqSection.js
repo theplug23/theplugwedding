@@ -60,7 +60,7 @@ const FAQSection = (props) => {
         <section className={`wpo-Service-section section-padding ${props.pbClass}`}>
             <div className="container ff">
                 <SectionTitle MainTitle={'ENTDECKEN SIE EINIGE DER HÄUFIG GESTELLTEN FRAGEN'} subTitle={'Fragen & Antworten'} />
-                <div className="col col-lg-12"><br/>
+                <div className="col col-lg-12">
                     {faqData.map((item, index) => (
                         <div key={index} className="faq-item">
                             <div className="faq-question" onClick={() => toggleAccordion(index)} style={{cursor:"pointer"}}>
