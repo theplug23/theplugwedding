@@ -94,18 +94,13 @@ const menus = [
                 id: 43,
                 title: 'EVENTSFOTOGRAPHIE',
                 link: '/Eventsfotografie'
-            },
-            {
-                id: 44,
-                title: 'HOCHZEITSVIDEOS',
-                link: '/Hochzeitsvideos',
             }
         ]
     },
     {
         id: 4,
-        title: 'ANGEBOTE',
-        link: '/Angebote',
+        title: 'HOCHZEITSVIDEOS',
+        link: '/Hochzeitsvideos',
       /*   submenu: [
             {
                 id: 71,

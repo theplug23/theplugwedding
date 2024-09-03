@@ -35,7 +35,14 @@ const FAQPricing = (props) => {
     return (
         <section className={`wpo-Service-section section-padding ${props.pbClass}`}>
             <div className="container ff">
-                <div className="row">    
+                <div className='row'>
+                    <div className='col-lg-12'>
+                        <h3 style={{fontWeight: "bold", fontFamily:"Montserrat"}}>*Was ist ein Fomo-Edit ?</h3><br/>
+                        <p><b>Fear of missing Out :</b> Hier bekommt ihr das komplette Material, das ich an eurer Hochzeit gefilmt habe nochmals separat. Ich werde es chronologisch ordnen, d.h. alle nicht brauchbaren, verwackelten oder doppelt aufgezeichneten Aufnahmen werden herausgenommen und der Ton wird optimiert (der Ton aus der Kamera wird z.B. durch qualitativ hochwertigere Aufzeichnungen aus Lavalier- & Sprechmikrofonen ersetzt  - ohne Hintergrundmusik).</p><br/>
+                        <p>Wenn ihr den "FOMO"-Edit dazubucht, habt ihr zusätzlich ein langes Video, das ihr euch zu besonderen Angelegenheiten zuhause anschauen könnt, um euren kompletten Hochzeitstag Revue passieren zu lassen. Viele kleine Szenen, z.B. Umarmungen von Gästen beim Sektempfang etc., die es weder ins Highlightvideo, noch in den Hochzeitsfilm geschafft haben, könnt ihr euch darin nochmals ansehen.</p>
+                    </div>
+                </div>
+                <div className="row section-padding">    
                     <div className="col-lg-4">
                         <Image style={{ }} src={img} />
                     </div>

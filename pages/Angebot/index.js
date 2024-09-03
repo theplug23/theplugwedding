@@ -17,6 +17,7 @@ import Hochzeitsfilm from '../../components/Hochzeitsfilm/hochzeitsfilm';
 import ShortAbout from '../../components/ShortAbout/shortabout';
 import FeedbackVideo from '../../components/FeedbackVideo/feedbackvideo';
 import FAQPricing from '../../components/FaqPricing/faqpricing';
+import AdditionalOption from '../../components/AdditionalOption/addOption';
 
 const ShopPage = ({ addToCart, addToWishList }) => {
   
@@ -35,11 +36,11 @@ const ShopPage = ({ addToCart, addToWishList }) => {
     ReactGA.event({
       hitType: 'pageview',
       page: window.location.pathname,
-      title: "Pricing PAGE"
+      title: "Angebote PAGE"
     });
   }, []);
 
-  const password = "wedding";
+  const password = "Theplug-Wedding2025!";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -67,15 +68,16 @@ const ShopPage = ({ addToCart, addToWishList }) => {
   return (
     <Fragment>
       <Helmet>
-        <title>Pricing - THEPLUG WEDDING</title>
+        <title>Angebote - THEPLUG WEDDING</title>
       </Helmet>
       <Navbar />
-      <PageTitle pageTitle={'PRICING'} pagesub={'Pricing'} />
+      <PageTitle pageTitle={'ANGEBOTE'} pagesub={'Angebote'} />
       <Hochzeitsfilm />
       <ShortAbout />
       <FeedbackVideo />
       <InvestingSection /><br/>
       <ServiceSection pbClass={'pt-0'} />
+      <AdditionalOption />
       <FAQPricing />
       {/* <PartnerSection pClass={'section-padding'} />  */}
       <FormSection />

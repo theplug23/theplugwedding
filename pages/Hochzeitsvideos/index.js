@@ -111,9 +111,9 @@ const Videos = () => {
                                 </div>
 
                                 <div className="widget about-widget">
-                                        <h2>Wie können wireuch helfen!</h2>
-                                        <p>Ihr könnt uns eine genaue Nachricht hinterlassen, was ihr wollt, indem ihr auf die Schaltfläche unten klickt.</p>
-                                        <Link onClick={ClickHandler} href="/contact">Kontakt Uns</Link>
+                                    <h2>Wie können wireuch helfen!</h2>
+                                    <p>Ihr könnt uns eine genaue Nachricht hinterlassen, was ihr wollt, indem ihr auf die Schaltfläche unten klickt.</p>
+                                    <Link onClick={ClickHandler} href="/contact">Kontakt Uns</Link>
                                 </div>
                             </div>
                         </div>

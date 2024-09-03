@@ -77,7 +77,7 @@ const Header = (props) => {
                                                 <li><Link onClick={ClickHandler} href='/Portraitfotografie'>Portraitfotografie</Link></li>
                                                 <li><Link onClick={ClickHandler} href='/Hochzeitfotografie'>Hochzeitsfotografie</Link></li>
                                                 <li><Link onClick={ClickHandler} href='/Eventsfotografie'>Eventsfotografie</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/Hochzeitsvideos">Hochzeitsvideos</Link></li>
+                                                {/* <li><Link onClick={ClickHandler} href="/Hochzeitsvideos">Hochzeitsvideos</Link></li> */}
                                             </ul>
                                         </li>
                                                                 
@@ -85,7 +85,7 @@ const Header = (props) => {
                                             alt="Logo The PLUG" /></Link></li>
 
                                         <li className="menu-item-has-children">
-                                            <Link className='item-menu' href="/Angebote">ANGEBOTE</Link>
+                                            <Link className='item-menu' href="/Hochzeitsvideos">Hochzeitsvideos</Link>
                                             {/* <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} href="/shop">Shop</Link></li>
                                                 <li><Link onClick={ClickHandler} href="/product-single/Wedding-Cake">Shop Single</Link></li>
