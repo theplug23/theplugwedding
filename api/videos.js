@@ -7,6 +7,7 @@ import vid7 from '/public/images/videos/Stephane.png'
 import vid8 from '/public/images/videos/Julia&Eric.jpg'
 import vid9 from '/public/images/event/WifOR/Bild-127.jpg'
 import vid10 from '/public/images/videos/Joel&Glwadys.jpg'
+import vid11 from '/public/images/videos/Hena&Oliver.jpg'
 
 const videos = [
     {
@@ -90,6 +91,15 @@ const videos = [
         link: 'https://www.youtube.com/embed/UCexQAz54MY',
         place: 'Paderborn - Allemagne'
     },
+    {
+        id: 10,
+        persons: 'Hena & Oliver',
+        date: '19 July 2024',
+        bgImg: vid11,
+        // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
+        link: 'https://www.youtube.com/embed/qkUczp9-0jo',
+        place: 'Darmstadt - Allemagne'
+    }
     
 ]
 

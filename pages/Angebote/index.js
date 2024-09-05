@@ -1,11 +1,9 @@
-import React, { Fragment, useEffect  } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { connect } from "react-redux";
-import PageTitle from '../../components/pagetitle/PageTitle'
-import Scrollbar from '../../components/scrollbar/scrollbar'
-
-import ServiceSection from '../../components/ServiceSection/ServiceSection';{/* i just added this one */}
-import PartnerSection from '../../components/PartnerSection';{/* i just added this one */}
-
+import PageTitle from '../../components/pagetitle/PageTitle';
+import Scrollbar from '../../components/scrollbar/scrollbar';
+import ServiceSection from '../../components/ServiceSection/ServiceSection';
+import PartnerSection from '../../components/PartnerSection';
 import { addToCart, addToWishList } from "../../store/actions/action";
 import api from "../../api";
 import Navbar from '../../components/Navbar/Navbar';
@@ -14,9 +12,18 @@ import MapSection from '../../components/MapSection/MapSection';
 import FormSection from '../../components/FormSection/FormSection';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga4';
+import { toast } from 'react-toastify';
+
+import InvestingSection from '../../components/InvestingSection/investing';
+import Hochzeitsfilm from '../../components/Hochzeitsfilm/hochzeitsfilm';
+import ShortAbout from '../../components/ShortAbout/shortabout';
+import FeedbackVideo from '../../components/FeedbackVideo/feedbackvideo';
+import FAQPricing from '../../components/FaqPricing/faqpricing';
+import AdditionalOption from '../../components/AdditionalOption/addOption';
 
 const ShopPage = ({ addToCart, addToWishList }) => {
-
+  
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const productsArray = api();
 
   const addToCartProduct = (product, qty = 1) => {
@@ -27,48 +34,60 @@ const ShopPage = ({ addToCart, addToWishList }) => {
     addToWishList(product);
   };
 
-  const products = productsArray
-
   useEffect(() => {
     ReactGA.event({
-        hitType: 'pageview',
-        page: window.location.pathname,
-        title: "Angebote PAGE"
-    })
-  })
+      hitType: 'pageview',
+      page: window.location.pathname,
+      title: "Angebote PAGE"
+    });
+  }, []);
+
+  const password = "Theplug-Wedding2025!";
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const enteredPassword = document.getElementById("passwordInput").value;
+
+    if (enteredPassword === password) {
+      setIsAuthenticated(true); 
+    } else {
+      toast.error("Falsches Passwort");
+    }
+  };
+
+  if (!isAuthenticated) {
+    return (
+      <div style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", flexDirection: "column"}}>
+        <h1 style={{fontSize: "30px", textAlign: "center"}}>Bitte geben Sie das Passwort für den Zugang zu den Tarifen ein</h1><br/>
+        <form onSubmit={handleSubmit}>
+          <input type="password" id="passwordInput" placeholder="Passwort eingeben" style={{height: "95%", fontSize: "1.3rem"}}/>
+          <button type="submit" className='theme-btn'>einreichen</button>
+        </form>
+      </div>
+    );
+  }
 
   return (
-  <Fragment>
-    <Helmet>
-      <title>ANGEBOTE - THEPLUG WEDDING</title>
-    </Helmet>
-    <Navbar />
-    <PageTitle pageTitle={'ANGEBOTE'} pagesub={'Angebote'} />
-
-      {/* <section className="wpo-shop-page section-padding">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <ShopProduct
-                addToCartProduct={addToCartProduct}
-                addToWishListProduct={addToWishListProduct}
-                products={products}
-              />
-            </div>
-          </div> 
-
-        </div>
-      </section> */}
-      <br />
-      <ServiceSection pbClass={'pt-0'}/>
-      {/* <TeamSection /> */}
-      <PartnerSection pClass={'section-padding'}/> 
+    <Fragment>
+      <Helmet>
+        <title>Angebote - THEPLUG WEDDING</title>
+      </Helmet>
+      <Navbar />
+      <PageTitle pageTitle={'ANGEBOTE'} pagesub={'Angebote'} />
+      <Hochzeitsfilm />
+      <ShortAbout />
+      <FeedbackVideo />
+      <InvestingSection /><br/>
+      <ServiceSection pbClass={'pt-0'} />
+      <AdditionalOption />
+      <FAQPricing />
+      {/* <PartnerSection pClass={'section-padding'} />  */}
       <FormSection />
       <MapSection />
       <Footer />
       <Scrollbar />
-  </Fragment>
-  )
+    </Fragment>
+  );
 };
 
 export default connect(null, { addToCart, addToWishList })(ShopPage);

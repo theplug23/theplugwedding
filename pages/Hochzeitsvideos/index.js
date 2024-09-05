@@ -48,7 +48,7 @@ const Videos = () => {
                     <div className="row">
                         <div className="row col-lg-8 wpo-blog-content">                        
                             {videos.map((video) => (                          
-                                <div key={video.id} className='post format-video col-lg-6'>
+                                <div key={video.id} className='post format-video col-lg-12'>
                                     <div className="entry-media video-holder">
                                         <Image style={{ minHeight: '250px' }} src={video.bgImg} alt={video.persons} />
                                         <VideoModal src={video.link} />
