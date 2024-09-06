@@ -41,7 +41,7 @@ const Videos = () => {
                 <title>HOCHZEITSVIDEOS - THEPLUG WEDDING</title>
             </Helmet>
             <Navbar />
-            <PageTitle pageTitle={'HOCHZEITSVIDEOS'} pagesub={'Hochzeitsvideos'} />
+            <PageTitle pageTitle={'HOCHZEITSVIDEOS'} pagesub={'Hochzeitsvideos'} showVideo="true" isVideoPage={true}/>
             <section className="wpo-blog-pg-section section-padding">
                 <div className="container">
                     <SectionTitle MainTitle={'FINDEN SIE HERAUS, WIE UNSERE KUNDEN DEN BESTEN TAG IHRES LEBENS HATTEN'} subTitle={'Unsere Hochzeitsvideos'}/>

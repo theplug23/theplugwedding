@@ -12,6 +12,13 @@
 	@media(max-width: 767px) {
 		min-height: 250px;
 	}
+	.video-bg{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border: none;
+		z-index: -1;
+	}
 
 	.wpo-breadcumb-wrap {
 		text-align: center;

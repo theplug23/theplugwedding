@@ -8,7 +8,7 @@ import vid8 from '/public/images/videos/Julia&Eric.jpg'
 import vid9 from '/public/images/event/WifOR/Bild-127.jpg'
 import vid10 from '/public/images/videos/Joel&Glwadys.jpg'
 import vid11 from '/public/images/videos/Hena&Oliver.jpg'
-
+import vid13 from '/public/images/videos/Alena-Peter.png'
 const videos = [
     {
         id: 1,
@@ -99,8 +99,16 @@ const videos = [
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/qkUczp9-0jo',
         place: 'Darmstadt - Allemagne'
+    },
+    {
+        id: 11,
+        persons: 'Alena & Peter',
+        date: '09 August 2024',
+        bgImg: vid13,
+        // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
+        link: 'https://www.youtube.com/embed/Jq2zWXXbRzs',
+        place: 'Mühltal - Allemagne'
     }
-    
 ]
 
 export default videos;
