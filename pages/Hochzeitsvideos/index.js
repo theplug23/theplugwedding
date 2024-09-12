@@ -41,14 +41,14 @@ const Videos = () => {
                 <title>HOCHZEITSVIDEOS - THEPLUG WEDDING</title>
             </Helmet>
             <Navbar />
-            <PageTitle pageTitle={'HOCHZEITSVIDEOS'} pagesub={'Hochzeitsvideos'} showVideo="true" isVideoPage={true}/>
+            <PageTitle pageTitle={'HOCHZEITSVIDEOS'} pagesub={'Hochzeitsvideos'} showVideo={true} isVideoPage={true}/>
             <section className="wpo-blog-pg-section section-padding">
                 <div className="container">
                     <SectionTitle MainTitle={'FINDEN SIE HERAUS, WIE UNSERE KUNDEN DEN BESTEN TAG IHRES LEBENS HATTEN'} subTitle={'Unsere Hochzeitsvideos'}/>
                     <div className="row">
-                        <div className="row col-lg-8 wpo-blog-content">                        
+                        <div className="row col-lg-12 wpo-blog-content">                        
                             {videos.map((video) => (                          
-                                <div key={video.id} className='post format-video col-lg-12'>
+                                <div key={video.id} className='post format-video col-lg-6'>
                                     <div className="entry-media video-holder">
                                         <Image style={{ minHeight: '250px' }} src={video.bgImg} alt={video.persons} />
                                         <VideoModal src={video.link} />
@@ -61,12 +61,12 @@ const Videos = () => {
                                         </ul>
                                     </div>
                                     <div className="entry-details">
-                                        <h3><Link href='/Hochzeitsvideos'>{video.persons}</Link></h3>
+                                        <h3>{video.persons}</h3>
                                     </div>
                                 </div>
                             ))}
                         </div>
-                        <div className="col col-lg-4 col-12">
+                        {/* <div className="col col-lg-4 col-12">
                             <div className="blog-sidebar">
                                 <div className="widget about-widget">
                                     <div className="img-holder">
@@ -116,7 +116,7 @@ const Videos = () => {
                                     <Link onClick={ClickHandler} href="/contact">Kontakt Uns</Link>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>

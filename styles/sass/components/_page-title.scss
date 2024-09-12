@@ -2,7 +2,7 @@
 
 .wpo-page-title {
 	// background: url(/images/BAN_1.jpg) no-repeat center top / cover;
-	min-height: 360px;
+	min-height: 360px;//l'ancienne valeur etait 360px
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -18,6 +18,7 @@
 		height: 100%;
 		border: none;
 		z-index: -1;
+		object-fit: cover;
 	}
 
 	.wpo-breadcumb-wrap {

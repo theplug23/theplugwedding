@@ -72,7 +72,7 @@ const Header = (props) => {
                                         </li>
 
                                         <li className="menu-item-has-children">
-                                            <Link className='item-menu' href="/Hochzeitfotografie" style={{cursor: 'default'}}>Portfolio</Link>
+                                            <Link className='item-menu' href="/Hochzeitfotografie" style={{cursor: 'default'}}>Hochzeitsfotos</Link>
                                             <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} href='/Portraitfotografie'>Portraitfotografie</Link></li>
                                                 <li><Link onClick={ClickHandler} href='/Hochzeitfotografie'>Hochzeitsfotografie</Link></li>
@@ -85,7 +85,7 @@ const Header = (props) => {
                                             alt="Logo The PLUG" /></Link></li>
 
                                         <li className="menu-item-has-children">
-                                            <Link className='item-menu' href="/Hochzeitsvideos">Hochzeitsvideos</Link>
+                                            <Link className='item-menu' href="/Hochzeitsvideos">Hochzeitsfilme</Link>
                                             {/* <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} href="/shop">Shop</Link></li>
                                                 <li><Link onClick={ClickHandler} href="/product-single/Wedding-Cake">Shop Single</Link></li>

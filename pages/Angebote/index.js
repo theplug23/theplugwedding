@@ -25,6 +25,11 @@ const ShopPage = ({ addToCart, addToWishList }) => {
   
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const productsArray = api();
+  const [total, setTotal] = useState(0); // Ajoutez cette ligne pour gérer le total
+
+  const handleServiceSelect = (price) => {
+    setTotal(Number(price));
+  }
 
   const addToCartProduct = (product, qty = 1) => {
     addToCart(product, qty);
@@ -78,8 +83,8 @@ const ShopPage = ({ addToCart, addToWishList }) => {
       <ShortAbout />
       <FeedbackVideo />
       <InvestingSection /><br/>
-      <ServiceSection pbClass={'pt-0'} />
-      <AdditionalOption />
+      <ServiceSection pbClass={'pt-0'} onServiceSelect={handleServiceSelect}/>
+      <AdditionalOption total={total}/>
       <FAQPricing />
       {/* <PartnerSection pClass={'section-padding'} />  */}
       <FormSection />

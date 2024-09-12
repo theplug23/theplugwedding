@@ -4,6 +4,7 @@ import video from '/public/images/service/video.jpg'
 const VServices = [
     {
         id: 1,
+        price: 1299,
         title:'Angebot 1:  1299€ für 2 Stunden',
         slug:'Angebot 1:  1299€ für 2 Stunden',
         packages: [
@@ -52,6 +53,7 @@ const VServices = [
     },
     {
         id: 2,
+        price: 1699,
         title:'Angebot 2:  1699€ für 3 Stunden',
         slug:'Angebot 2:  1699€ für 3 Stunden',
         packages: [
@@ -100,6 +102,7 @@ const VServices = [
     },
     {
         id: 3,
+        price: 1999,
         title:'Angebot 3:  1999€ für 4 Stunden',
         slug:'Angebot 3:  1999€ für 4 Stunden',
         packages: [
@@ -148,6 +151,7 @@ const VServices = [
     },
     {
         id: 4,
+        price: 2299,
         title:'Angebot 4:  2299€ für 5 Stunden',
         slug:'Angebot 4:  2299€ für 5 Stunden',
         packages: [
@@ -196,6 +200,7 @@ const VServices = [
     },
     {
         id: 5,
+        price: 2499,
         title:'Angebot 5:  2499€ für 6 Stunden',
         slug:'Angebot 5:  2499€ für 6 Stunden',
         packages: [
@@ -244,6 +249,7 @@ const VServices = [
     },
     {
         id: 6,
+        price: 2789,
         title:'Angebot 6:  2789€ für 7 Stunden',
         slug:'Angebot 6:  2789€ für 7 Stunden',
         packages: [
@@ -292,6 +298,7 @@ const VServices = [
     },
     {
         id: 7,
+        price: 2950,
         title:'Angebot 7: 2950€ für 8 Stunden',
         slug:'Angebot 7: 2950€ für 8 Stunden',
         packages: [
@@ -340,6 +347,7 @@ const VServices = [
     },
     {
         id: 8,
+        price: 3199,
         title:'Angebot 8: 3199€ für 9 Stunden',
         slug:'Angebot 8: 3199€ für 9 Stunden',
         packages: [

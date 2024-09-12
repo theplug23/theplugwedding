@@ -3,21 +3,20 @@ import Link from 'next/link'
 
 const PageTitle = (props) => {
     return(
-        <section className="wpo-page-title">
+        <section className="wpo-page-title" style={{ height: props.showVideo ? '1300px' : 'auto' }}>
             {props.showVideo && (
-                <iframe src='https://www.youtube.com/embed/qkUczp9-0jo?autoplay=1&mute=1&loop=1&playlist=qkUczp9-0jo'
-                 allow='autoplay; encrypted-media'
+                <video src="/images/videos/videobg.mp4" autoPlay muted loop
                  className='video-bg'
-                 ></iframe>
+                 ></video>
             )}
             <div className="container">
                 <div className="row">
                     <div className="col col-xs-12">
                         <div className="wpo-breadcumb-wrap" style={{color: props.isVideoPage ? 'white' : 'black'}}>
-                            <h2>{props.pageTitle}</h2>
+                            <h2 style={{color: props.showVideo ? 'white' : 'black'}}>{props.pageTitle}</h2>
                             <ol className="link-banner">
-                                <li><Link href="/">Home</Link></li>
-                                <li><span>{props.pagesub}</span></li>
+                                <li><Link style={{color: props.showVideo ? 'white' : 'black'}} href="/">Home</Link></li>
+                                <li><span style={{color: props.showVideo ? 'white' : 'black'}}>{props.pagesub}</span></li>
                             </ol>
                         </div>
                     </div>

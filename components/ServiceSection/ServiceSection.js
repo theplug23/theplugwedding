@@ -14,6 +14,9 @@ const ServiceSection = (props) => {
         window.scrollTo(10, 0);
     }
 
+    const handlePriceClick = (price) => {
+        props.onServiceSelect(price);
+    }
 
     return (
 
@@ -30,7 +33,8 @@ const ServiceSection = (props) => {
                                         <Image src={service.img} alt="service" />
                                     </div>
                                     <div className="wpo-Service-text text-wrap">
-                                        <Link onClick={ClickHandler} style={{fontSize: '18px'}} href='' as={``}>{longueurTexte(service.title)}</Link>
+                                        <h2 style={{fontFamily:"Montserrat", fontSize:"18px"}} onClick={() => handlePriceClick(service.price)}>{service.price} €</h2>
+                                        {/* <Link onClick={ClickHandler} style={{fontSize: '18px'}} href='' as={``}>{longueurTexte(service.title)}</Link> */}
                                         {/* <Link onClick={ClickHandler} style={{fontSize: '18px'}} href='/service/[slug]' as={`/service/${service.slug}`}>{longueurTexte(service.title)}</Link> */}
                                     </div>
                                 </div>
@@ -56,7 +60,8 @@ const ServiceSection = (props) => {
                                         <Image src={oservice.img} alt="service" />
                                     </div>
                                     <div className="wpo-Service-text text-wrap">
-                                        <Link onClick={ClickHandler} style={{fontSize: '18px'}} href='' as={``}>{longueurTexte(oservice.title)}</Link>
+                                        <h2 style={{fontFamily:"Montserrat", fontSize:"18px"}} onClick={() => handlePriceClick(oservice.price)}>{oservice.price} €</h2>
+                                        {/* <Link onClick={ClickHandler} style={{fontSize: '18px'}} href='' as={``}>{longueurTexte(oservice.title)}</Link> */}
                                         {/* <Link onClick={ClickHandler} style={{fontSize: '18px'}} href='/service/[slug]' as={`/service/${oservice.slug}`}>{longueurTexte(oservice.title)}</Link> */}
                                     </div>
                                 </div>
@@ -82,7 +87,8 @@ const ServiceSection = (props) => {
                                         <Image src={vservice.img} alt="service" />
                                     </div>
                                     <div className="wpo-Service-text text-wrap">
-                                        <Link onClick={ClickHandler} style={{fontSize: '18px'}} href='' as={``}>{longueurTexte(vservice.title)}</Link>
+                                        <h2 style={{fontFamily:"Montserrat", fontSize:"18px"}} onClick={() => handlePriceClick(vservice.price)}>{vservice.price} €</h2>
+                                        {/* <Link onClick={ClickHandler} style={{fontSize: '18px'}} href='' as={``}>{longueurTexte(vservice.title)}</Link> */}
                                         {/* <Link onClick={ClickHandler} style={{fontSize: '18px'}} href='/service/[slug]' as={`/service/${vservice.slug}`}>{longueurTexte(vservice.title)}</Link> */}
                                     </div>
                                 </div>

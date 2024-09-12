@@ -4,6 +4,7 @@ import photo from '/public/images/service/photo.jpg'
 const Services = [
     {
         id: 1,
+        price : 599,
         title:'Angebot 1: 599€ für 2 Stunden',
         slug:'Angebot 1: 599€ für 2 Stunden',
         packages: [
@@ -48,6 +49,7 @@ const Services = [
     },
     {
         id: 2,
+        price : 799,
         title:'Angebot 2: 799€ für 3 Stunden',
         slug:'Angebot 2: 799€ für 3 Stunden',
         packages: [
@@ -92,6 +94,7 @@ const Services = [
     },
     {
         id: 3,
+        price : 999,
         title:'Angebot 3: 999€ für 4 Stunden',
         slug:'Angebot 3: 999€ für 4 Stunden',
         packages: [
@@ -136,6 +139,7 @@ const Services = [
     },
     {
         id: 4,
+        price : 1199,
         title:'Angebot 4: 1199€ für 5 Stunden',
         slug:'Angebot 4: 1199€ für 5 Stunden',
         packages: [
@@ -180,6 +184,7 @@ const Services = [
     },
     {
         id: 5,
+        price : 1399,
         title:'Angebot 5: 1399€ für 6 Stunden',
         slug:'Angebot 5: 1399€ für 6 Stunden',
         packages: [
@@ -224,6 +229,7 @@ const Services = [
     },
     {
         id: 6,
+        price : 1599,
         title:'Angebot 6: 1599€ für 7 Stunden',
         slug:'Angebot 6: 1599€ für 7 Stunden',
         packages: [
@@ -268,6 +274,7 @@ const Services = [
     },
     {
         id: 7,
+        price : 1789,
         title:'Angebot 7: 1789€ für 8 Stunden',
         slug:'Angebot 7: 1789€ für 8 Stunden',
         packages: [
@@ -312,6 +319,7 @@ const Services = [
     },
     {
         id: 8,
+        price : 1989,
         title:'Angebot 8: 1989€ für 9 Stunden',
         slug:'Angebot 8: 1989€ für 9 Stunden',
         packages: [
@@ -356,6 +364,7 @@ const Services = [
     },
     {
         id: 9,
+        price : 2089,
         title:'Angebot 9: 2089€ für 10 Stunden',
         slug:'Angebot 9: 2089€ für 10 Stunden',
         packages: [
@@ -400,6 +409,7 @@ const Services = [
     },
     {
         id: 10,
+        price : 2189,
         title:'Angebot 10: 2189€ für 11 Stunden',
         slug:'Angebot 10: 2189€ für 11 Stunden',
         packages: [
@@ -444,6 +454,7 @@ const Services = [
     },
     {
         id: 11,
+        price : 2389,
         title:'Angebot 11: 2389€ für 12 Stunden',
         slug:'Angebot 11: 2389€ für 12 Stunden',
         packages: [

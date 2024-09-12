@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SectionTitle from "../../components/SectionTitle";
 
 
-function Option({ name, quantity, price, add, onSelect }) {
+function Option({ name, price, add, onSelect }) {
     const [selected, setSelected] = useState(false);
   
     const handleSelect = () => {
@@ -23,12 +23,16 @@ function Option({ name, quantity, price, add, onSelect }) {
 }
 
 
-const AdditionalOption = (props) => {
-    const [total, setTotal] = useState(0);
+const AdditionalOption = ({total}) => {
+    const [optionsTotal, setOptionsTotal] = useState(0);
 
     const handleOptionSelect = (isSelected, price) => {
-        setTotal(prevTotal => isSelected ? prevTotal + price : prevTotal - price);
+        setOptionsTotal(prevTotal => isSelected ? prevTotal + price : prevTotal - price);
     }
+    // console.log("total:", total, "optiontotal:", optionsTotal);
+
+    const grandTotal = (typeof total === 'number' ? total : 0) + optionsTotal; // Total final incluant le service et les options
+    
     const optionsData = [
         // { name: 'Überstunde/n', quantity: 1, price: 250 },
         { name: 'Überstunde/n',  price: 250 },
@@ -61,7 +65,7 @@ const AdditionalOption = (props) => {
                             </tbody>
                         </table>
                     </div><br/><br/>
-                    <div style={{textAlign:"right", color:"#b89325", marginTop:"30px"}}>Total : {total} €</div>
+                    <div style={{position:"fixed", bottom:"10%", color:"#b89325", zIndex:"1000", textAlign:"right", right:"3%"}}>Total : {grandTotal} €</div>
                 </div>
             </div>
         </section>

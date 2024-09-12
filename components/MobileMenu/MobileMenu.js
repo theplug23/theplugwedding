@@ -77,7 +77,7 @@ const menus = [
     },  
     {
         id: 3,
-        title: 'PORTFOLIO',
+        title: 'HOCHZEITSFOTOS',
         link: '/Hochzeitfotografie',
         submenu: [
             {
@@ -99,7 +99,7 @@ const menus = [
     },
     {
         id: 4,
-        title: 'HOCHZEITSVIDEOS',
+        title: 'HOCHZEITSFILME',
         link: '/Hochzeitsvideos',
       /*   submenu: [
             {
