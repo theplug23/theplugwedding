@@ -12,12 +12,12 @@ import vid13 from '/public/images/videos/Alena-Peter.png'
 const videos = [
     {
         id: 1,
-        persons: 'Charles & Lisa-Marie Hochzeitsvideo (Wedding film) 2023',
+        persons: 'Lisa-Marie & Charles | Hochzeitsfilm (Wedding film) 2023 am Mönchbruch in Mörfelden-Walldorf',
         date: '12.15.2023',
         bgImg: vid5,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/nKuE7ynd6X0?si=zXKl2TbfF2L6Ql9t',
-        place: 'Allemagne'
+        place: 'Deutschland'
     },
     {
         id: 2,
@@ -26,7 +26,7 @@ const videos = [
         bgImg: vid8,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/4a_-hAaDnGU?si=okUAiHNrd5Q3dRHC',
-        place: 'Allemagne'
+        place: 'Deutschland'
     },
     {
         id: 3,
@@ -35,7 +35,7 @@ const videos = [
         bgImg: vid13,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/Jq2zWXXbRzs',
-        place: 'Mühltal - Allemagne'
+        place: 'Mühltal - Deutschland'
     },
     {
         id:4,
@@ -44,7 +44,7 @@ const videos = [
         bgImg: vid9,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/SzNp8ED68uM',
-        place: 'Darmstadt - Allemagne'
+        place: 'Darmstadt - Deutschland'
     },
     {
         id: 5,
@@ -53,7 +53,7 @@ const videos = [
         bgImg: vid11,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/qkUczp9-0jo',
-        place: 'Darmstadt - Allemagne'
+        place: 'Darmstadt - Deutschland'
     },
     {
         id: 6,
@@ -62,7 +62,7 @@ const videos = [
         bgImg: vid10,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/UCexQAz54MY',
-        place: 'Paderborn - Allemagne'
+        place: 'Paderborn - Deutschland'
     },
     {
         id: 7,
@@ -71,7 +71,7 @@ const videos = [
         bgImg: vid1,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/IrrQsBKKpuE?si=rLe5IIr12Cn4Cslc',
-        place: 'Allemagne'
+        place: 'Deutschland'
     },
     {
         id: 8,
@@ -80,7 +80,7 @@ const videos = [
         bgImg: vid3,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/fTmzfNYPsdU?si=53nqKKHdVGEMXFlJ',
-        place: 'Allemagne'
+        place: 'Deutschland'
     },
     {
         id: 9,
@@ -89,7 +89,7 @@ const videos = [
         bgImg: vid6,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/XxfjT8NCkrU',
-        place: 'Allemagne'
+        place: 'Deutschland'
     },
     {
         id: 10,
@@ -98,7 +98,7 @@ const videos = [
         bgImg: vid7,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/rzEP767qF-E',
-        place: 'Allemagne'
+        place: 'Deutschland'
     },
     {
         id: 11,
@@ -107,7 +107,7 @@ const videos = [
         bgImg: vid2,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',
         link: 'https://www.youtube.com/embed/Ep4m-aOeK_0?si=vbdWPVGGmx6zrCTj',
-        place: 'Allemagne'
+        place: 'Deutschland'
     },
 ]
 

@@ -3,9 +3,9 @@ import Link from 'next/link'
 
 const PageTitle = (props) => {
     return(
-        <section className="wpo-page-title" style={{ height: props.showVideo ? '1300px' : 'auto' }}>
+        <section className="wpo-page-title" style={{ height: props.showVideo ? '1000px' : 'auto' }}>
             {props.showVideo && (
-                <video src="/images/videos/videobg.mp4" autoPlay muted loop
+                <video src="/images/videos/video.mp4" autoPlay muted loop
                  className='video-bg'
                  ></video>
             )}

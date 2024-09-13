@@ -2,16 +2,21 @@
 
 .wpo-page-title {
 	// background: url(/images/BAN_1.jpg) no-repeat center top / cover;
-	min-height: 360px;//l'ancienne valeur etait 360px
+	min-height: 360px;
 	position: relative;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	z-index: 1;
+	overflow: hidden;
 
 	@media(max-width: 767px) {
-		min-height: 250px;
+		height: 300px !important;
 	}
+	@media(min-width: 768px) and (max-width: 1114px) {
+		height: 550px !important;
+	}
+	
 	.video-bg{
 		position: absolute;
 		width: 100%;
