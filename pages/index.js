@@ -125,7 +125,7 @@ const HomePage = (props) => {
             <VideoSection />
             <Testimonial />
             <FunFact />
-            <section className={`wpo-Service-section section-padding ${props.pbClass}`} id="Service">
+            {/* <section className={`wpo-Service-section section-padding ${props.pbClass}`} id="Service">
                 <div className="container ff">
                     <SectionTitle MainTitle={'Erkunden Sie unser umfassendes Angebot an Leistungen, die auf Ihre einzigartigen Bedürfnisse zugeschnitten sind.'} subTitle={'Unsere Angebote'} />   
                     <div className="wpo-Service-wrap">
@@ -138,7 +138,6 @@ const HomePage = (props) => {
                                     </div>
                                     <div className="wpo-Service-text text-wrap">
                                         <Link onClick={ClickHandler} href='' as={``}>{longueurTexte(service.title)}</Link>
-                                        {/* <Link onClick={ClickHandler} href='/service/[slug]' as={`/service/${service.slug}`}>{longueurTexte(service.title)}</Link> */}
                                     </div>
                                 </div>
                                 <div className="wpo-Service-item item-service">
@@ -156,7 +155,7 @@ const HomePage = (props) => {
                     <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="/Angebote" className="theme-btn">MEHR ANGEBOTE</Link>
                     </div>
                 </div>
-            </section><br/>
+            </section><br/> */}
             {/* <ProjectSection /> */}
             <BannerSec />
             <Product
