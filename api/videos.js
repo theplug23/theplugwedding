@@ -21,7 +21,7 @@ const videos = [
     },
     {
         id: 2,
-        persons: 'Julia & Eric Wedding Video in Germany',
+        persons: 'Julia & Eric | Hochzeitsfilm in Deutschland',
         date: '22 September 2022',
         bgImg: vid8,
         // description: 'Jura ist ein großartiger Karriereweg, wenn man ein breites Spektrum an Fähigkeiten erwerben möchte, das von kritischem Denken und strategischer Planung bis hin zur Kommunikation reicht. Wenn man gerne Herausforderungen annimmt.',

@@ -9,7 +9,8 @@
     "delPrice": "500",
     "brand":"Photography",
     "stock":"Stock in",
-    "size":"Xl"
+    "size":"Xl",
+    "link": ""
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "delPrice": "380",
     "brand":"Photography",
     "stock":"Stock in",
-    "size":"XXl"
+    "size":"XXl",
+    "link": ""
   },
   {
     "id": 4,
@@ -33,7 +35,8 @@
     "delPrice": "250/h",
     "brand":"Gucci",
     "stock":"Stock in",
-    "size":"M"
+    "size":"M",
+    "link": ""
   },
   {
     "id": 5,
@@ -45,7 +48,8 @@
     "delPrice": "130.00",
     "brand":"Gucci",
     "stock":"Stock out",
-    "size":"XXl"
+    "size":"XXl",
+    "link": "https://www.maman2noemi.com/de/Home"
   },
   {
     "id": 6,
