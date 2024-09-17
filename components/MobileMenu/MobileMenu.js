@@ -72,6 +72,11 @@ const menus = [
                 id: 42,
                 title: 'FAQ',
                 link: '/FAQ'
+            },
+            {
+                id: 43,
+                title: 'ANGEBOTE',
+                link: '/Angebote'
             }
         ]
     },  
