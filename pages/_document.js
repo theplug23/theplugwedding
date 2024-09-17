@@ -67,6 +67,13 @@ export default class MyDocument extends Document {
           <script  async src="https://www.googletagmanager.com/gtag/js?id=G-B5PGZNWSDD"></script>
           <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
           <div class="elfsight-app-d7ac4587-d61c-49dc-882e-bcdd704ce704" data-elfsight-app-lazy></div>
+          
+          <div style={{position:"fixed", bottom:"20px", left:"20px", zIndex:"9999"}}>
+            <a href="https://www.google.com/search?sca_esv=72aaa3890415b76e&sca_upv=1&rlz=1C5CHFA_enDE1098DE1098&tbm=lcl&sxsrf=ADLYWIIq1IKXVENW1ErmwixuUf7Y1-DrOg:1726580660139&q=Stephane+Kamwa+Hochzeitsfotograf+%26+Hochzeitsvideograf+%28THEPLUG+WEDDING+-+EVENTSFOTOGRAF-PORTRAIT+FOTOGRAF%29+Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDI2NzI3NTc2sDAyNzayNLQ0NN3AyPiKsSi4JLUgIzEvVcE7Mbc8UcEjPzmjKjWzpDgtvyQ_vSgxTUENIVaWmZIKEdQI8XAN8Al1Vwh3dXHx9HNX0FVwDXP1Cwl28w_xdw9ydNMN8A8KCXL0DFGAiWgqBKWWZaaWFy9iHQBLAcCfd8sFAQAA&rldimm=12372757308273291915&hl=en-ES&sa=X&ved=2ahUKEwiEr7GXjsqIAxXe0AIHHcQePRIQ9fQKegQIQhAF#lkt=LocalPoiReviews" target="_blank">
+              <img style={{width:"180px", height:"auto", boxShadow:"0px 4px 8px rgba(0, 0, 0, 0.4)", borderRadius:"10px"}} src="/images/videos/Google_review.png" alt="Google review"/>
+            </a>
+          </div>
+
         </body>
       </Html>
     )
