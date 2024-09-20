@@ -36,10 +36,11 @@ const AdditionalOption = ({total}) => {
     const optionsData = [
         // { name: 'Überstunde/n', quantity: 1, price: 250 },
         { name: 'Überstunde/n',  price: 250 },
+        { name: 'Exklusive Rechte an Bild & Ton', price: 300 },
         { name: 'Hochzeitsvideo Instagram-teaser (1-Minute)', price: 500 },
         { name: 'Alle Reden, Ehegelübde und Hochzeitstanz als einzelnes extra Video', price: 500 },
-        { name: 'Exklusive Rechte an Bild & Ton', price: 300 },
-        { name: 'FOMO-Edit', price: 1000}
+        { name: 'ALBUM', price: 500},
+        { name: 'FOMO-Edit', price: 1000},
     ];
 
     return(

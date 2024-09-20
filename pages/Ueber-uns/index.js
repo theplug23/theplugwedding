@@ -31,7 +31,7 @@ const AboutPage = () => {
                 <title>ÜBER UNS - THEPLUG WEDDING</title>
             </Helmet>
             <Navbar />
-            <PageTitle pageTitle={'ÜBER UNS'} pagesub={'ÜBER UNS'} /> 
+            {/* <PageTitle pageTitle={'ÜBER UNS'} pagesub={'ÜBER UNS'} />  */}
             <About />
             {/* <section className={`wpo-Service-section section-padding`} id="Service">
                 <div className="container ff">

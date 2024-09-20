@@ -26,7 +26,7 @@ const BlogSingle = (props) => {
                 <title>BLOGS - THEPLUG WEDDING</title>
             </Helmet>
             <Navbar />
-            <PageTitle pageTitle='Letzte Neuigkeiten' pagesub="Blog" />
+            {/* <PageTitle pageTitle='Letzte Neuigkeiten' pagesub="Blog" /> */}
             <BlogList/>
             <FormSection />
             <MapSection />

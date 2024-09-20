@@ -27,7 +27,7 @@ const PortfolioMasonaryPageS3 =() => {
                 <title>PORTRÄITSFOTOGRAFIE - THEPLUG WEDDING</title>
             </Helmet>
             <Navbar/>
-            <PageTitle pageTitle={'PORTRÄITSFOTOGRAFIE'} pagesub={'Porträitsfotografie'}/> 
+            {/* <PageTitle pageTitle={'PORTRÄITSFOTOGRAFIE'} pagesub={'Porträitsfotografie'}/>  */}
             <ProjectSection prClass={'pt-120'}/>
             <PartnerSection pClass={'pb-120'}/>
             <FormSection />

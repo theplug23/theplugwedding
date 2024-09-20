@@ -69,7 +69,7 @@ export default class MyDocument extends Document {
           <div class="elfsight-app-d7ac4587-d61c-49dc-882e-bcdd704ce704" data-elfsight-app-lazy></div>
           
           <div style={{position:"fixed", bottom:"20px", left:"20px", zIndex:"9999"}}>
-            <a href="https://www.google.com/search?sca_esv=72aaa3890415b76e&sca_upv=1&rlz=1C5CHFA_enDE1098DE1098&tbm=lcl&sxsrf=ADLYWIIq1IKXVENW1ErmwixuUf7Y1-DrOg:1726580660139&q=Stephane+Kamwa+Hochzeitsfotograf+%26+Hochzeitsvideograf+%28THEPLUG+WEDDING+-+EVENTSFOTOGRAF-PORTRAIT+FOTOGRAF%29+Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDI2NzI3NTc2sDAyNzayNLQ0NN3AyPiKsSi4JLUgIzEvVcE7Mbc8UcEjPzmjKjWzpDgtvyQ_vSgxTUENIVaWmZIKEdQI8XAN8Al1Vwh3dXHx9HNX0FVwDXP1Cwl28w_xdw9ydNMN8A8KCXL0DFGAiWgqBKWWZaaWFy9iHQBLAcCfd8sFAQAA&rldimm=12372757308273291915&hl=en-ES&sa=X&ved=2ahUKEwiEr7GXjsqIAxXe0AIHHcQePRIQ9fQKegQIQhAF#lkt=LocalPoiReviews" target="_blank">
+            <a href="https://www.google.com/search?sa=X&sca_esv=72aaa3890415b76e&sca_upv=1&rlz=1C5CHFA_enDE1098DE1098&hl=en-ES&sxsrf=ADLYWIIFF37SZtLqcKU0bg6yo-jehjiUcg:1726643566118&q=Stephane+Kamwa+Hochzeitsfotograf+%26+Hochzeitsvideograf+(THEPLUG+WEDDING+-+EVENTSFOTOGRAF-PORTRAIT+FOTOGRAF)+Reviews&ved=2ahUKEwjXzqXD-MuIAxUGgf0HHfIEIVIQ7t0BegQICRAI&biw=1512&bih=857&dpr=2" target="_blank">
               <img style={{width:"180px", height:"auto", boxShadow:"0px 4px 8px rgba(0, 0, 0, 0.4)", borderRadius:"10px"}} src="/images/videos/Google_review.png" alt="Google review"/>
             </a>
           </div>

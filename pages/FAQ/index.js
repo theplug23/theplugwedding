@@ -27,7 +27,7 @@ const FAQPage = () => {
                 <title>FAQ - THEPLUG WEDDING</title>
             </Helmet>
             <Navbar />
-            <PageTitle pageTitle={'FAQ'} pagesub={'FAQ'} /> 
+            {/* <PageTitle pageTitle={'FAQ'} pagesub={'FAQ'} />  */}
             <br/>
             <FAQSection pbClass={'pt-0'}/>
             <PartnerSection/><br/><br/><br/>

@@ -63,7 +63,7 @@ const ShopPage = ({ addToCart, addToWishList }) => {
   if (!isAuthenticated) {
     return (
       <div style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", flexDirection: "column"}}>
-        <h1 style={{fontSize: "30px", textAlign: "center"}}>Bitte geben Sie das Passwort für den Zugang zu den Tarifen ein</h1><br/>
+        <h1 style={{fontSize: "30px", textAlign: "center", fontFamily:"montserrat", fontWeight:"bold"}}>Bitte geben Sie das Passwort für den Zugang zu den Tarifen ein</h1><br/>
         <form onSubmit={handleSubmit}>
           <input type="password" id="passwordInput" placeholder="Passwort eingeben" style={{height: "95%", fontSize: "1.3rem"}}/>
           <button type="submit" className='theme-btn'>einreichen</button>
@@ -78,7 +78,7 @@ const ShopPage = ({ addToCart, addToWishList }) => {
         <title>Angebote - THEPLUG WEDDING</title>
       </Helmet>
       <Navbar />
-      <PageTitle pageTitle={'ANGEBOTE'} pagesub={'Angebote'} />
+      <PageTitle pageTitle={'ANGEBOTE'} pagesub={'Angebote'} showHero={true} heroText="EXKLUSIVE UND HERAUSRAGENDE HOCHZEITSFOTOS UND HOCHZEITSVIDEOS"/>
       <Hochzeitsfilm />
       <ShortAbout />
       <FeedbackVideo />

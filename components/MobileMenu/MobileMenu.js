@@ -87,17 +87,17 @@ const menus = [
         submenu: [
             {
                 id: 41,
-                title: 'PORTRAITSFOTOGRAFIE',
+                title: 'PORTRAITSFOTOS',
                 link: '/Portraitfotografie'
             },
             {
                 id: 42,
-                title: 'HOCHZEITENFOTOGRAFIE',
+                title: 'HOCHZEITENFOTOS',
                 link: '/Hochzeitfotografie'
             },
             {
                 id: 43,
-                title: 'EVENTSFOTOGRAPHIE',
+                title: 'EVENTSFOTOGS',
                 link: '/Eventsfotografie'
             }
         ]

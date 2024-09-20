@@ -26,7 +26,7 @@ const DatenschutzPage = () => {
                 <title>Datenschutz - THEPLUG WEDDING</title>
             </Helmet>
             <Navbar />
-            <PageTitle pageTitle={'Datenschutz'} pagesub={'Datenschutz'} /> 
+            {/* <PageTitle pageTitle={'Datenschutz'} pagesub={'Datenschutz'} />  */}
             <DatenschutzSection pbClass={'pt-0'}/>
             <Footer />
             <Scrollbar />

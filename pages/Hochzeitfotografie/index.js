@@ -26,7 +26,7 @@ const PortfolioMasonaryPage =() => {
                 <title>HOCHZEITENFOTOGRAFIE - THEPLUG WEDDING</title>
             </Helmet>
             <Navbar/>
-            <PageTitle pageTitle={'HOCHZEITENFOTOGRAFIE'} pagesub={'Hochzeitenfotografie'}/> 
+            {/* <PageTitle pageTitle={'HOCHZEITENFOTOGRAFIE'} pagesub={'Hochzeitenfotografie'}/>  */}
             <PortfolioSectionS2/>
             <PartnerSection pClass={'pb-120'}/>
             <FormSection />

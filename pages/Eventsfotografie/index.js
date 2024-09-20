@@ -27,7 +27,7 @@ const PortfolioMasonaryPageS2 =() => {
                 <title>EVENTSFOTOGRAFIE - THEPLUG WEDDING</title>
             </Helmet>
             <Navbar/>
-            <PageTitle pageTitle={'EVENTSFOTOGRAFIE'} pagesub={'Eventsfotografie'}/> 
+            {/* <PageTitle pageTitle={'EVENTSFOTOGRAFIE'} pagesub={'Eventsfotografie'}/>  */}
             <PortfolioSectionS3/>
             <PartnerSection pClass={'pb-120'}/>
             <FormSection />

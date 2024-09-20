@@ -26,7 +26,7 @@ const ImpressumPage = () => {
                 <title>Impressum - THEPLUG WEDDING</title>
             </Helmet>
             <Navbar />
-            <PageTitle pageTitle={'Impressum'} pagesub={'Impressum'} /> 
+            {/* <PageTitle pageTitle={'Impressum'} pagesub={'Impressum'} />  */}
             <ImpressumSection pbClass={'pt-0'}/>
             <Footer />
             <Scrollbar />

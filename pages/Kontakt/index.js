@@ -25,7 +25,7 @@ const GalleryPage = (props) => {
                 <title>KONTAKT - THEPLUG WEDDING</title>
             </Helmet>
             <Navbar/>
-            <PageTitle pageTitle={'KONTAKT UNS'} pagesub={'Kontakt'}/> 
+            {/* <PageTitle pageTitle={'KONTAKT UNS'} pagesub={'Kontakt'}/>  */}
             <AblaufSection />
             <Contactpage/>
             <Footer/>
