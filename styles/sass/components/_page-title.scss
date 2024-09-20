@@ -16,6 +16,26 @@
 	@media(min-width: 768px) and (max-width: 1114px) {
 		height: 550px !important;
 	}
+
+	.slide-text{
+		@media(max-width: 767px) {
+			position: absolute;
+			font-size: 11px !important;
+			top: 80px !important;
+		}
+		@media(min-width: 768px) and (max-width: 1114px) {
+			position: absolute;
+			font-size: 18px !important;
+			top: 180px !important;
+			padding: 0 28px !important;
+		}
+		@media(min-width: 1115px) and (max-width: 2048px) {
+			position: absolute;
+			font-size: 30px !important;
+			top: 350px !important;
+			margin-left: 60px !important;
+		}
+	}
 	
 	.video-bg{
 		position: absolute;
