@@ -19,7 +19,7 @@ const PageTitle = (props) => {
                     top: '48%',
                     zIndex: 1,
                 }}>
-                    <h2 style={{fontWeight:"bold", fontSize:"30px", fontFamily:"montserrat", textAlign:"center", color:"white"}}>{props.heroText}</h2>
+                    {/* <h2 style={{fontWeight:"bold", fontSize:"30px", fontFamily:"montserrat", textAlign:"center", color:"white"}}>{props.heroText}</h2> */}
                 </div>
             )}
             {props.showVideo && !props.showHero && (
