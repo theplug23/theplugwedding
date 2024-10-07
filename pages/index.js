@@ -82,7 +82,7 @@ const HomePage = (props) => {
     return (
         <div>
             <Helmet>
-                <title>HOME - THEPLUG WEDDING</title>
+                <title>Hochzeitsfotograf & Hochzeitsvideograf in Darmstadt | Weltweite Hochzeitsreportagen | THEPLUG WEDDING</title>
             </Helmet>
             <Navbar />
             <Hero />

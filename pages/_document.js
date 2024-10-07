@@ -29,8 +29,7 @@ export default class MyDocument extends Document {
           />
           <meta
             name="description"
-            content="Hey liebes Brautpaar😊,
-            Ich bin Fotograf-Videograf-Drohne Pilot- leidenschaftlicher 'Story Teller' mit mehr als 10 Jahren Erfahrung in Hochzeitsfoto- und Videografie in Deutschland und im Ausland. Ich habe Mediengestaltung mit Schwerpunkt Foto-und Videoproduktion studiert und möchte euch dabei helfen, die bildliche Geschichte des schönsten Tages eures Lebens zu schreiben. Ich spreche fließend deutsch, französisch und englisch. Ich würde mich sehr freuen, euch begleiten zu dürfen. Liebe Grüße Eur Stephane Kamwa (THEPLUG)"
+            content="Professioneller Hochzeitsfotograf und Videograf aus Darmstadt. Emotionale Hochzeitsfotos und Filme, die Ihre Liebe weltweit einfangen. Jetzt unverbindlich anfragen!"
           />
           <meta property="og:locale" content="de_DE" />
           <meta property="og:url" content="https://www.theplug-wedding.com/" /> 
@@ -46,8 +45,7 @@ export default class MyDocument extends Document {
             content="Theplug Wedding - Event & Hochzeitsfotograf - Event & Hochzeitsvideograf | in Darmstadt, Frankfurt am Main, Rhein-Main-Gebiet, Odenwald, Baden-Württemberg, Rheinland-Pfalz, Saarland, deutschlandweit und international." />
           <meta
             property="og:description"
-            content="Hey liebes Brautpaar😊,
-            Ich bin Fotograf-Videograf-Drohne Pilot- leidenschaftlicher'Story Teller' mit mehr als 10 Jahren Erfahrung in Hochzeitsfoto- und Videografie in Deutschland und im Ausland. Ich habe Mediengestaltung mit Schwerpunkt Foto-und Videoproduktion studiert und möchte euch dabei helfen, die bildliche Geschichte des schönsten Tages eures Lebens zu schreiben. Ich spreche fließend deutsch, französisch und englisch. Ich würde mich sehr freuen, euch begleiten zu dürfen. Liebe Grüße Eur Stephane Kamwa (THEPLUG)"
+            content="Professioneller Hochzeitsfotograf und Videograf aus Darmstadt. Emotionale Hochzeitsfotos und Filme, die Ihre Liebe weltweit einfangen. Jetzt unverbindlich anfragen!"
           />
         </Head>
         <body>

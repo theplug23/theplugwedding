@@ -20,6 +20,8 @@ import ShortAbout from '../../components/ShortAbout/shortabout';
 import FeedbackVideo from '../../components/FeedbackVideo/feedbackvideo';
 import FAQPricing from '../../components/FaqPricing/faqpricing';
 import AdditionalOption from '../../components/AdditionalOption/addOption';
+import ContactForm from '../../components/ContactFrom/ContactForm';
+
 
 const ShopPage = ({ addToCart, addToWishList }) => {
   
@@ -62,12 +64,30 @@ const ShopPage = ({ addToCart, addToWishList }) => {
 
   if (!isAuthenticated) {
     return (
-      <div style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", flexDirection: "column"}}>
-        <h1 style={{fontSize: "30px", textAlign: "center", fontFamily:"montserrat", fontWeight:"bold"}}>Bitte geben Sie das Passwort für den Zugang zu den Tarifen ein</h1><br/>
-        <form onSubmit={handleSubmit}>
-          <input type="password" id="passwordInput" placeholder="Passwort eingeben" style={{height: "95%", fontSize: "1.3rem"}}/>
-          <button type="submit" className='theme-btn'>einreichen</button>
-        </form>
+      <div style={{}}>
+        <Navbar/>
+        <div style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column"}}>
+          <h1 style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column",fontSize: "30px", textAlign: "center", fontFamily:"montserrat", fontWeight:"bold"}}>Bitte geben Sie das Passwort für den Zugang zu den Tarifen ein</h1><br/>
+
+          <form onSubmit={handleSubmit}>
+            <input type="password" id="passwordInput" placeholder="Passwort eingeben" style={{height: "150%", fontSize: "1.5rem"}}/>
+            <button type="submit" className='theme-btn'>einreichen</button>
+          </form>
+        </div>
+        
+        <section className='wpo-contact-pg-section section-padding'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col col-lg-10 offset-lg-1'>
+                <div className='wpo-contact-form-area'>
+                  <h1 style={{fontSize: "30px", textAlign: "center", fontFamily:"montserrat", fontWeight:"bold"}}>Füllen Sie das nachstehende Formular aus, um das Passwort zu erhalten, das Zugang zur Preisliste gewährt</h1><br/><br/>
+                  <ContactForm/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section><br/><br/><br/><br/><br/><br/>
+        <Footer/>
       </div>
     );
   }
