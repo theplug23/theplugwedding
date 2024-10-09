@@ -23,7 +23,9 @@ const ServiceSection = (props) => {
         <section className={`wpo-Service-section section-padding ${props.pbClass}`} id="Service">
             <div className="container ff">
                 <SectionTitle MainTitle={'Erkunden Sie unser umfassendes Angebot an Leistungen, die auf Ihre einzigartigen Bedürfnisse zugeschnitten sind.'} subTitle={'Unsere Angebote'} />
+                <div id="photo" style={{height:"280px"}}></div>
                 <h2 id="photo" style={{color:'#b99256'}}>Angebote für Fotos</h2><br/>
+                <p>Wir präsentieren euch unsere professionellen Hochzeitsfotografie-Dienstleistungen, die darauf abzielen, die unvergesslichen Momente eures besonderen Tages in wunderschönen Bildern festzuhalten. Mit einem kreativen und geschulten Auge fangen wir die Emotionen, die Schönheit und die einzigartigen Details ein, die eure Hochzeit so besonders machen. Ob romantische Porträts oder spontane Augenblicke – unsere Fotos erzählen eure Geschichte mit Stil und Eleganz. Vertraut auf unsere Erfahrung und Leidenschaft, um die Erinnerungen an euren schönsten Tag für die Ewigkeit festzuhalten.</p>
                 <div className="wpo-Service-wrap">
                     <div className="row">
                         {Services.map((service, sitem) => (
@@ -48,7 +50,9 @@ const ServiceSection = (props) => {
 
                     </div>
                 </div>
+                <div id="video" style={{height:"280px"}}></div>
                 <h2 id="video" style={{color:'#b99256'}}>Angebote für Videos</h2><br/>
+                <p>Wir bieten euch unvergessliche Hochzeitsvideos, die eure einzigartigen Momente für immer festhalten. Mit unserer Leidenschaft für Film und einem kreativen Auge schaffen wir emotionale und authentische Videos, die eure Liebesgeschichte in den Mittelpunkt stellen. Von den kleinen Details bis hin zu den großen Augenblicken – wir fangen alles ein, damit ihr diese besonderen Momente immer wieder erleben könnt. Unser Ziel ist es, eure Hochzeit so festzuhalten, wie sie wirklich war: voller Emotionen, Freude und Liebe. Lasst uns gemeinsam euren schönsten Tag in einem Film verewigen, der euch ein Leben lang begleiten wird!</p>
                 <div className="wpo-Service-wrap">
                     <div className="row">
                         {VServices.map((vservice, vsitem) => (
@@ -72,7 +76,9 @@ const ServiceSection = (props) => {
                         ))}
                     </div>
                 </div>
+                <div id="photo-video" style={{height:"280px"}}></div>
                 <h2 id="photo-video" style={{color:'#b99256'}}>Angebote für Fotos und Videos</h2><br/>
+                <p>Wir bieten euch einzigartige Foto- und Videodienstleistungen für euren Hochzeitstag an, die all die besonderen Momente festhalten, die ihr für immer in Erinnerung behalten möchtet. Unser Team sorgt dafür, dass ihr euch an eurem großen Tag voll und ganz auf das Feiern konzentrieren könnt, während wir im Hintergrund die Magie in professionellen Bildern und emotionalen Videos einfangen. Mit Liebe zum Detail und einem Auge für authentische Augenblicke gestalten wir eure Hochzeitsgeschichte in einem individuellen Stil, der eure Persönlichkeit widerspiegelt. Lasst uns gemeinsam unvergessliche Erinnerungen schaffen, die ein Leben lang halten.</p>
                 <div className="wpo-Service-wrap">
                     <div className="row">
                         {OServices.map((oservice, ositem) => (

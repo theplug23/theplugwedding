@@ -16,8 +16,8 @@ const FAQPricing = (props) => {
         },
         {
             num:'3',
-            question: 'Wann erhalten wir das fertige Hochzeitsvideo ?',
-            answer: 'Die Nachbearbeitung ist für mich immer ein sehr kreativer Prozess, da ich jede Geschichte individuell gestalten möchte. In der Regel benötige ich ca. 6 – 8 Wochen.'
+            question: 'Wie lange dauert es, bis wir die fertigen Hochzeitsfotos und das Video erhalten ?',
+            answer: 'Die Nachbearbeitung ist für mich immer ein sehr kreativer Prozess, da ich jede Geschichte individuell gestalten möchte. In der Regel benötige ich 2-4 Wochen für die Fotos und ca. 4-8 Wochen für das Video.'
         },
         {
             num:'4',
