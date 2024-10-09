@@ -98,7 +98,12 @@ const ShopPage = ({ addToCart, addToWishList }) => {
         <title>Angebote - THEPLUG WEDDING</title>
       </Helmet>
       <Navbar />
-      <PageTitle pageTitle={'ANGEBOTE'} pagesub={'Angebote'} showHero={true} heroText="EXKLUSIVE UND HERAUSRAGENDE HOCHZEITSFOTOS UND HOCHZEITSVIDEOS"/>
+      <div style={{textAlign: 'center', marginBottom: '20px', scrollBehavior: 'smooth', marginTop:"20px"}}>
+        <a href="#photo" style={{marginRight: '20px', backgroundColor: '#b99226', color:"white", padding:"10px 15px", borderRadius:"5px"}}>Angebote für Fotos</a>
+        <a href="#video" style={{marginRight: '20px', backgroundColor: '#b99226', color:"white", padding:"10px 15px", borderRadius:"5px"}}>Angebote für Video</a>
+        <a href="#photo-video" style={{backgroundColor: '#b99226', color:"white", padding:"10px 15px", borderRadius:"5px"}}>Angebote für Fotos & Video</a>
+      </div>
+      {/* <PageTitle pageTitle={'ANGEBOTE'} pagesub={'Angebote'} showHero={true} heroText="EXKLUSIVE UND HERAUSRAGENDE HOCHZEITSFOTOS UND HOCHZEITSVIDEOS"/> */}
       <Hochzeitsfilm />
       <ShortAbout />
       <FeedbackVideo />
