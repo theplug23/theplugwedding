@@ -158,6 +158,7 @@ const ContactForm = () => {
                             value={forms.date}
                             type="date"
                             name="date"
+                            format="tt/mm/jjjj"
                             onBlur={(e) => changeHandler(e)}
                             onChange={(e) => changeHandler(e)} />
                         {validator.message('date', forms.date, 'required')}
@@ -170,7 +171,7 @@ const ContactForm = () => {
                             onChange={(e) => changeHandler(e)}
                             value={forms.time}
                             name="time">
-                            <option value=""></option>
+                            <option value="">Begleitungszeit</option>
                             {timeOptionsForSubject.map((option, index) => (
                                 <option key={index} value={option}> {option} </option>
                             ))}
