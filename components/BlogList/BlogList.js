@@ -36,7 +36,7 @@ const BlogList = (props) => {
             <h1 className="" style={{textAlign:'center', fontWeight:'bold', marginBottom:'50px'}}>You can see all posts here</h1><br/>
         </div> */}
             <div className="container">
-                <h1 className="" style={{textAlign:'center', fontWeight:'bold', marginBottom:'50px'}}>Alle Beiträge könnt ihr hier sehen</h1><br/>
+                <h1 className="" style={{textAlign:'center', fontWeight:'bold', marginBottom:'50px', color:"#b99226"}}>Alle Beiträge könnt ihr hier sehen</h1><br/>
                 <div className="row">
                     <div className={`col col-lg-8 col-12 ${props.blRight}`}>
                         <div className="wpo-blog-content">

@@ -48,7 +48,7 @@ const Header = (props) => {
                                     <button className="menu-close"><i className="ti-close"></i></button>
                                     <ul className="nav navbar-nav mb-2 mb-lg-0">
                                         <li className="menu-item-has-children">
-                                            <Link className='item-menu' href="/">Home</Link>
+                                            <Link className='item-menu' href="/" style={{color:"black", fontWeight:"bold"}}>Home</Link>
                                             {/* <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} href="/home">Main Home</Link></li>
                                                 <li><Link onClick={ClickHandler} href="/home2">Wedding Planner</Link></li>
@@ -63,7 +63,7 @@ const Header = (props) => {
                                         </li>
 
                                         <li className="menu-item-has-children">
-                                            <Link className='item-menu' href="/Ueber-uns">About</Link>
+                                            <Link className='item-menu' href="/Ueber-uns" style={{color:"black", fontWeight:"bold"}}>About</Link>
                                             <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} href='/Ueber-uns'>Über uns</Link></li>
                                                 <li><Link onClick={ClickHandler} href='/FAQ'>FAQ</Link></li>
@@ -73,7 +73,7 @@ const Header = (props) => {
                                         </li>
 
                                         <li className="menu-item-has-children">
-                                            <Link className='item-menu' href="/Hochzeitfotografie" style={{cursor: 'default'}}>Hochzeitsfotos</Link>
+                                            <Link className='item-menu' href="/Hochzeitfotografie" style={{cursor: 'default', color:"black", fontWeight:"bold"}}>Hochzeitsfotos</Link>
                                             <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} href='/Portraitfotografie'>Portraitfotos</Link></li>
                                                 <li><Link onClick={ClickHandler} href='/Hochzeitfotografie'>Hochzeitsfotos</Link></li>
@@ -86,7 +86,7 @@ const Header = (props) => {
                                             alt="Logo The PLUG" /></Link></li>
 
                                         <li className="menu-item-has-children">
-                                            <Link className='item-menu' href="/Hochzeitsvideos">Hochzeitsfilme</Link>
+                                            <Link className='item-menu' href="/Hochzeitsvideos" style={{color:"black", fontWeight:"bold"}}>Hochzeitsfilme</Link>
                                             {/* <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} href="/shop">Shop</Link></li>
                                                 <li><Link onClick={ClickHandler} href="/product-single/Wedding-Cake">Shop Single</Link></li>
@@ -95,8 +95,8 @@ const Header = (props) => {
                                                 <li><Link onClick={ClickHandler} href="/checkout">Checkout</Link></li>
                                             </ul> */}
                                         </li>
-                                        <li><Link className='item-menu' onClick={ClickHandler} href="/Blogs">Blog</Link></li>
-                                        <li><Link className='item-menu' onClick={ClickHandler} href="/Kontakt">KONTAKT</Link></li>
+                                        <li><Link className='item-menu' onClick={ClickHandler} href="/Blogs" style={{color:"black", fontWeight:"bold"}}>Blog</Link></li>
+                                        <li><Link className='item-menu' onClick={ClickHandler} href="/Kontakt" style={{color:"black", fontWeight:"bold"}}>KONTAKT</Link></li>
                                     </ul>
                                 </div>
                             </div>

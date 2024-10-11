@@ -138,14 +138,14 @@
         }
 
         p {
-            color: #909090;
+            color: $black;
 
             @media(max-width:767px) {
                 font-size: 14px;
             }
 
             a {
-                color: #909090;
+                color: $black;
             }
         }
     }

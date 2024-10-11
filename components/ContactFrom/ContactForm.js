@@ -1,20 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import SimpleReactValidator from 'simple-react-validator';
-import emailjs from '@emailjs/browser'
+import emailjs from '@emailjs/browser';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css"; // Importation des styles
+import { de } from 'date-fns/locale'; // Importation de la locale allemande
+import moment from 'moment/moment';
 
 const timeOptions = {
     Fotografie: [
-      "2 Stunden",
-      "3 Stunden",
-      "4 Stunden",
-      "5 Stunden",
-      "6 Stunden",
-      "7 Stunden",
-      "8 Stunden",
-      "9 Stunden",
-      "10 Stunden",
-      "11 Stunden",
-      "12 Stunden",
+        "2 Stunden",
+        "3 Stunden",
+        "4 Stunden",
+        "5 Stunden",
+        "6 Stunden",
+        "7 Stunden",
+        "8 Stunden",
+        "9 Stunden",
+        "10 Stunden",
+        "11 Stunden",
+        "12 Stunden",
     ],
     Videografie: [
         "5 Stunden",
@@ -39,14 +43,14 @@ const timeOptions = {
 };
 
 const ContactForm = () => {
-    const [sendStatus, setSendStatus] = useState(0)
+    const [sendStatus, setSendStatus] = useState(0);
     const [forms, setForms] = useState({
         name: '',
         email: '',
         subject: '',
         phone: '',
-        date: '',
-        time:'',
+        date: null, // État de date
+        time: '',
         message: ''
     });
     const [validator] = useState(new SimpleReactValidator({
@@ -55,7 +59,7 @@ const ContactForm = () => {
     const [timeOptionsForSubject, setTimeOptionsForSubject] = useState([]);
 
     const changeHandler = e => {
-        setForms({ ...forms, [e.target.name]: e.target.value })
+        setForms({ ...forms, [e.target.name]: e.target.value });
         if (validator.allValid()) {
             validator.hideMessages();
         } else {
@@ -73,31 +77,38 @@ const ContactForm = () => {
         e.preventDefault();
         if (validator.allValid() && forms.date) {
             validator.hideMessages();
-            setSendStatus(1)
-            emailjs.send('service_76lbexa', 'template_bvxpoqo', forms, 'AC_DTNvzmjFi3HHjs')
-            .then((result) => {
-                console.log(result.text)
-                setForms({
-                    name: '',
-                    email: '',
-                    subject: '',
-                    phone: '',
-                    date: '',
-                    time:'',
-                    message: ''
-                })
-                setSendStatus(2)
-            }, (error) => {
-                console.log(error.text)
-            })
-            console.log(forms)
+            setSendStatus(1);
+
+            const formattedDate = moment(forms.date).format('DD.MM.YYYY'); // Format DD.MM.YYYY
+            const formDataToSend = {
+                ...forms,
+                date: formattedDate // Envoie de la date formatée
+            };
+
+            emailjs.send('service_76lbexa', 'template_bvxpoqo', formDataToSend, 'AC_DTNvzmjFi3HHjs')
+                .then((result) => {
+                    console.log(result.text);
+                    setForms({
+                        name: '',
+                        email: '',
+                        subject: '',
+                        phone: '',
+                        date: null,
+                        time: '',
+                        message: ''
+                    });
+                    setSendStatus(2);
+                }, (error) => {
+                    console.log(error.text);
+                });
+            console.log(forms);
         } else {
             validator.showMessages();
         }
     };
 
     return (
-        <form onSubmit={(e) => submitHandler(e)} className="contact-validation-active">
+        <form onSubmit={submitHandler} className="contact-validation-active">
             <div className="row">
                 <div className="col col-lg-6 col-12">
                     <div className="form-field">
@@ -105,8 +116,8 @@ const ContactForm = () => {
                             value={forms.name}
                             type="text"
                             name="name"
-                            onBlur={(e) => changeHandler(e)}
-                            onChange={(e) => changeHandler(e)}
+                            onBlur={changeHandler}
+                            onChange={changeHandler}
                             placeholder="Ihr Name" />
                         {validator.message('name', forms.name, 'required|alpha_space')}
                     </div>
@@ -114,8 +125,8 @@ const ContactForm = () => {
                 <div className="col col-lg-6 col-12">
                     <div className="form-field">
                         <select
-                            onBlur={(e) => changeHandler(e)}
-                            onChange={(e) => handleSubjectChange(e)}
+                            onBlur={changeHandler}
+                            onChange={handleSubjectChange}
                             value={forms.subject}
                             name="subject">
                             <option value="">Dienstauswahl</option>
@@ -132,10 +143,10 @@ const ContactForm = () => {
                     <div className="form-field">
                         <input
                             value={forms.phone}
-                            type="phone"
+                            type="text" // Change phone type to text
                             name="phone"
-                            onBlur={(e) => changeHandler(e)}
-                            onChange={(e) => changeHandler(e)}
+                            onBlur={changeHandler}
+                            onChange={changeHandler}
                             placeholder="Ihre Telefonnummer" />
                         {validator.message('phone', forms.phone, 'required|phone')}
                     </div>
@@ -146,34 +157,33 @@ const ContactForm = () => {
                             value={forms.email}
                             type="email"
                             name="email"
-                            onBlur={(e) => changeHandler(e)}
-                            onChange={(e) => changeHandler(e)}
+                            onBlur={changeHandler}
+                            onChange={changeHandler}
                             placeholder="Deine E-Mail Adresse" />
                         {validator.message('email', forms.email, 'required|email')}
                     </div>
                 </div>
                 <div className="col col-lg-6 col-12">
                     <div className="form-field">
-                        <input
-                            value={forms.date}
-                            type="date"
-                            name="date"
-                            format="tt/mm/jjjj"
-                            onBlur={(e) => changeHandler(e)}
-                            onChange={(e) => changeHandler(e)} />
+                        <DatePicker
+                            selected={forms.date}
+                            onChange={(date) => setForms({ ...forms, date })}
+                            locale={de} // Définit la locale en allemand
+                            placeholderText="Wählen Sie ein Datum"
+                        />
                         {validator.message('date', forms.date, 'required')}
                     </div>
                 </div>
                 <div className="col col-lg-6 col-12">
                     <div className="form-field">
                         <select
-                            onBlur={(e) => changeHandler(e)}
-                            onChange={(e) => changeHandler(e)}
+                            onBlur={changeHandler}
+                            onChange={changeHandler}
                             value={forms.time}
                             name="time">
                             <option value="">Begleitungszeit</option>
                             {timeOptionsForSubject.map((option, index) => (
-                                <option key={index} value={option}> {option} </option>
+                                <option key={index} value={option}>{option}</option>
                             ))}
                         </select>
                         {validator.message('time', forms.time, 'time')}
@@ -181,8 +191,8 @@ const ContactForm = () => {
                 </div>
                 <div className="col col-lg-12 col-12">
                     <textarea
-                        onBlur={(e) => changeHandler(e)}
-                        onChange={(e) => changeHandler(e)}
+                        onBlur={changeHandler}
+                        onChange={changeHandler}
                         value={forms.message}
                         type="text"
                         name="message"
@@ -192,10 +202,12 @@ const ContactForm = () => {
                 </div>
             </div>
             <div className="submit-area">
-                <button type="submit" className="theme-btn">{sendStatus === 1 ? 'IM GANGE...' : (sendStatus === 0 ? 'JETZT ABSENDEN' : 'E-MAIL GESENDET')}</button>
+                <button type="submit" className="theme-btn">
+                    {sendStatus === 1 ? 'IM GANGE...' : (sendStatus === 0 ? 'JETZT ABSENDEN' : 'E-MAIL GESENDET')}
+                </button>
             </div>
-        </form >
-    )
+        </form>
+    );
 }
 
 export default ContactForm;

@@ -158,7 +158,7 @@ const BlogSingle = (props) => {
                 <title> Blog-THEPLUG Wedding</title>
             </Helmet>
             <Navbar />
-            <PageTitle pageTitle={post.title} pagesub="Blog" />
+            {/* <PageTitle pageTitle={post.title} pagesub="Blog" /> */}
             <section className="wpo-blog-single-section section-padding">
                 <div className="container">
                     <div className="row">
