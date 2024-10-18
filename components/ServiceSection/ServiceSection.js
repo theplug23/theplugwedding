@@ -41,7 +41,7 @@ const ServiceSection = (props) => {
                                 <div className="wpo-Service-item item-service">
                                     <ul className="list-item">
                                         {service.packages.map((pack) => (
-                                            <li style={{fontSize: '14px'}} key={pack.id} className="item">{pack.slug}</li>
+                                            <li style={{fontSize: '14px', color:"black"}} key={pack.id} className="item">{pack.slug}</li>
                                         ))}
                                     </ul>
                                 </div>
@@ -68,7 +68,7 @@ const ServiceSection = (props) => {
                                 <div className="wpo-Service-item item-service">
                                     <ul className="list-item">
                                         {vservice.packages.map((pack) => (
-                                            <li style={{fontSize: '14px'}} key={pack.id} className="item">{pack.slug}</li>
+                                            <li style={{fontSize: '14px', color:"black"}} key={pack.id} className="item">{pack.slug}</li>
                                         ))}
                                     </ul>
                                 </div>
@@ -94,7 +94,7 @@ const ServiceSection = (props) => {
                                 <div className="wpo-Service-item item-service">
                                     <ul className="list-item">
                                         {oservice.packages.map((pack) => (
-                                            <li style={{fontSize: '14px'}} key={pack.id} className="item">{pack.slug}</li>
+                                            <li style={{fontSize: '14px', color:"black"}} key={pack.id} className="item">{pack.slug}</li>
                                         ))}
                                     </ul>
                                 </div>

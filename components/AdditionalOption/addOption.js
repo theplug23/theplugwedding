@@ -50,7 +50,7 @@ const AdditionalOption = ({total}) => {
                 <div className="row">
                     <div className="row col-lg-12  wpo-blog-content">
                         <p style={{fontSize:"22px"}}>Das Paket kann auch ohne weitere Zusatzoption gebucht werden. Aufgrund der hohen Nachfrage weiterer Optionen, die oft nach der Hochzeit bewusst werden, gibt es hier eine klare Preisliste für weitere Möglichkeiten.</p><br/><br/><br/><br/>                    
-                        <table style={{fontSize:"22px"}}>
+                        <table style={{fontSize:"22px", color:"black"}}>
                             <thead>
                                 <tr>
                                     <th>Name</th>
