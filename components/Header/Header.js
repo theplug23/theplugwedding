@@ -106,7 +106,7 @@ const Header = (props) => {
                                         <ul className="icon-color">
                                             <li><Link style={{color:'#B99226'}}  target={'_blank'} href="https://www.facebook.com/profile.php?id=100094313491782"><i className="fi flaticon-facebook-app-symbol icon"></i></Link></li>
                                         {/* <li><Link href="/"><i className="fi flaticon-twitter"></i></Link></li>*/}
-                                            <li><Link style={{color:'#B99226'}} target={'_blank'} href="https://www.instagram.com/theplug_wedding/"><i className="fi flaticon-instagram-1 icon"></i></Link></li>
+                                            <li><Link style={{color:'#B99226'}} target={'_blank'} href="https://www.instagram.com/stephanekamwa_theplug/"><i className="fi flaticon-instagram-1 icon"></i></Link></li>
                                             <li><Link style={{color:'#B99226'}} target={'_blank'} href="https://www.youtube.com/channel/UCjSaZbsMA4qSiqtHQOmrjFA "><i className="fi flaticon-youtube icon"></i></Link></li>
                                         </ul>
                                     </div>

@@ -55,7 +55,6 @@ const BlogList = (props) => {
                                                         <li><i className="fa fa-camera"></i> <Link href='/' >THEPLUG Wedding</Link> </li><br/>
                                                         <li><i className="fa fa-eye"></i> {post.vues} views </li>
                                                         <li><i className="fi flaticon-calendar"></i> {moment(post.created_at).format('DD MMMM YYYY')}</li>
-                                                        
                                                     </ul>
                                                 </div>
                                                 <div className="entry-details">
