@@ -7,7 +7,7 @@ const PageTitle = (props) => {
     return(
         <section className="wpo-page-title" style={{ height: props.showVideo ? '1000px' : 'auto' }}>
             {props.showVideo && props.isVideoPage && (
-                <video src="/images/videos/Hochzeitsvideograf-Darmstadt.mp4" autoPlay muted loop
+                <video src="/images/videos/video-wedding-new-2025.mp4" autoPlay muted loop
                  className='video-bg'
                  ></video>
             )}
