@@ -25,7 +25,8 @@ import ContactForm from '../../components/ContactFrom/ContactForm';
 
 const ShopPage = ({ addToCart, addToWishList }) => {
   
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // TEMPORAIRE : accès direct aux tarifs, retirer le `true` pour réactiver la vérification
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
   const productsArray = api();
   const [total, setTotal] = useState(0); // Ajoutez cette ligne pour gérer le total
 
