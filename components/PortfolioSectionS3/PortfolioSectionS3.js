@@ -1442,9 +1442,6 @@ const Portfolios = [
     {
         Pimg: '/images/event/WifOR/Bild-195.jpg'
     }
-
-
-
 ]
 
 
