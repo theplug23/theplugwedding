@@ -43,7 +43,7 @@ const Footer = () => {
                                 <ul>
                                     <li><Link className='bg-component' onClick={ClickHandler} target={'_blank'} href="https://www.facebook.com/thepluggroup1"><i className="ti-facebook"></i></Link></li>
                                     <li><Link className='bg-component' onClick={ClickHandler} target={'_blank'} href="https://www.youtube.com/channel/UCjSaZbsMA4qSiqtHQOmrjFA "><i className="ti-youtube"></i></Link></li>
-                                    <li><Link className='bg-component' onClick={ClickHandler} target={'_blank'} href="https://www.instagram.com/stephanekamwa_theplug/"><i className="ti-instagram"></i></Link></li>
+                                    <li><Link className='bg-component' onClick={ClickHandler} target={'_blank'} href="https://www.instagram.com/theplug_wedding_sk/"><i className="ti-instagram"></i></Link></li>
                                 </ul>
                             </div>
                         </div>

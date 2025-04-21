@@ -38,7 +38,7 @@ const BlogSidebar = (props) => {
                     <ul className="clearfix">
                         <li><Link onClick={ClickHandler} target={'_blank'} href="https://www.facebook.com/thepluggroup1"><i className="fi flaticon-facebook-app-symbol"></i></Link></li>
                         <li><Link onClick={ClickHandler} target={'_blank'} href="https://www.youtube.com/channel/UCjSaZbsMA4qSiqtHQOmrjFA"><i className="fi flaticon-youtube"></i></Link></li>
-                        <li><Link onClick={ClickHandler} target={'_blank'} href="https://www.instagram.com/theplug_wedding/"><i className="fi flaticon-instagram-1"></i></Link></li>
+                        <li><Link onClick={ClickHandler} target={'_blank'} href="https://www.instagram.com/theplug_wedding_sk/"><i className="fi flaticon-instagram-1"></i></Link></li>
                         <li><Link onClick={ClickHandler} target={'_blank'} href="https://wa.me/4915752069252"><i className="fa fa-whatsapp"></i></Link></li>
                     </ul>
                 </div>
