@@ -2,7 +2,8 @@ import React from 'react'
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import SectionTitle from '../SectionTitle'
-import {shuffleArray} from '../../utils/index.js'
+import { shuffleArray } from '../../utils/index.js'
+import { useTranslation } from 'react-i18next'
 
 const Portfolios = [
     {
@@ -1446,10 +1447,11 @@ const Portfolios = [
 
 
 const PortfolioSectionS3 = (props) => {
+    const { t } = useTranslation()
     return (
         <section className={`wpo-portfolio-section-s2 section-padding ${props.prClass}`} id="gallery">
             <div className="container-fluid">
-                <SectionTitle MainTitle={'ENTDECKEN SIE IN BILDERN EINIGE BILDER UNSERER VERANSTALTUNGEN'} subTitle={'Unseren Veranstaltungen'}/>
+                <SectionTitle MainTitle={t('ENTDECKEN SIE IN BILDERN EINIGE BILDER UNSERER VERANSTALTUNGEN')} subTitle={t('Unseren Veranstaltungen')} />
                 <div className="sortable-gallery">
                     <div className="gallery-filters"></div>
                     <div className="row">

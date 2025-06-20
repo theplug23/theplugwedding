@@ -1,8 +1,9 @@
-import React from 'react'
+
 import Image from 'next/image'
 import fIcon1 from '/public/images/funfact/1.png'
 import fIcon2 from '/public/images/funfact/2.png'
 import fIcon3 from '/public/images/funfact/3.png'
+import { useTranslation } from 'react-i18next'
 
 const funFact = [
     {
@@ -31,6 +32,7 @@ const funFact = [
 
 
 const FunFact = (props) => {
+    const { t } = useTranslation();
     return (
         <section className={`wpo-fun-fact-section ${props.fClass}`}>
             <div className="container">
@@ -41,9 +43,9 @@ const FunFact = (props) => {
                                 <div className="grid" key={fitem}>
                                     <div className="info">
                                         <h3><span>{funfact.title}</span>+</h3>
-                                        <p>{funfact.subTitle}</p>
+                                        <p>{t(funfact.subTitle)}</p>
                                     </div>
-                                    <div className="flower"><Image src={funfact.fIcon} alt=""/></div>
+                                    <div className="flower"><Image src={funfact.fIcon} alt="" /></div>
                                 </div>
                             ))}
                         </div>

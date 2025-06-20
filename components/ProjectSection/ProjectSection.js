@@ -2,7 +2,8 @@ import React from 'react'
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import SectionTitle from '../SectionTitle'
-import {shuffleArray} from '../../utils/index.js'
+import { shuffleArray } from '../../utils/index.js'
+import { useTranslation } from 'react-i18next'
 
 
 const ClickHandler = () => {
@@ -241,10 +242,11 @@ const portraits = [
 ]
 
 const ProjectSection = (props) => {
+    const { t } = useTranslation()
     return (
         <section className={`wpo-portfolio-section-s2 section-padding ${props.prClass}`} id="gallery">
             <div className="container-fluid">
-                <SectionTitle MainTitle={'Lassen Sie sich in die fesselnde Welt unserer fotografischen Porträts entführen, die das Wesen und die Schönheit jedes Einzelnen einfangen'} subTitle={'Unsere Porträts'}/>
+                <SectionTitle MainTitle={t('Lassen Sie sich in die fesselnde Welt unserer fotografischen Porträts entführen, die das Wesen und die Schönheit jedes Einzelnen einfangen')} subTitle={t('Unsere Porträts')} />
                 <div className="sortable-gallery">
                     <div className="gallery-filters"></div>
                     <div className="row">

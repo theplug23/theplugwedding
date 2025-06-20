@@ -1,19 +1,20 @@
 import React from "react";
 import Link from "next/link";
 import SectionTitle from '../../components/SectionTitle'
+import { useTranslation } from "react-i18next";
 
 
 const Product = ({ products, addToCartProduct, addToWishListProduct }) => {
-  
+
   const ClickHandler = () => {
     window.scrollTo(10, 0);
   };
-
+  const { t } = useTranslation()
   return (
 
     <section className="wpo-product-section section-padding">
       <div className="container">
-        <SectionTitle subTitle={'Unser Shop'} MainTitle={'SPEZIELLE PRODUKTE FÜR EUCH'} />
+        <SectionTitle subTitle={t('Unser Shop')} MainTitle={t('SPEZIELLE PRODUKTE FÜR EUCH')} />
         <div className="wpo-product-wrap">
           <div className="row">
             {products.length > 0 &&
@@ -46,7 +47,7 @@ const Product = ({ products, addToCartProduct, addToWishListProduct }) => {
                       </ul>
                     </div>
                     <div className="wpo-product-text">
-                      <h3><Link onClick={ClickHandler} href={product.link} target="_blank" as={product.link}>{product.title}</Link></h3>
+                      <h3><Link onClick={ClickHandler} href={product.link} target="_blank" as={product.link}>{t(product.title)}</Link></h3>
                       {/* <h3><Link onClick={ClickHandler} href='/product-single/[slug]' as={`/product-single/${product.slug}`}>{product.title}</Link></h3> */}
                       {/* <ul>
                         <li>€{product.delPrice}</li>

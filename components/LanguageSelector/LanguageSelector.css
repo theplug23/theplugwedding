@@ -1,0 +1,23 @@
+.languageSelector {
+  display: flex;
+  gap: 10px;
+}
+
+.languageSelector button {
+  padding: 8px 12px;
+  border: 2px solid #ccc;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.languageSelector button:hover {
+  border-color: #007bff;
+}
+
+.languageSelector button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}

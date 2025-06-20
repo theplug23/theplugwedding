@@ -16,14 +16,15 @@ import MapSection from '../../components/MapSection/MapSection';
 import FormSection from "../../components/FormSection/FormSection";
 import { Helmet } from "react-helmet";
 import ReactGA from 'react-ga4';
+import { useTranslation } from "react-i18next";
 
 
 const Videos = () => {
-    const ClickHandler = () =>{
+    const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
 
-    const SubmitHandler = (e) =>{
+    const SubmitHandler = (e) => {
         e.preventDefault()
     }
 
@@ -34,20 +35,20 @@ const Videos = () => {
             title: "Hochzeitsvideos PAGE"
         })
     })
-
+    const { t } = useTranslation()
     return (
         <Fragment>
             <Helmet>
-                <title>HOCHZEITSVIDEOS - THEPLUG WEDDING</title>
+                <title>{t("HOCHZEITSVIDEOS")} - THEPLUG WEDDING</title>
             </Helmet>
             <Navbar />
-            <PageTitle pageTitle={'HOCHZEITSVIDEOS'} pagesub={'Hochzeitsvideos'} showVideo={true} isVideoPage={true}/>
+            <PageTitle pageTitle={t('HOCHZEITSVIDEOS')} pagesub={'Hochzeitsvideos'} showVideo={true} isVideoPage={true} />
             <section className="wpo-blog-pg-section section-padding">
                 <div className="container">
-                    <SectionTitle MainTitle={'FINDEN SIE HERAUS, WIE UNSERE KUNDEN DEN BESTEN TAG IHRES LEBENS HATTEN'} subTitle={'Unsere Hochzeitsvideos'}/>
+                    <SectionTitle MainTitle={t('FINDEN SIE HERAUS, WIE UNSERE KUNDEN DEN BESTEN TAG IHRES LEBENS HATTEN')} subTitle={t('Unsere Hochzeitsvideos')} />
                     <div className="row">
-                        <div className="row col-lg-12 wpo-blog-content">                        
-                            {videos.map((video) => (                          
+                        <div className="row col-lg-12 wpo-blog-content">
+                            {videos.map((video) => (
                                 <div key={video.id} className='post format-video col-lg-6'>
                                     <div className="entry-media video-holder">
                                         <Image style={{ minHeight: '250px' }} src={video.bgImg} alt={video.persons} />
@@ -73,7 +74,7 @@ const Videos = () => {
                                         <Image src={logo} alt=""/>
                                     </div>
                                     <h4>THEPLUG Weeding</h4>
-                                    <p>THEPLUG Hochzeitsteam verewigt den schönsten Tag in Ihrem Leben</p>
+                                    <p>{t("THEPLUG Hochzeitsteam verewigt den schönsten Tag in Ihrem Leben")}</p>
                                     <div className="social">
                                         <ul className="clearfix">
                                             <li><Link onClick={ClickHandler} target={'_blank'} href="https://www.facebook.com/thepluggroup1"><i className="fi flaticon-facebook-app-symbol"></i></Link></li>
@@ -120,7 +121,7 @@ const Videos = () => {
                     </div>
                 </div>
             </section>
-            <PartnerSection pClass={'section-padding'}/> 
+            <PartnerSection pClass={'section-padding'} />
             <FormSection />
             <MapSection />
             <Footer />

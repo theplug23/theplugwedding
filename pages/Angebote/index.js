@@ -21,10 +21,11 @@ import FeedbackVideo from '../../components/FeedbackVideo/feedbackvideo';
 import FAQPricing from '../../components/FaqPricing/faqpricing';
 import AdditionalOption from '../../components/AdditionalOption/addOption';
 import ContactForm from '../../components/ContactFrom/ContactForm';
+import { useTranslation } from 'react-i18next';
 
 
 const ShopPage = ({ addToCart, addToWishList }) => {
-  
+
   // TEMPORAIRE : accès direct aux tarifs, retirer le `true` pour réactiver la vérification
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const productsArray = api();
@@ -51,13 +52,13 @@ const ShopPage = ({ addToCart, addToWishList }) => {
   }, []);
 
   const password = "Theplug-Wedding2025!";
-
+  const { t } = useTranslation()
   const handleSubmit = (e) => {
     e.preventDefault();
     const enteredPassword = document.getElementById("passwordInput").value;
 
     if (enteredPassword === password) {
-      setIsAuthenticated(true); 
+      setIsAuthenticated(true);
     } else {
       toast.error("Falsches Passwort");
     }
@@ -66,29 +67,29 @@ const ShopPage = ({ addToCart, addToWishList }) => {
   if (!isAuthenticated) {
     return (
       <div style={{}}>
-        <Navbar/>
-        <div style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column"}}>
-          <h1 style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column",fontSize: "30px", textAlign: "center", fontFamily:"montserrat", fontWeight:"bold"}}>Bitte geben Sie das Passwort für den Zugang zu den Tarifen ein</h1><br/>
+        <Navbar />
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
+          <h1 style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", fontSize: "30px", textAlign: "center", fontFamily: "montserrat", fontWeight: "bold" }}>{t("Bitte geben Sie das Passwort für den Zugang zu den Tarifen ein")}</h1><br />
 
           <form onSubmit={handleSubmit}>
-            <input type="password" id="passwordInput" placeholder="Passwort eingeben" style={{height: "150%", fontSize: "1.5rem"}}/>
-            <button type="submit" className='theme-btn'>einreichen</button>
+            <input type="password" id="passwordInput" placeholder={t("Passwort eingeben")} style={{ height: "150%", fontSize: "1.5rem" }} />
+            <button type="submit" className='theme-btn'>{t("Einreichen")}</button>
           </form>
         </div>
-        
+
         <section className='wpo-contact-pg-section section-padding'>
           <div className='container'>
             <div className='row'>
               <div className='col col-lg-10 offset-lg-1'>
                 <div className='wpo-contact-form-area'>
-                  <h1 style={{fontSize: "30px", textAlign: "center", fontFamily:"montserrat", fontWeight:"bold"}}>Füllen Sie das nachstehende Formular aus, um das Passwort zu erhalten, das Zugang zur Preisliste gewährt</h1><br/><br/>
-                  <ContactForm/>
+                  <h1 style={{ fontSize: "30px", textAlign: "center", fontFamily: "montserrat", fontWeight: "bold" }}>{t("Füllen Sie das nachstehende Formular aus, um das Passwort zu erhalten, das Zugang zur Preisliste gewährt")}</h1><br /><br />
+                  <ContactForm />
                 </div>
               </div>
             </div>
           </div>
-        </section><br/><br/><br/><br/><br/><br/>
-        <Footer/>
+        </section><br /><br /><br /><br /><br /><br />
+        <Footer />
       </div>
     );
   }
@@ -96,21 +97,21 @@ const ShopPage = ({ addToCart, addToWishList }) => {
   return (
     <Fragment>
       <Helmet>
-        <title>Angebote - THEPLUG WEDDING</title>
+        <title>{t("Angebote")} - THEPLUG WEDDING</title>
       </Helmet>
-      <Navbar /><br/><br/>
-      <div className='ancre' style={{textAlign: 'center', scrollBehavior: 'smooth', marginTop:"20px"}}>
-        <a href="#photo" style={{marginRight: '20px', backgroundColor: '#b99226', color:"white", padding:"10px 15px", borderRadius:"5px"}}>Angebote für Fotos</a>
-        <a href="#video" style={{marginRight: '20px', backgroundColor: '#b99226', color:"white", padding:"10px 15px", borderRadius:"5px"}}>Angebote für Video</a>
-        <a href="#photo-video" style={{backgroundColor: '#b99226', color:"white", padding:"10px 15px", borderRadius:"5px"}}>Angebote für Fotos & Video</a>
+      <Navbar /><br /><br />
+      <div className='ancre' style={{ textAlign: 'center', scrollBehavior: 'smooth', marginTop: "20px" }}>
+        <a href="#photo" style={{ marginRight: '20px', backgroundColor: '#b99226', color: "white", padding: "10px 15px", borderRadius: "5px" }}>{t("Angebote für Fotos")}</a>
+        <a href="#video" style={{ marginRight: '20px', backgroundColor: '#b99226', color: "white", padding: "10px 15px", borderRadius: "5px" }}>{t("Angebote für Video")}</a>
+        <a href="#photo-video" style={{ backgroundColor: '#b99226', color: "white", padding: "10px 15px", borderRadius: "5px" }}>{t("Angebote für Fotos & Video")}</a>
       </div>
       {/* <PageTitle pageTitle={'ANGEBOTE'} pagesub={'Angebote'} showHero={true} heroText="EXKLUSIVE UND HERAUSRAGENDE HOCHZEITSFOTOS UND HOCHZEITSVIDEOS"/> */}
       <Hochzeitsfilm />
       <ShortAbout />
       <FeedbackVideo />
-      <InvestingSection /><br/>
-      <ServiceSection pbClass={'pt-0'} onServiceSelect={handleServiceSelect}/>
-      <AdditionalOption total={total}/>
+      <InvestingSection /><br />
+      <ServiceSection pbClass={'pt-0'} onServiceSelect={handleServiceSelect} />
+      <AdditionalOption total={total} />
       <FAQPricing />
       {/* <PartnerSection pClass={'section-padding'} />  */}
       <FormSection />

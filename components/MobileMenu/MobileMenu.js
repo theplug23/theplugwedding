@@ -2,64 +2,65 @@ import React, { Fragment, useState } from 'react';
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Collapse from "@mui/material/Collapse";
-import Link  from "next/link";
+import Link from "next/link";
+import { useTranslation } from 'react-i18next';
 
 const menus = [
     {
         id: 1,
         title: 'HOME',
         link: '/',
-       /*  submenu: [
-            {
-                id: 11,
-                title: 'Main Home',
-                link: '/home'
-            },
-            {
-                id: 12,
-                title: 'Wedding Planner',
-                link: '/home2'
-            },
-            {
-                id: 13,
-                title: 'Announcement Home',
-                link: '/home3'
-            },
-            {
-                id: 14,
-                title: 'Wedding Home',
-                link: '/home4'
-            },
-            {
-                id: 15,
-                title: 'Asian / Indian Wedding Announcement',
-                link: '/home5'
-            },
-            {
-                id: 16,
-                title: 'Asian / Indian Wedding Planner',
-                link: '/home6'
-            },
-            {
-                id: 17,
-                title: 'Muslim Wedding',
-                link: '/home7'
-            },
-            {
-                id: 18,
-                title: 'Shop Home',
-                link: '/home8'
-            },
-            {
-                id: 19,
-                title: 'Wedding Invitation',
-                link: '/home9'
-            },
-        ] */
+        /*  submenu: [
+             {
+                 id: 11,
+                 title: 'Main Home',
+                 link: '/home'
+             },
+             {
+                 id: 12,
+                 title: 'Wedding Planner',
+                 link: '/home2'
+             },
+             {
+                 id: 13,
+                 title: 'Announcement Home',
+                 link: '/home3'
+             },
+             {
+                 id: 14,
+                 title: 'Wedding Home',
+                 link: '/home4'
+             },
+             {
+                 id: 15,
+                 title: 'Asian / Indian Wedding Announcement',
+                 link: '/home5'
+             },
+             {
+                 id: 16,
+                 title: 'Asian / Indian Wedding Planner',
+                 link: '/home6'
+             },
+             {
+                 id: 17,
+                 title: 'Muslim Wedding',
+                 link: '/home7'
+             },
+             {
+                 id: 18,
+                 title: 'Shop Home',
+                 link: '/home8'
+             },
+             {
+                 id: 19,
+                 title: 'Wedding Invitation',
+                 link: '/home9'
+             },
+         ] */
     },
 
-{
-    id: 2,
+    {
+        id: 2,
         title: 'ABOUT',
         link: '/Ueber-uns',
         submenu: [
@@ -79,7 +80,7 @@ const menus = [
                 link: '/Angebote'
             }
         ]
-    },  
+    },
     {
         id: 3,
         title: 'HOCHZEITSFOTOS',
@@ -106,29 +107,29 @@ const menus = [
         id: 4,
         title: 'HOCHZEITSFILME',
         link: '/Hochzeitsvideos',
-      /*   submenu: [
-            {
-                id: 71,
-                title: 'Shop',
-                link: '/shop',
-            },
-            {
-                id: 75,
-                title: 'Shop Single',
-                link: '/product-single/Wedding-Cake'
-            },
-            {
-                id: 76,
-                title: 'Cart',
-                link: '/cart'
-            },
-            {
-                id: 77,
-                title: 'Checkout',
-                link: '/checkout'
-            }
-            
-        ] */
+        /*   submenu: [
+              {
+                  id: 71,
+                  title: 'Shop',
+                  link: '/shop',
+              },
+              {
+                  id: 75,
+                  title: 'Shop Single',
+                  link: '/product-single/Wedding-Cake'
+              },
+              {
+                  id: 76,
+                  title: 'Cart',
+                  link: '/cart'
+              },
+              {
+                  id: 77,
+                  title: 'Checkout',
+                  link: '/checkout'
+              }
+              
+          ] */
     },
 
     /*{
@@ -221,7 +222,7 @@ const MobileMenu = () => {
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
-
+    const { t } = useTranslation()
     return (
         <div>
             <div className={`mobileMenu ${menuActive ? "show" : ""}`}>
@@ -232,11 +233,11 @@ const MobileMenu = () => {
                 <ul className="responsivemenu">
                     {menus.map((item, mn) => {
                         return (
-                            <ListItem className={item.id === openId ? 'active' : null}  key={mn}>
+                            <ListItem className={item.id === openId ? 'active' : null} key={mn}>
                                 {item.submenu ?
                                     <Fragment>
-                                        <p onClick={() => setOpenId(item.id === openId ? 0 : item.id)}>{item.title}
-                                          <i className={item.id === openId ? 'fa fa-angle-up' : 'fa fa-angle-down'}></i>
+                                        <p onClick={() => setOpenId(item.id === openId ? 0 : item.id)}>{t(item.title)}
+                                            <i className={item.id === openId ? 'fa fa-angle-up' : 'fa fa-angle-down'}></i>
                                         </p>
                                         <Collapse in={item.id === openId} timeout="auto" unmountOnExit>
                                             <List className="subMenu">
@@ -245,7 +246,7 @@ const MobileMenu = () => {
                                                         return (
                                                             <ListItem key={i}>
                                                                 <Link onClick={ClickHandler}
-                                                                    href={submenu.link}>{submenu.title}</Link>
+                                                                    href={submenu.link}>{t(submenu.title)}</Link>
                                                             </ListItem>
                                                         )
                                                     })}
@@ -254,7 +255,7 @@ const MobileMenu = () => {
                                         </Collapse>
                                     </Fragment>
                                     : <Link
-                                        href={item.link}>{item.title}</Link>
+                                        href={item.link}>{t(item.title)}</Link>
                                 }
                             </ListItem>
                         )
@@ -262,11 +263,11 @@ const MobileMenu = () => {
                 </ul>
 
                 <div className='links'>
-                    <hr style={{color:'white'}} />
+                    <hr style={{ color: 'white' }} />
                     <ul className="list-links">
-                        <li className='link'><Link style={{color:'white'}}  target={'_blank'} href="tel:+4915752069252"><i className="fi flaticon-phone-call"></i></Link></li>
-                        <li className='link'><Link style={{color:'white'}} href="https://wa.me/4915752069252" target={'_blank'}><i className="fa fa-whatsapp"></i></Link></li>
-                        <li className='link'><Link style={{color:'white'}} target={'_blank'} href="mailto:contact@theplug-group.com"><i className="fi flaticon-email icon"></i></Link></li>                 
+                        <li className='link'><Link style={{ color: 'white' }} target={'_blank'} href="tel:+4915752069252"><i className="fi flaticon-phone-call"></i></Link></li>
+                        <li className='link'><Link style={{ color: 'white' }} href="https://wa.me/4915752069252" target={'_blank'}><i className="fa fa-whatsapp"></i></Link></li>
+                        <li className='link'><Link style={{ color: 'white' }} target={'_blank'} href="mailto:contact@theplug-group.com"><i className="fi flaticon-email icon"></i></Link></li>
                     </ul>
                 </div>
 
@@ -274,7 +275,7 @@ const MobileMenu = () => {
 
             <div className="showmenu" onClick={() => setMenuState(!menuActive)}>
                 <button type="button" className="navbar-toggler open-btn">
-                    <span className="icon-bar first-angle"></span> 
+                    <span className="icon-bar first-angle"></span>
                     <span className="icon-bar middle-angle"></span>
                     <span className="icon-bar last-angle"></span>
                 </button>

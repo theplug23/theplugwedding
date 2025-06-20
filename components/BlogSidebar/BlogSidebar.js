@@ -2,55 +2,56 @@ import React from 'react';
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '/public/images/THEPLUG-WEGGING_logo.png'
-import { useEffect ,useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 const BlogSidebar = (props) => {
     const [posts, setPosts] = useState([])
     const [search, setSearch] = useState("")
 
-    const SubmitHandler = (e) =>{
-       e.preventDefault()
-        const searchPosts= posts.filter(post => (post.title.includes(search) || post.text.includes(search)))
+    const SubmitHandler = (e) => {
+        e.preventDefault()
+        const searchPosts = posts.filter(post => (post.title.includes(search) || post.text.includes(search)))
         console.log(searchPosts)
     }
 
     useEffect(() => {
         axios.get('http://localhost:5000/posts')
-       .then(res=> setPosts(res.data))
-       .catch(err =>console.log(err))
+            .then(res => setPosts(res.data))
+            .catch(err => console.log(err))
     }, [search])
 
-    const ClickHandler = () =>{
+    const ClickHandler = () => {
         window.scrollTo(10, 0);
-     }
-
-    return(
+    }
+    const { t } = useTranslation()
+    return (
         <div className={`col col-lg-4 col-12 ${props.blLeft}`}>
             <div className="blog-sidebar">
-            <div className="widget about-widget">
-                 <div className="img-holder">
-                    <Image src={logo} alt=""/>
-                </div>
-                <h4>THEPLUG Weeding</h4>
-                <p>THEPLUG Hochzeitsteam verewigt den schönsten Tag in Ihrem Leben</p>
-                <div className="social">
-                    <ul className="clearfix">
-                        <li><Link onClick={ClickHandler} target={'_blank'} href="https://www.facebook.com/thepluggroup1"><i className="fi flaticon-facebook-app-symbol"></i></Link></li>
-                        <li><Link onClick={ClickHandler} target={'_blank'} href="https://www.youtube.com/channel/UCjSaZbsMA4qSiqtHQOmrjFA"><i className="fi flaticon-youtube"></i></Link></li>
-                        <li><Link onClick={ClickHandler} target={'_blank'} href="https://www.instagram.com/theplug_wedding_sk/"><i className="fi flaticon-instagram-1"></i></Link></li>
-                        <li><Link onClick={ClickHandler} target={'_blank'} href="https://wa.me/4915752069252"><i className="fa fa-whatsapp"></i></Link></li>
-                    </ul>
-                </div>
-            </div>
-            <div className="widget search-widget">
-                <form onSubmit={SubmitHandler}>
-                    <div>
-                        <input value={search} onChange={(e)=>setSearch(e.target.value)} type="text" className="form-control" placeholder="Search Post.." required/>
-                        <button type="submit"><i className="ti-search"></i></button>
+                <div className="widget about-widget">
+                    <div className="img-holder">
+                        <Image src={logo} alt="" />
                     </div>
-                </form>
-            </div>
+                    <h4>THEPLUG Weeding</h4>
+                    <p>{t("THEPLUG Hochzeitsteam verewigt den schönsten Tag in Ihrem Leben")}</p>
+                    <div className="social">
+                        <ul className="clearfix">
+                            <li><Link onClick={ClickHandler} target={'_blank'} href="https://www.facebook.com/thepluggroup1"><i className="fi flaticon-facebook-app-symbol"></i></Link></li>
+                            <li><Link onClick={ClickHandler} target={'_blank'} href="https://www.youtube.com/channel/UCjSaZbsMA4qSiqtHQOmrjFA"><i className="fi flaticon-youtube"></i></Link></li>
+                            <li><Link onClick={ClickHandler} target={'_blank'} href="https://www.instagram.com/theplug_wedding_sk/"><i className="fi flaticon-instagram-1"></i></Link></li>
+                            <li><Link onClick={ClickHandler} target={'_blank'} href="https://wa.me/4915752069252"><i className="fa fa-whatsapp"></i></Link></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="widget search-widget">
+                    <form onSubmit={SubmitHandler}>
+                        <div>
+                            <input value={search} onChange={(e) => setSearch(e.target.value)} type="text" className="form-control" placeholder="Search Post.." required />
+                            <button type="submit"><i className="ti-search"></i></button>
+                        </div>
+                    </form>
+                </div>
                 {/* <div className="widget category-widget">
                     <h3>Categories</h3>
                     <ul>
@@ -100,14 +101,14 @@ const BlogSidebar = (props) => {
                     </ul>
                 </div> */}
                 <div className="wpo-contact-widget widget">
-                        <h2>How We Can <br/> Help You !</h2>
-                        <p>labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                        <Link onClick={ClickHandler} href="/Kontakt">Contact Us</Link>
+                    <h2>{t("Wie wir können")} <br />{t("Dir helfen !")}</h2>
+                    <p>{t("Was auch immer Ihr Bedarf, Ihr Anliegen oder Ihre Frage ist, zögern Sie nicht, uns direkt zu kontaktieren, wir werden Ihnen gerne antworten")}</p>
+                    <Link onClick={ClickHandler} href="/Kontakt">{t("Kontaktiere uns")}</Link>
                 </div>
             </div>
         </div>
-     )
-        
+    )
+
 }
 
 export default BlogSidebar;

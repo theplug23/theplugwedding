@@ -5,10 +5,11 @@ import Image from "next/image";
 import VideoModal from "../../components/ModalVideo/VideoModal";
 // import img from '/public/images/videos/Julia&Eric.jpg'
 import img from '/public/images/videos/Alena-Peter.png'
+import { useTranslation } from "react-i18next";
 
 
 const Hochzeitsfilm = (props) => {
-
+const {t} = useTranslation()
     return(
         <section className="wpo-blog-pg-section section-padding">
             <div className="container">
@@ -24,8 +25,8 @@ const Hochzeitsfilm = (props) => {
                     <div className="col col-lg-6 col-12">
                         <div className="blog-sidebar">
                             <div className="widget about-widget">
-                                <h4>CINEMATISCHE HOCHZEITSFILM</h4>
-                                <p>Wir sind auf herausragende und luxuriöse Hochzeitsfilme spezialisiert.<br/><br/>Schau dir gerne die Hochzeit von Alena & Peter an, welche im Mühltal im Darmstadt. </p>
+                                <h4>{t("CINEMATISCHE HOCHZEITSFILM")}</h4>
+                                <p>{t("Wir sind auf herausragende und luxuriöse Hochzeitsfilme spezialisiert.")}<br/><br/>{t("Schau dir gerne die Hochzeit von Alena & Peter an, welche im Mühltal im Darmstadt.")} </p>
                             </div>
                         </div>
                     </div>

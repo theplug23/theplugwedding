@@ -5,16 +5,17 @@ import Image from "next/image";
 import VideoModal from "../../components/ModalVideo/VideoModal";
 // import img from '/public/images/videos/vladi-&-sarah.jpg'
 import img from '/public/images/videos/Hena&Oliver.jpg'
+import { useTranslation } from "react-i18next";
 
 
 const FeedbackVideo = (props) => {
-
-    return(
+    const { t } = useTranslation()
+    return (
         <section className="wpo-blog-pg-section">
             <div className="container">
-                <SectionTitle MainTitle={'WAS SAGEN MEINE BRAUTPAARE ZU IHREM VIDEO ?'} subTitle={''}/>
+                <SectionTitle MainTitle={t('WAS SAGEN MEINE BRAUTPAARE ZU IHREM VIDEO ?')} subTitle={''} />
                 <div className="row">
-                    <div className="row col-lg-12 wpo-blog-content">                        
+                    <div className="row col-lg-12 wpo-blog-content">
                         <div className='post format-video col-lg-12'>
                             <div className="entry-media video-holder">
                                 <Image style={{ minHeight: '250px' }} src={img} alt={"Hena & Oliver"} />
@@ -23,8 +24,8 @@ const FeedbackVideo = (props) => {
                         </div>
                     </div>
                 </div>
-             </div>
-         </section>
+            </div>
+        </section>
     )
 }
 

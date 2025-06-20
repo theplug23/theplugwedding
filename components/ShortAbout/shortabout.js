@@ -12,6 +12,7 @@ import Image from 'next/image'
 // Things i added for the slide show
 import Slider from "react-slick";
 import { Button } from '@mui/material'
+import { t } from 'i18next'
 
 var settings = {
     dots: false,
@@ -22,7 +23,7 @@ var settings = {
     autoplay: true,
     autoplaySpeed: 2000,
     centerMode: true,
-    centerPadding:'0',
+    centerPadding: '0',
     responsive: [
         {
             breakpoint: 1500,
@@ -103,20 +104,20 @@ const ShortAbout = (props) => {
                         </div>
                         <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-1">
                             <div className="wpo-about-text">
-                                <h2 style={{color:'#b99226'}} >Über Stephane</h2>
-                                
-                                <p style={{fontSize:'20px', fontFamily:'Montserrat'}}>Liebe Brautpaare,<br /><br />
-                                Ich bin Stéphane Kamwa, Hochzeitsfotograf und -videograf.<br /><br />
-                                Vor 13 Jahren bin ich nach Deutschland gekommen, um zu studieren. Zu Beginn meines Studiums in Medieninformatik an der Hochschule Mittelhessen habe ich die Fotografie und Videografie entdeckt. Dieser Beruf hat mir ermöglicht, mein Studium in Deutschland zu finanzieren.<br /><br />
+                                <h2 style={{ color: '#b99226' }} >{t("Über Stephane")}</h2>
+
+                                <p style={{ fontSize: '20px', fontFamily: 'Montserrat' }}>{t("Liebe Brautpaare")},<br /><br />
+                                    {t("Ich bin Stéphane Kamwa, Hochzeitsfotograf und -videograf.")}<br /><br />
+                                    {t("Vor 13 Jahren bin ich nach Deutschland gekommen, um zu studieren. Zu Beginn meines Studiums in Medieninformatik an der Hochschule Mittelhessen habe ich die Fotografie und Videografie entdeckt. Dieser Beruf hat mir ermöglicht, mein Studium in Deutschland zu finanzieren.")}<br /><br />
                                 </p>
-                                {!showMore && <p style={{fontSize:'20px', fontFamily:'Montserrat', marginTop: -50}}>
-                                Mit 10 Jahren Erfahrung in der Hochzeitsfotografie und -videografie bin ich leidenschaftlich darum bemüht, die kostbarsten Momente festzuhalten. Ich liebe es, eure Geschichte des Tages durch wunderschöne bewegte Bilder zu erzählen. Meine Filme und Fotos sind die perfekten Erinnerungen an den schönsten Tag eures Lebens – ein einzigartiges Andenken, das ihr niemals vergessen werdet.<br /><br />
-                                Wenn euch ein authentischer Stil, echte Emotionen und ungestellte Posen gefallen, freue ich mich auf eure Anfrage, um eure persönliche Geschichte zu erzählen.<br /><br />
-                                Nach dem Ende meines Studiums konnte ich nicht lange in einem formellen Job bleiben, weil mir das Gefühl fehlte, Menschen durch meine Arbeit glücklich zu machen. Ich glaube, es war keine bewusste Entscheidung, Hochzeitsfotograf und -videograf zu werden. Es war das Schicksal, das mich in diese Richtung gelenkt hat. Und wisst ihr was? Ich würde nichts daran ändern. Ich halte mich für den glücklichsten Menschen auf der Welt, weil ich den Beruf ausüben kann, in den ich mich verliebt habe.<br /><br />
-                                Schaut euch gerne mein Portfolio an und entdeckt mein Universum.
+                                {!showMore && <p style={{ fontSize: '20px', fontFamily: 'Montserrat', marginTop: -50 }}>
+                                    {t("Mit 10 Jahren Erfahrung in der Hochzeitsfotografie und -videografie bin ich leidenschaftlich darum bemüht, die kostbarsten Momente festzuhalten. Ich liebe es, eure Geschichte des Tages durch wunderschöne bewegte Bilder zu erzählen. Meine Filme und Fotos sind die perfekten Erinnerungen an den schönsten Tag eures Lebens – ein einzigartiges Andenken, das ihr niemals vergessen werdet.")}<br /><br />
+                                    {t("Wenn euch ein authentischer Stil, echte Emotionen und ungestellte Posen gefallen, freue ich mich auf eure Anfrage, um eure persönliche Geschichte zu erzählen.")}<br /><br />
+                                    {t("Nach dem Ende meines Studiums konnte ich nicht lange in einem formellen Job bleiben, weil mir das Gefühl fehlte, Menschen durch meine Arbeit glücklich zu machen. Ich glaube, es war keine bewusste Entscheidung, Hochzeitsfotograf und -videograf zu werden. Es war das Schicksal, das mich in diese Richtung gelenkt hat. Und wisst ihr was? Ich würde nichts daran ändern. Ich halte mich für den glücklichsten Menschen auf der Welt, weil ich den Beruf ausüben kann, in den ich mich verliebt habe.")}<br /><br />
+                                    {t("Schaut euch gerne mein Portfolio an und entdeckt mein Universum.")}
                                 </p>}
-                                <Button style={{fontFamily:'Montserrat', marginTop: -50, color:'#b99226'}} onClick={() => setShowMore(!showMore)}>
-                                    {showMore ? 'Mehr sehen' : 'Siehe weniger'}
+                                <Button style={{ fontFamily: 'Montserrat', marginTop: -50, color: '#b99226' }} onClick={() => setShowMore(!showMore)}>
+                                    {showMore ? t('Mehr sehen') : t('Siehe weniger')}
                                 </Button><br />
                             </div>
                         </div>

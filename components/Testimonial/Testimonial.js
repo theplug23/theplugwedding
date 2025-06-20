@@ -7,6 +7,7 @@ import ts3 from '/public/images/testimonial/testimonial3.jpg'
 import ts4 from '/public/images/testimonial/testimonial4.jpg'
 import SectionTitle from '../SectionTitle';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 const testimonial = [
     {
@@ -58,11 +59,12 @@ const Testimonial = () => {
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
+    const {t}=useTranslation()
 
     return (
         <section className="wpo-testimonial-section section-padding">
             <div className="container">
-            <SectionTitle subTitle={'Kundenreferenzen'} MainTitle={'Lesen Sie, was unsere Kunden über ihre Erfahrungen mit unseren Dienstleistungen zu sagen haben.'} />
+            <SectionTitle subTitle={t('Kundenreferenzen')} MainTitle={t('Lesen Sie, was unsere Kunden über ihre Erfahrungen mit unseren Dienstleistungen zu sagen haben.')} />
                 <div className="wpo-testimonial-wrap">
                     <div className="row align-items-center">
                         <div className="col col-lg-7">
@@ -91,7 +93,7 @@ const Testimonial = () => {
                                             <div className="wpo-testimonial-item" key={tesmnl.id}>
                                                 <div className="wpo-testimonial-text">
                                                     <i className="fi flaticon-quotation"></i>
-                                                    <p>{tesmnl.Des}</p>
+                                                    <p>{t(tesmnl.Des)}</p>
                                                     <div className="wpo-testimonial-text-btm">
                                                         <h3>{tesmnl.Title}</h3>
                                                         {/* <span>Wedding- {tesmnl.Date}</span> */}
@@ -102,7 +104,7 @@ const Testimonial = () => {
                                     }
 
                                 </Slider>
-                                <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="https://www.google.com/search?q=stephane+kamwa+hochzeitsfotograf+%26+-videograf+(theplug-wedding-events-portrait))&oq=st&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGEAyBggCEEUYOzIGCAMQRRg5MgYIBBBFGDsyBggFEEUYPTIGCAYQRRg8MgYIBxBFGD3SAQgxNzg0ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x47bd7af23aaaa0a1:0xabb4dd37dbbf728b,1" target='_blank' className="theme-btn">MEHR FEEDBACK</Link>
+                                <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="https://www.google.com/search?q=stephane+kamwa+hochzeitsfotograf+%26+-videograf+(theplug-wedding-events-portrait))&oq=st&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGEAyBggCEEUYOzIGCAMQRRg5MgYIBBBFGDsyBggFEEUYPTIGCAYQRRg8MgYIBxBFGD3SAQgxNzg0ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x47bd7af23aaaa0a1:0xabb4dd37dbbf728b,1" target='_blank' className="theme-btn">{t("MEHR FEEDBACK")}</Link>
                             </div>
                         </div>
                     </div>

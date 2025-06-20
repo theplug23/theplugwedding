@@ -13,6 +13,7 @@ import pimg9 from '/public/images/partners/trustlocal_logo.svg'
 import pimg10 from '/public/images/partners/zankyou-logo.svg'
 import pimg11 from '/public/images/partners/cakebynoemi_logo.png'
 import SectionTitle from "../SectionTitle";
+import { useTranslation } from "react-i18next";
 
 const partners = [
     {
@@ -98,12 +99,13 @@ const PartnerSection = (props) => {
             }
         ]
     };
+    const { t } = useTranslation()
 
     return (
 
         <section className={`wpo-partners-section ${props.pClass}`}>
             <div className="container">
-                <SectionTitle MainTitle={'ALLE, MIT DENEN WIR ARBEITEN'} subTitle={'Unsere Partner'}/>
+                <SectionTitle MainTitle={t('ALLE, MIT DENEN WIR ARBEITEN')} subTitle={t('Unsere Partner')} />
                 <div className="row">
                     <div className="col col-xs-12">
                         <div className="partner-grids partners-slider">

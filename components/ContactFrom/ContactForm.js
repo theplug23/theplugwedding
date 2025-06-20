@@ -5,6 +5,7 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css"; // Importation des styles
 import { de } from 'date-fns/locale'; // Importation de la locale allemande
 import moment from 'moment/moment';
+import { useTranslation } from 'react-i18next';
 
 const timeOptions = {
     Fotografie: [
@@ -43,6 +44,7 @@ const timeOptions = {
 };
 
 const ContactForm = () => {
+    const { t } = useTranslation()
     const [sendStatus, setSendStatus] = useState(0);
     const [forms, setForms] = useState({
         name: '',
@@ -118,7 +120,7 @@ const ContactForm = () => {
                             name="name"
                             onBlur={changeHandler}
                             onChange={changeHandler}
-                            placeholder="Ihr Name" />
+                            placeholder={t("Ihr Name")} />
                         {validator.message('name', forms.name, 'required|alpha_space')}
                     </div>
                 </div>
@@ -129,12 +131,12 @@ const ContactForm = () => {
                             onChange={handleSubjectChange}
                             value={forms.subject}
                             name="subject">
-                            <option value="">Dienstauswahl</option>
-                            <option value="Fotografie">Fotografie</option>
-                            <option value="Videografie">Videografie</option>
-                            <option value="FotoVideo">Fotos + Videos</option>
-                            <option value="Albumfoto">Albumfoto</option>
-                            <option value="Fotobox">Fotobox</option>
+                            <option value="">{t("Dienstauswahl")}</option>
+                            <option value="Fotografie">{t("Fotografie")}</option>
+                            <option value="Videografie">{t("Videografie")}</option>
+                            <option value="FotoVideo">{t("Fotos + Videos")}</option>
+                            <option value="Albumfoto">{t("Albumfoto")}</option>
+                            <option value="Fotobox">{t("Fotobox")}</option>
                         </select>
                         {validator.message('subject', forms.subject, 'required')}
                     </div>
@@ -147,7 +149,7 @@ const ContactForm = () => {
                             name="phone"
                             onBlur={changeHandler}
                             onChange={changeHandler}
-                            placeholder="Ihre Telefonnummer" />
+                            placeholder={t("Ihre Telefonnummer")} />
                         {validator.message('phone', forms.phone, 'required|phone')}
                     </div>
                 </div>
@@ -159,7 +161,7 @@ const ContactForm = () => {
                             name="email"
                             onBlur={changeHandler}
                             onChange={changeHandler}
-                            placeholder="Deine E-Mail Adresse" />
+                            placeholder={t("Deine E-Mail Adresse")} />
                         {validator.message('email', forms.email, 'required|email')}
                     </div>
                 </div>
@@ -169,7 +171,7 @@ const ContactForm = () => {
                             selected={forms.date}
                             onChange={(date) => setForms({ ...forms, date })}
                             locale={de} // Définit la locale en allemand
-                            placeholderText="Wählen Sie ein Datum"
+                            placeholderText={t("Wählen Sie ein Datum")}
                         />
                         {validator.message('date', forms.date, 'required')}
                     </div>
@@ -181,7 +183,7 @@ const ContactForm = () => {
                             onChange={changeHandler}
                             value={forms.time}
                             name="time">
-                            <option value="">Begleitungszeit</option>
+                            <option value="">{t("Begleitungszeit")}</option>
                             {timeOptionsForSubject.map((option, index) => (
                                 <option key={index} value={option}>{option}</option>
                             ))}
@@ -196,14 +198,14 @@ const ContactForm = () => {
                         value={forms.message}
                         type="text"
                         name="message"
-                        placeholder="Mitteilung">
+                        placeholder={t("Mitteilung")}>
                     </textarea>
                     {validator.message('message', forms.message, 'required')}
                 </div>
             </div>
             <div className="submit-area">
                 <button type="submit" className="theme-btn">
-                    {sendStatus === 1 ? 'IM GANGE...' : (sendStatus === 0 ? 'JETZT ABSENDEN' : 'E-MAIL GESENDET')}
+                    {sendStatus === 1 ? t('IM GANGE...') : (sendStatus === 0 ? t('JETZT ABSENDEN') : t('E-MAIL GESENDET'))}
                 </button>
             </div>
         </form>

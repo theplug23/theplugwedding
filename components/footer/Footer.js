@@ -1,12 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
 import FormSection from '../FormSection/FormSection'
+import { useTranslation } from 'react-i18next';
 
 const ClickHandler = () => {
     window.scrollTo(10, 0);
 }
 
 const Footer = () => {
+    const { t } = useTranslation();
     return (
         <>
             <div className="wpo-site-footer text-center">
@@ -34,7 +36,7 @@ const Footer = () => {
                         <div className="col-12">
                             <div className="Tags">
                                 <p style={{color:'black'}}>
-                                Hochzeitsfotograf Darmstadt | Hochzeitsvideograf Darmstadt | Hochzeitsfotograf Frankfurt | Hochzeitsvideograf Frankfurt | Hochzeitsfotograf Rüsselsheim | Hochzeitsvideograf Rüsselsheim | Hochzeitsfotograf Mainz | Hochzeitsvideograf Mainz | Hochzeitsfotograf Wiesbaden | Hochzeitsvideograf Wiesbaden | Hochzeitsfotograf Hanau | Hochzeitsvideograf Hanau | Hochzeitsfotograf Langen | Hochzeitsvideograf Langen | Hochzeitsfotograf Neu-Isenburg | Hochzeitsvideograf Neu-Isenburg | Hochzeitsfotograf Dietzenbach | Hochzeitsvideograf Dietzenbach | Hochzeitsfotograf Heidelberg | Hochzeitsvideograf Heidelberg | Hochzeitsfotograf Mannheim | Hochzeitsvideograf Mannheim | Hochzeitsfotograf Bensheim | Hochzeitsvideograf Bensheim | Hochzeitsfotograf Dieburg | Hochzeitsvideograf Dieburg | Hochzeitsfotograf Rodgau | Hochzeitsvideograf Rodgau | Hochzeitsfotograf Worms | Hochzeitsvideograf Worms | Hochzeitsfotograf Maintal | Hochzeitsvideograf Maintal | Hochzeitsfotograf Weiterstadt | Hochzeitsvideograf Weiterstadt | Hochzeitsfotograf Bad Homburg | Hochzeitsvideograf Bad Homburg | Hochzeitsfotograf Friedberg | Hochzeitsvideograf Friedberg | Hochzeitsfotograf Gießen | Hochzeitsvideograf Gießen | Hochzeitsfotograf Oberursel | Hochzeitsvideograf Oberursel | Hochzeitsfotograf Taunusstein | Hochzeitsvideograf Taunusstein | Hochzeitsfotograf Königstein im Taunus | Hochzeitsvideograf Königstein am Taunus | Hochzeitsfotograf Weinheim | Hochzeitsvideograf Weinheim | Hochzeitsfotograf Bruchsal | Hochzeitsvideograf Bruchsal | Hochzeitsfotograf Karlsruhe | Hochzeitsvideograf Karlsruhe | Hochzeitsfotograf Heilbronn | Hochzeitsvideograf Heilbronn | Hochzeitsfotograf Bad Dürkheim | Hochzeitsvideograf Bad Dürkheim | Hochzeitsfotograf Speyer | Hochzeitsvideograf Speyer
+                                {t("Hochzeitsfotograf")} Darmstadt | {t("Hochzeitsvideograf")} Darmstadt | {t("Hochzeitsfotograf")} Frankfurt | {t("Hochzeitsvideograf")} Frankfurt | {t("Hochzeitsfotograf")} Rüsselsheim | {t("Hochzeitsvideograf")} Rüsselsheim | {t("Hochzeitsfotograf")} Mainz | {t("Hochzeitsvideograf")} Mainz | {t("Hochzeitsfotograf")} Wiesbaden | {t("Hochzeitsvideograf")} Wiesbaden | {t("Hochzeitsfotograf")} Hanau | {t("Hochzeitsvideograf")} Hanau | {t("Hochzeitsfotograf")} Langen | {t("Hochzeitsvideograf")} Langen | {t("Hochzeitsfotograf")} Neu-Isenburg | {t("Hochzeitsvideograf")} Neu-Isenburg | {t("Hochzeitsfotograf")} Dietzenbach | {t("Hochzeitsvideograf")} Dietzenbach | {t("Hochzeitsfotograf")} Heidelberg | {t("Hochzeitsvideograf")} Heidelberg | {t("Hochzeitsfotograf")} Mannheim | {t("Hochzeitsvideograf")} Mannheim | {t("Hochzeitsfotograf")} Bensheim | {t("Hochzeitsvideograf")} Bensheim | {t("Hochzeitsfotograf")} Dieburg | {t("Hochzeitsvideograf")} Dieburg | {t("Hochzeitsfotograf")} Rodgau | {t("Hochzeitsvideograf")} Rodgau | {t("Hochzeitsfotograf")} Worms | {t("Hochzeitsvideograf")} Worms | {t("Hochzeitsfotograf")} Maintal | {t("Hochzeitsvideograf")} Maintal | {t("Hochzeitsfotograf")} Weiterstadt | {t("Hochzeitsvideograf")} Weiterstadt | {t("Hochzeitsfotograf")} Bad Homburg | {t("Hochzeitsvideograf")} Bad Homburg | {t("Hochzeitsfotograf")} Friedberg | {t("Hochzeitsvideograf")} Friedberg | {t("Hochzeitsfotograf")} Gießen | {t("Hochzeitsvideograf")} Gießen | {t("Hochzeitsfotograf")} Oberursel | {t("Hochzeitsvideograf")} Oberursel | {t("Hochzeitsfotograf")} Taunusstein | {t("Hochzeitsvideograf")} Taunusstein | {t("Hochzeitsfotograf")} Königstein im Taunus | {t("Hochzeitsvideograf")} Königstein am Taunus | {t("Hochzeitsfotograf")} Weinheim | {t("Hochzeitsvideograf")} Weinheim | {t("Hochzeitsfotograf")} Bruchsal | {t("Hochzeitsvideograf")} Bruchsal | {t("Hochzeitsfotograf")} Karlsruhe | {t("Hochzeitsvideograf")} Karlsruhe | {t("Hochzeitsfotograf")} Heilbronn | {t("Hochzeitsvideograf")} Heilbronn | {t("Hochzeitsfotograf")} Bad Dürkheim | {t("Hochzeitsvideograf")} Bad Dürkheim | {t("Hochzeitsfotograf")} Speyer | {t("Hochzeitsvideograf")} Speyer
                                 </p>
                             </div><br/><br/>
                         </div>
@@ -49,7 +51,7 @@ const Footer = () => {
                         </div>
                         <div className="col-12">
                             <div className="copyright">
-                                <p>© Copyright 2024 | THEPLUG WEDDING - All rights reserved | <Link href="/Impressum">Impressum</Link> | <Link href="/Datenschutz">Datenschutz</Link> | Web Designed By <Link style={{color:'#B99226', fontWeight: 'bold'}} href="https://www.comtheplug.com/" target='_blank'>THEPLUG COM</Link></p>
+                                <p>{t("© Copyright 2024 | THEPLUG WEDDING - All rights reserved |")} <Link href="/Impressum">{t("Impressum")}</Link> | <Link href="/Datenschutz">{t("Datenschutz")}</Link> | {t("Web Designed By")} <Link style={{color:'#B99226', fontWeight: 'bold'}} href="https://www.comtheplug.com/" target='_blank'>THEPLUG COM</Link></p>
                             </div>
                         </div>
                     </div>

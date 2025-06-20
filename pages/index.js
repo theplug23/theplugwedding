@@ -25,10 +25,9 @@ import VideoSection from '../components/VideoSection';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga4';
 import PartnerSection from '../components/PartnerSection';
-
+import { useTranslation } from 'react-i18next';
 
 const HomePage = (props) => {
-
     useEffect(() => {
         ReactGA.event({
             hitType: 'pageview',
@@ -46,10 +45,11 @@ const HomePage = (props) => {
     const addToWishListProduct = (product) => {
         props.addToWishList(product);
     };
-    
+
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
+    const { t } = useTranslation()
 
     const products = productsArray
     const weddings = [
@@ -82,14 +82,14 @@ const HomePage = (props) => {
     return (
         <div>
             <Helmet>
-                <title>Hochzeitsfotograf & Hochzeitsvideograf in Darmstadt | Weltweite Hochzeitsreportagen | THEPLUG WEDDING</title>
+                <title>{t("Hochzeitsfotograf & Hochzeitsvideograf in Darmstadt | Weltweite Hochzeitsreportagen")} | THEPLUG WEDDING</title>
             </Helmet>
             <Navbar />
             <Hero />
             <About />
             <section className={`wpo-portfolio-section-s2 section-padding ${props.prClass}`} id="gallery">
                 <div className="container-fluid">
-                    <SectionTitle MainTitle={'ENTDECKEN SIE IN BILDERN EINIGE BILDER UNSERER HOCHZEITEN'} subTitle={'Unsere Hochzeiten'}/>
+                    <SectionTitle MainTitle={t('ENTDECKEN SIE IN BILDERN EINIGE BILDER UNSERER HOCHZEITEN')} subTitle={t('Unsere Hochzeiten')} />
                     <div className="sortable-gallery">
                         <div className="gallery-filters"></div>
                         <div className="row">
@@ -117,8 +117,8 @@ const HomePage = (props) => {
                                     </Gallery>
                                 </div>
                             </div>
-                        </div><br/>
-                        <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="/Portraitfotografie" className="theme-btn">WEITERE PHOTOS SEHEN...</Link>
+                        </div><br />
+                        <Link style={{ backgroundColor: '#b99226' }} onClick={ClickHandler} href="/Portraitfotografie" className="theme-btn">{t("WEITERE PHOTOS SEHEN...")}</Link>
                     </div>
                 </div>
             </section>
@@ -177,5 +177,3 @@ const HomePage = (props) => {
     )
 };
 export default connect(null, { addToCart, addToWishList })(HomePage);
-
-
