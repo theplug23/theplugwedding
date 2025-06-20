@@ -66,7 +66,7 @@ const HomePage = (props) => {
             img: '/images/portfolio/p/p228.jpg'
         },
         {
-            img: '/images/portfolio/p/p329.jpg'
+            img: '/images/portfolio/p/p329.jpeg'
         },
         {
             img: '/images/portfolio/p/p327.jpg'
