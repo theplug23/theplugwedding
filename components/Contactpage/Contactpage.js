@@ -10,7 +10,7 @@ const Contactpage = () => {
     return (
         <section className="wpo-contact-pg-section section-padding">
             <div className="container">
-                <SectionTitle MainTitle={'IHR HABT MEHRERE MÖGLICHKEITEN, UNS ZU KONTAKTIEREN'} subTitle={t('Unsere Kontakts')} />
+                <SectionTitle MainTitle={t('IHR HABT MEHRERE MÖGLICHKEITEN, UNS ZU KONTAKTIEREN')} subTitle={t('Unsere Kontakts')} />
                 <div className="row">
                     <div className="col col-lg-10 offset-lg-1">
                         <div className="office-info">
