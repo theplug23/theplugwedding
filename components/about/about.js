@@ -235,17 +235,15 @@ const About = (props) => {
                     <div className="row">
                         <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-2">
                             <div className="wpo-about-text">
-                                <h2 style={{color:'#b99226'}} >Über Philipp</h2>
-                                
-                                <p style={{fontSize:'20px', fontFamily:'Montserrat'}}>Mein Name ist Philipp Kopp und ich bin ein leidenschaftlicher Videograf mit einem starken Fokus auf Ästhetik und visueller Storytelling-Kunst. Seit einem Jahrzehnt habe ich die Freude, mit Unternehmen, talentierten Musikern und inspirierenden Künstlern zu arbeiten. Meine Reise führte mich von den zauberhaften Landschaften des Odenwaldes zu internationalen Bühnen und Projekten. Meine Stärke liegt darin, nicht nur Momente festzuhalten, sondern auch Emotionen in jedem Bild und jeder Sequenz einzufangen. Jedes Projekt ist für mich eine Chance, die Einzigartigkeit und Schönheit in Bewegtbildern festzuhalten. Unsere kreative Partnerschaft ermöglicht es uns, Synergien zu schaffen, die eure Projekte auf ein neues Level heben.
-
+                                <h2 style={{ color: '#b99226' }} >{t("Über Philipp")}</h2>
+                                <p style={{ fontSize: '20px', fontFamily: 'Montserrat' }}>{t("Mein Name ist Philipp Kopp und ich bin ein leidenschaftlicher Videograf mit einem starken Fokus auf Ästhetik und visueller Storytelling-Kunst. Seit einem Jahrzehnt habe ich die Freude, mit Unternehmen, talentierten Musikern und inspirierenden Künstlern zu arbeiten. Meine Reise führte mich von den zauberhaften Landschaften des Odenwaldes zu internationalen Bühnen und Projekten. Meine Stärke liegt darin, nicht nur Momente festzuhalten, sondern auch Emotionen in jedem Bild und jeder Sequenz einzufangen. Jedes Projekt ist für mich eine Chance, die Einzigartigkeit und Schönheit in Bewegtbildern festzuhalten. Unsere kreative Partnerschaft ermöglicht es uns, Synergien zu schaffen, die eure Projekte auf ein neues Level heben.")}
                                 </p>
-                                <Link style={{backgroundColor:'#b99226'}} onClick={ClickHandler} href="/Kontakt" className="theme-btn">KONTAKT UNS</Link>
+                                <Link style={{ backgroundColor: '#b99226' }} onClick={ClickHandler} href="/Kontakt" className="theme-btn">{t("KONTAKT UNS")}</Link>
                             </div>
-                           
+
                         </div>
                         <div className="col-lg-6 col-md-12 col-12 order-lg-2 order-1">
-                             <div className="wpo-about-item">
+                            <div className="wpo-about-item">
                                 <div className="wpo-about-img">
                                     <Slider {...settings}>
                                         {
