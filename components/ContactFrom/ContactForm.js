@@ -2,49 +2,35 @@ import React, { useState } from 'react';
 import SimpleReactValidator from 'simple-react-validator';
 import emailjs from '@emailjs/browser';
 import DatePicker from 'react-datepicker';
-import "react-datepicker/dist/react-datepicker.css"; // Importation des styles
-import { de } from 'date-fns/locale'; // Importation de la locale allemande
+import "react-datepicker/dist/react-datepicker.css";
+import { de } from 'date-fns/locale';
 import moment from 'moment/moment';
 import { useTranslation } from 'react-i18next';
+import { submitContactForm } from '../../api/orders';
 
 const timeOptions = {
     Fotografie: [
-        "2 Stunden",
-        "3 Stunden",
-        "4 Stunden",
-        "5 Stunden",
-        "6 Stunden",
-        "7 Stunden",
-        "8 Stunden",
-        "9 Stunden",
-        "10 Stunden",
-        "11 Stunden",
-        "12 Stunden",
+        "2 Stunden", "3 Stunden", "4 Stunden", "5 Stunden", "6 Stunden",
+        "7 Stunden", "8 Stunden", "9 Stunden", "10 Stunden", "11 Stunden", "12 Stunden",
     ],
     Videografie: [
-        "5 Stunden",
-        "6 Stunden",
-        "7 Stunden",
-        "8 Stunden",
-        "9 Stunden",
-        "10 Stunden",
-        "11 Stunden",
-        "12 Stunden",
+        "5 Stunden", "6 Stunden", "7 Stunden", "8 Stunden", "9 Stunden",
+        "10 Stunden", "11 Stunden", "12 Stunden",
     ],
     FotoVideo: [
-        "5 Stunden",
-        "6 Stunden",
-        "7 Stunden",
-        "8 Stunden",
-        "9 Stunden",
-        "10 Stunden",
-        "11 Stunden",
-        "12 Stunden",
+        "5 Stunden", "6 Stunden", "7 Stunden", "8 Stunden", "9 Stunden",
+        "10 Stunden", "11 Stunden", "12 Stunden",
     ],
 };
 
-const ContactForm = () => {
-    const { t } = useTranslation()
+const ContactForm = ({
+    // Nouveaux paramètres optionnels pour les commandes
+    isOrderMode = false,
+    orderData = null, // { service, additions, total }
+    onOrderSuccess = null,
+    onOrderError = null
+}) => {
+    const { t } = useTranslation();
     const [sendStatus, setSendStatus] = useState(0);
     const [forms, setForms] = useState({
         name: '',
@@ -72,38 +58,83 @@ const ContactForm = () => {
     const handleSubjectChange = (e) => {
         const selectedSubject = e.target.value;
         setTimeOptionsForSubject(timeOptions[selectedSubject] || []);
-        setForms({ ...forms, subject: selectedSubject, time: '' }); // Réinitialiser le champ de temps
+        setForms({ ...forms, subject: selectedSubject, time: '' });
     };
 
-    const submitHandler = e => {
+    const handleContactSubmit = async (contactData) => {
+        const result = await submitContactForm({
+            name: contactData.name,
+            email: contactData.email,
+            phone: contactData.phone,
+            service: contactData.service,
+            message: contactData.message,
+            eventDate: contactData.eventDate,
+            duration: contactData.duration,
+            total: isOrderMode ? orderData.total : null,
+            orderDetails: isOrderMode ? orderData : null
+        });
+
+        return result;
+    };
+
+    const submitHandler = async e => {
         e.preventDefault();
         if (validator.allValid() && forms.date) {
             validator.hideMessages();
             setSendStatus(1);
 
-            const formattedDate = moment(forms.date).format('DD.MM.YYYY'); // Format DD.MM.YYYY
+            const formattedDate = moment(forms.date).format('DD.MM.YYYY');
             const formDataToSend = {
                 ...forms,
-                date: formattedDate // Envoie de la date formatée
+                date: formattedDate
             };
 
-            emailjs.send('service_76lbexa', 'template_bvxpoqo', formDataToSend, 'AC_DTNvzmjFi3HHjs')
-                .then((result) => {
-                    console.log(result.text);
-                    setForms({
-                        name: '',
-                        email: '',
-                        subject: '',
-                        phone: '',
-                        date: null,
-                        time: '',
-                        message: ''
-                    });
-                    setSendStatus(2);
-                }, (error) => {
-                    console.log(error.text);
+            try {
+                // Soumettre via l'API
+                const result = await handleContactSubmit({
+                    name: forms.name,
+                    email: forms.email,
+                    phone: forms.phone,
+                    service: forms.subject,
+                    message: forms.message,
+                    eventDate: forms.date,
+                    duration: forms.time,
                 });
-            console.log(forms);
+
+                // Envoyer l'email
+                await emailjs.send('service_76lbexa', 'template_bvxpoqo', formDataToSend, 'AC_DTNvzmjFi3HHjs');
+
+                // Réinitialiser le formulaire
+                setForms({
+                    name: '',
+                    email: '',
+                    subject: '',
+                    phone: '',
+                    date: null,
+                    time: '',
+                    message: ''
+                });
+
+                setSendStatus(2);
+
+                // Callbacks de succès
+                if (isOrderMode && onOrderSuccess) {
+                    onOrderSuccess(result);
+                }
+
+            } catch (error) {
+                console.error('Erreur lors de l\'envoi:', error);
+                setSendStatus(3);
+
+                // Callbacks d'erreur
+                if (isOrderMode && onOrderError) {
+                    onOrderError(error);
+                }
+            } finally {
+                setTimeout(() => {
+                    setSendStatus(0)
+                })
+            }
         } else {
             validator.showMessages();
         }
@@ -145,7 +176,7 @@ const ContactForm = () => {
                     <div className="form-field">
                         <input
                             value={forms.phone}
-                            type="text" // Change phone type to text
+                            type="text"
                             name="phone"
                             onBlur={changeHandler}
                             onChange={changeHandler}
@@ -170,7 +201,7 @@ const ContactForm = () => {
                         <DatePicker
                             selected={forms.date}
                             onChange={(date) => setForms({ ...forms, date })}
-                            locale={de} // Définit la locale en allemand
+                            locale={de}
                             placeholderText={t("Wählen Sie ein Datum")}
                         />
                         {validator.message('date', forms.date, 'required')}
@@ -205,7 +236,13 @@ const ContactForm = () => {
             </div>
             <div className="submit-area">
                 <button type="submit" className="theme-btn">
-                    {sendStatus === 1 ? t('IM GANGE...') : (sendStatus === 0 ? t('JETZT ABSENDEN') : t('E-MAIL GESENDET'))}
+                    {sendStatus === 1 ?
+                        t('IM GANGE...') :
+                        (sendStatus === 0 ?
+                            (isOrderMode ? t('COMMANDE BESTÄTIGEN') : t('JETZT ABSENDEN')) : sendStatus === 2 ?
+                                (isOrderMode ? t('COMMANDE GESENDET') : t('E-MAIL GESENDET')) : t('Echec, Veuillez reéssayer')
+                        )
+                    }
                 </button>
             </div>
         </form>

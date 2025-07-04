@@ -26,6 +26,7 @@ import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga4';
 import PartnerSection from '../components/PartnerSection';
 import { useTranslation } from 'react-i18next';
+import Newsletter from '../components/Newsletter';
 
 const HomePage = (props) => {
     useEffect(() => {
@@ -164,7 +165,8 @@ const HomePage = (props) => {
                 products={products}
             />
             {/* <TeamSection /> */}
-            <PartnerSection />
+            <PartnerSection /><br/><br/><br/><br/>
+            <Newsletter/><br/><br/><br/><br/>
             <FormSection /><br /><br /><br /><br /><br /><br />
             <RecupEmail />
             {/*<RsvpSection rClass={'pt-0'}/> //Modale qui vient se superposer au dessus
