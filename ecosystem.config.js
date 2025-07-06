@@ -6,8 +6,13 @@ module.exports = {
       exec_mode: 'fork',
       instances: 'max',
       script: "node_modules/next/dist/bin/next",
-      args: 'start',
+      args: "start -- --port 3007",
+      cwd: "/var/www/dev/theplugwedding",
       watch: true,
+      env: {
+        NODE_ENV: "production",
+        PORT: 3007
+      },
       env_local: {
         APP_ENV: 'local'
       },
