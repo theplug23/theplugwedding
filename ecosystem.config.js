@@ -3,7 +3,7 @@ module.exports = {
   apps: [
     {
       name: "fotograf-frontend",
-      exec_mode: 'cluster', // Changé de 'fork' à 'cluster' pour les performances
+      exec_mode: 'fork', // Changé de 'fork' à 'cluster' pour les performances
       instances: 1, // Changé de 'max' à 1 pour éviter les conflits de port
       script: "node_modules/next/dist/bin/next",
       args: 'start',
