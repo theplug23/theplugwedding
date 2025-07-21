@@ -102,23 +102,22 @@ const ContactForm = ({
                     duration: forms.time,
                 });
 
-                // Envoyer l'email
-                // await emailjs.send('service_76lbexa', 'template_bvxpoqo', formDataToSend, 'AC_DTNvzmjFi3HHjs');
 
-                // Réinitialiser le formulaire
-                // setForms({
-                //     name: '',
-                //     email: '',
-                //     subject: '',
-                //     phone: '',
-                //     date: null,
-                //     time: '',
-                //     message: ''
-                // });
+                await emailjs.send('service_76lbexa', 'template_bvxpoqo', formDataToSend, 'AC_DTNvzmjFi3HHjs');
+
+
+                setForms({
+                    name: '',
+                    email: '',
+                    subject: '',
+                    phone: '',
+                    date: null,
+                    time: '',
+                    message: ''
+                });
 
                 setSendStatus(2);
 
-                // Callbacks de succès
                 if (isOrderMode && onOrderSuccess) {
                     onOrderSuccess(result);
                 }
