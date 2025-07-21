@@ -96,7 +96,6 @@ export const submitContactForm = async (contactData) => {
         if (!isValidEmail(contactData.email)) {
             throw new Error('Format d\'email invalide');
         }
-
         const contactPayload = {
             name: contactData.name.trim(),
             email: contactData.email.trim().toLowerCase(),
@@ -105,7 +104,7 @@ export const submitContactForm = async (contactData) => {
             message: contactData.message.trim(),
             eventDate: contactData.eventDate ? new Date(contactData.eventDate).toISOString() : null,
             duration: contactData.duration ? parseInt(contactData.duration) : null,
-            orderDetails: contactData.total == 0 ? contactData.orderDetails : null,
+            orderDetails: contactData.total != 0 ? contactData.orderDetails : null,
             totalAmount: contactData.total
 
         };

@@ -31,7 +31,7 @@ const Header = (props) => {
                                     <MobileMenu />
                                 </div>
                             </div>
-                            <div className="col-lg-2 col-md-6 col-6 d-lg-block d-none">
+                            <div className="col-lg-1 col-md-6 col-6 d-lg-block d-none">
                                 <div className='icons'>
                                     <ul className="icon-color">
                                         <li className='icon'><Link style={{ color: '#B99226' }} target={'_blank'} href="tel:+4915752069252"><i className="fi flaticon-phone-call"></i></Link></li>
@@ -45,7 +45,7 @@ const Header = (props) => {
                                     <Link className="navbar-brand" href="/"><img src='/images/logo-mobile.png' alt="logo_mobile" /></Link>
                                 </div>
                             </div>
-                            <div className="col-lg-8 col-md-1 col-1">
+                            <div className="col-lg-10 col-md-1 col-1">
                                 <div id="navbar" className="collapse navbar-collapse navigation-holder">
                                     <button className="menu-close"><i className="ti-close"></i></button>
                                     <ul className="nav navbar-nav mb-2 mb-lg-0">
@@ -104,7 +104,7 @@ const Header = (props) => {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-lg-2 col-md-2 col-2">
+                            <div className="col-lg-1 col-md-2 col-2">
                                 <div className="header-right">
                                     <div className='icons-media'>
                                         <ul className="icon-color">

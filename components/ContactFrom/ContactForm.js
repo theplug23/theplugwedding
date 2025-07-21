@@ -62,6 +62,7 @@ const ContactForm = ({
     };
 
     const handleContactSubmit = async (contactData) => {
+        console.log(orderData)
         const result = await submitContactForm({
             name: contactData.name,
             email: contactData.email,
@@ -102,18 +103,18 @@ const ContactForm = ({
                 });
 
                 // Envoyer l'email
-                await emailjs.send('service_76lbexa', 'template_bvxpoqo', formDataToSend, 'AC_DTNvzmjFi3HHjs');
+                // await emailjs.send('service_76lbexa', 'template_bvxpoqo', formDataToSend, 'AC_DTNvzmjFi3HHjs');
 
                 // Réinitialiser le formulaire
-                setForms({
-                    name: '',
-                    email: '',
-                    subject: '',
-                    phone: '',
-                    date: null,
-                    time: '',
-                    message: ''
-                });
+                // setForms({
+                //     name: '',
+                //     email: '',
+                //     subject: '',
+                //     phone: '',
+                //     date: null,
+                //     time: '',
+                //     message: ''
+                // });
 
                 setSendStatus(2);
 

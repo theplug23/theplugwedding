@@ -68,7 +68,7 @@ const ShopPage = ({ addToCart, addToWishList }) => {
     }
   };
 
-  if (isAuthenticated) {
+  if (!isAuthenticated) {
     return (
       <div style={{}}>
         <Navbar />
@@ -133,9 +133,9 @@ const ShopPage = ({ addToCart, addToWishList }) => {
                 total: total
               }}
               onOrderSuccess={(result) => {
-                setMainService(null)
-                setAdditionnalServices([])
-                setTotal(0)
+                // setMainService(null)
+                // setAdditionnalServices([])
+                // setTotal(0)
               }}
               onOrderError={(error) => {
                 

@@ -362,7 +362,7 @@ const VServices = [
             {
                 id: 3,
                 slug: '• Anfahrt'
-            },
+        },
             {
                 id: 4,
                 slug: '• Bis zu 12h Hochzeitsbegleitung'
