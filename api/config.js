@@ -1,7 +1,7 @@
 // api/config.js
 import axios from 'axios';
 
-const API_BASE_URL = 'http://62.72.16.90:3004'
+const API_BASE_URL = 'https://www.fotograf-darmstdat.de/api'
 // process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3008';
 
 // Instance axios avec configuration de base
