@@ -78,7 +78,7 @@ const Header = (props) => {
                                             <Link className='item-menu' href="/Hochzeitfotografie" style={{ cursor: 'default', color: "black", fontWeight: "bold" }}>{t("Hochzeitsfotos")}</Link>
                                             <ul className="sub-menu">
                                                 <li><Link onClick={ClickHandler} href='/Portraitfotografie'>{t("Portraitfotos")}</Link></li>
-                                                <li><Link onClick={ClickHandler} href='/Hochzeitfotografie'>{t("Hochzeitsfotos")}</Link></li>
+                                                <li><Link onClick={ClickHandler} href='/Hochzeitfotografie'>{t("Hochzeitsfoto")}</Link></li>
                                                 <li><Link onClick={ClickHandler} href='/Eventsfotografie'>{t("Eventsfotos")}</Link></li>
                                                 {/* <li><Link onClick={ClickHandler} href="/Hochzeitsvideos">{t("Hochzeitsvideos")}</Link></li> */}
                                             </ul>

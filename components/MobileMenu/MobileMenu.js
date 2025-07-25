@@ -94,7 +94,7 @@ const menus = [
             },
             {
                 id: 42,
-                title: 'Hochzeitsfotos',
+                title: 'Hochzeitsfoto',
                 link: '/Hochzeitfotografie'
             },
             {

@@ -34,7 +34,6 @@ const styleMediumScreen = {
 }
 
 export default function Newsletter() {
-
     const [email, SetEmail] = useState('')
     const [forms, setForms] = useState({ email: email })
     const [statusEmail, setStatusEmail] = useState(0)
