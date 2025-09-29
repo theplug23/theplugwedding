@@ -261,7 +261,7 @@ const ContactForm = ({
                     }
                 </button>
             </div>
-        </form> 
+        </form>
     );
 }
 
