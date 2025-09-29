@@ -62,6 +62,7 @@ const ContactForm = ({
     };
 
     const handleContactSubmit = async (contactData) => {
+        console.log(orderData)
         const result = await submitContactForm({
             name: contactData.name,
             email: contactData.email,
@@ -101,10 +102,10 @@ const ContactForm = ({
                     duration: forms.time,
                 });
 
-                // Envoyer l'email
+
                 await emailjs.send('service_76lbexa', 'template_bvxpoqo', formDataToSend, 'AC_DTNvzmjFi3HHjs');
 
-                // Réinitialiser le formulaire
+
                 setForms({
                     name: '',
                     email: '',
@@ -117,7 +118,6 @@ const ContactForm = ({
 
                 setSendStatus(2);
 
-                // Callbacks de succès
                 if (isOrderMode && onOrderSuccess) {
                     onOrderSuccess(result);
                 }

@@ -18,16 +18,27 @@ import 'photoswipe/dist/photoswipe.css'
 import '../styles/sass/style.scss'
 import '../styles/style.css';
 import ReactGA from "react-ga4";
+import CookieConsent from '../components/CookieConsent/CookieConsent';
+import { useEffect } from 'react';
 
 const TRACKING_ID = "G-HKH2H83L02"
-ReactGA.initialize(TRACKING_ID)
+// ReactGA.initialize(TRACKING_ID) // We will initialize conditionally
 
 function MyApp({ Component, pageProps }) {
+
+  useEffect(() => {
+    const consent = localStorage.getItem('cookie_consent');
+    if (consent === 'accepted') {
+      ReactGA.initialize(TRACKING_ID);
+    }
+  }, []);
+
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <Component {...pageProps} />
         <ToastContainer />
+        <CookieConsent />
       </PersistGate>
     </Provider>
 

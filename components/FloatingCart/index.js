@@ -3,14 +3,15 @@ import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 const FloatingCart = ({
-  selectedService = null,
+  selectedServices = [],
   selectedAdditions = [],
   setTotal,
+  onRemoveService,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const { t } = useTranslation()
   const calculateTotal = () => {
-    const serviceTotal = selectedService ? selectedService.price : 0;
+    const serviceTotal = selectedServices.reduce((sum, service) => sum + service.price, 0);
     const additionsTotal = selectedAdditions.reduce((sum, addition) =>
       sum + addition.price, 0
     );
@@ -19,7 +20,7 @@ const FloatingCart = ({
   };
 
   const grandTotal = calculateTotal();
-  const hasItems = selectedService || selectedAdditions.length > 0;
+  const hasItems = selectedServices.length > 0 || selectedAdditions.length > 0;
   const [stateLoad, setStateLoad] = useState(1)
   // const handleOrder = () => {
   //   order
@@ -35,7 +36,7 @@ const FloatingCart = ({
         <span className="cart-total">{grandTotal} €</span>
         {hasItems && (
           <CartBadge className="badge bg-danger">
-            {(selectedService ? 1 : 0) + selectedAdditions.length}
+            {selectedServices.length + selectedAdditions.length}
           </CartBadge>
         )}
       </CartButton>
@@ -47,7 +48,7 @@ const FloatingCart = ({
         >
           <div className="card-header bg-warning text-dark">
             <div className="d-flex justify-content-between align-items-center">
-              <h5 style={{ fontWeight: "bold", fontFamily: "Montserrat", color:'#FFF' }} className="mb-0">
+              <h5 style={{ fontWeight: "bold", fontFamily: "Montserrat", color: '#FFF' }} className="mb-0">
 
                 {t("Votre Sélection")}
               </h5>
@@ -62,42 +63,47 @@ const FloatingCart = ({
 
           <div className="card-body p-0">
             {/* Service principal sélectionné */}
-            {selectedService && (
+            {selectedServices.length > 0 && (
               <div className="p-3 border-bottom">
-                {/* <h6 className="text-warning mb-3" style={{ fontWeight: "bold", fontFamily: "Montserrat" }}>
+                <h6 className="text-warning mb-3" style={{ fontWeight: "bold", fontFamily: "Montserrat" }}>
                   <i className="fi flaticon-star icon me-2"></i>
-                  {t("Service Principal")}
-                </h6> */}
-
-                <div className="card border-warning bg-opacity-10">
-                  <div className="card-body p-3">
-                    <div className="d-flex justify-content-between align-items-start mb-2">
-                      <div className="flex-grow-1">
-                        <h6 className="mb-2">{t(selectedService.title)}</h6>
-                        <div className="text-muted small">
-                          {selectedService.packages && selectedService.packages.length > 0 && (
-                            <div>
-                              <strong>{t("Inclus :")}</strong>
-                              <ul className="mb-0 mt-1" style={{ paddingLeft: '15px' }}>
-
-                                {selectedService.packages.map(pack => (
-                                  <li style={{ fontSize: '14px', color: "black" }} key={pack.id} className="item">{t(pack.slug)}</li>
-                                ))}
-
-                              </ul>
-                            </div>
-                          )}
+                  {t("Services Principaux")}
+                </h6>
+                {selectedServices.map((selectedService, index) => (
+                  <div key={index} className="card border-warning bg-opacity-10 mb-2">
+                    <div className="card-body p-3">
+                      <div className="d-flex justify-content-between align-items-start mb-2">
+                        <div className="flex-grow-1">
+                          <h6 className="mb-2">{t(selectedService.title)}</h6>
+                          <div className="text-muted small">
+                            {selectedService.packages && selectedService.packages.length > 0 && (
+                              <div>
+                                <strong>{t("Inclus :")}</strong>
+                                <ul className="mb-0 mt-1" style={{ paddingLeft: '15px' }}>
+                                  {selectedService.packages.map(pack => (
+                                    <li style={{ fontSize: '14px', color: "black" }} key={pack.id} className="item">{t(pack.slug)}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                          </div>
                         </div>
-                      </div>
-                      <div className="text-end ms-3">
-                        <strong className="text-warning fs-5">{selectedService.price} €</strong>
-                        <div>
-                          <i className="fi flaticon-check-mark icon text-success"></i>
+                        <div className="text-end ms-3">
+                          <strong className="text-warning fs-5">{selectedService.price} €</strong>
+                          <div>
+                            <i className="fi flaticon-check-mark icon text-success me-2"></i>
+                            <button
+                              className="btn btn-sm btn-outline-danger"
+                              onClick={() => onRemoveService(selectedService.id)}
+                            >
+                              X
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
             )}
 
@@ -140,12 +146,12 @@ const FloatingCart = ({
                     {t("Résumé de la commande")}
                   </h6>
 
-                  {selectedService && (
-                    <div className="d-flex justify-content-between mb-1">
-                      <span className="small">{t(selectedService.title)}</span>
-                      <span className="small text-warning fw-bold">{selectedService.price} €</span>
+                  {selectedServices.map((service, index) => (
+                    <div key={`summary-service-${index}`} className="d-flex justify-content-between mb-1">
+                      <span className="small">{t(service.title)}</span>
+                      <span className="small text-warning fw-bold">{service.price} €</span>
                     </div>
-                  )}
+                  ))}
 
                   {selectedAdditions.map((addition, index) => (
                     <div key={`summary-${addition.name}-${index}`} className="d-flex justify-content-between mb-1">
@@ -162,22 +168,16 @@ const FloatingCart = ({
                   <strong className="text-warning fs-4">{grandTotal} €</strong>
                 </div>
 
-                {/* <button
-                  className="btn btn-warning w-100 py-2"
-                  onClick={() => onProceedToOrder && onProceedToOrder({
-                    service: selectedService,
-                    additions: selectedAdditions,
-                    total: grandTotal
-                  })}
-                  disabled={!selectedService}
-                >
-                  <i className="fi flaticon-paper-plane icon me-2"></i>
-                  {t("COMMANDER")}
-                </button> */}
- <small className="text-muted d-block text-center mt-2">
-                    {t("Veuillez remplir le formulaire au bas de la page pour passer cette commande")}
-                  </small>
-                {!selectedService && (
+                <a
+                  className="theme-btn d-block text-center"
+                  href='#contact-form'
+                  disabled={!selectedServices.length}>
+                  {t("Remplir le formulaire")}
+                </a>
+                <small className="text-muted d-block text-center mt-2">
+                  {t("Veuillez remplir le formulaire au bas de la page pour passer cette commande")}
+                </small>
+                {!selectedServices.length && (
                   <small className="text-muted d-block text-center mt-2">
                     {t("Veuillez d'abord sélectionner un service principal")}
                   </small>
@@ -190,7 +190,7 @@ const FloatingCart = ({
                 <p className="mb-0 small">{t("Sélectionnez un service pour commencer")}</p>
               </div>
             )}
-            
+
           </div>
         </CartPanel>
       )}

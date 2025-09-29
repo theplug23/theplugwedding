@@ -42,7 +42,7 @@ const Videos = () => {
                 <title>{t("HOCHZEITSVIDEOS")} - THEPLUG WEDDING</title>
             </Helmet>
             <Navbar />
-            <PageTitle pageTitle={t('HOCHZEITSVIDEOS')} pagesub={'Hochzeitsvideos'} showVideo={true} isVideoPage={true} />
+            <PageTitle pageTitle={t('HOCHZEITSVIDEOS')} pagesub={t('Hochzeitsvideos')} showVideo={true} isVideoPage={true} />
             <section className="wpo-blog-pg-section section-padding">
                 <div className="container">
                     <SectionTitle MainTitle={t('FINDEN SIE HERAUS, WIE UNSERE KUNDEN DEN BESTEN TAG IHRES LEBENS HATTEN')} subTitle={t('Unsere Hochzeitsvideos')} />

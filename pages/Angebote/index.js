@@ -31,13 +31,26 @@ const ShopPage = ({ addToCart, addToWishList }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const productsArray = api();
   const [total, setTotal] = useState(0); // Ajoutez cette ligne pour gérer le total
-  const [mainService, setMainService] = useState(null)
+  const [mainServices, setMainServices] = useState([])
   const [additionnalServices, setAdditionnalServices] = useState([])
   const handleServiceSelect = (service) => {
-    setMainService(service)
-    console.log(service)
-    setTotal(Number(service.price));
+    setMainServices((prevServices) => {
+      const isServiceSelected = prevServices.some((s) => s.id === service.id);
+
+      if (isServiceSelected) {
+        return prevServices.filter((s) => s.id !== service.id);
+      } else {
+        return [...prevServices, service];
+      }
+    });
+    // setTotal(Number(service.price)); // This will be handled in FloatingCart
   }
+
+  const handleRemoveService = (serviceId) => {
+    setMainServices((prevServices) =>
+      prevServices.filter((service) => service.id !== serviceId)
+    );
+  };
 
   const addToCartProduct = (product, qty = 1) => {
     addToCart(product, qty);
@@ -68,7 +81,7 @@ const ShopPage = ({ addToCart, addToWishList }) => {
     }
   };
 
-  if (isAuthenticated) {
+  if (!isAuthenticated) {
     return (
       <div style={{}}>
         <Navbar />
@@ -114,11 +127,11 @@ const ShopPage = ({ addToCart, addToWishList }) => {
       <ShortAbout />
       <FeedbackVideo />
       <InvestingSection /><br />
-      <ServiceSection pbClass={'pt-0'} onServiceSelect={handleServiceSelect} />
+      <ServiceSection pbClass={'pt-0'} onServiceSelect={handleServiceSelect} selectedServices={mainServices} />
       <AdditionalOption setAdditionalServices={setAdditionnalServices} />
       <FAQPricing />
       {/* <PartnerSection pClass={'section-padding'} />  */}
-      <section className="wpo-contact-pg-section section-padding">
+      <section className="wpo-contact-pg-section section-padding" id='contact-form'>
         <div className="container">
           <div className="wpo-contact-title">
             <h2>{t("Haben Sie Fragen?")}</h2>
@@ -128,12 +141,12 @@ const ShopPage = ({ addToCart, addToWishList }) => {
             <ContactForm
               isOrderMode={true}
               orderData={{
-                service: mainService,
+                services: mainServices,
                 additions: additionnalServices,
                 total: total
               }}
               onOrderSuccess={(result) => {
-                setMainService(null)
+                setMainServices([])
                 setAdditionnalServices([])
                 setTotal(0)
               }}
@@ -148,9 +161,10 @@ const ShopPage = ({ addToCart, addToWishList }) => {
       <Footer />
       <Scrollbar />
       <FloatingCart
-        selectedService={mainService}
+        selectedServices={mainServices}
         selectedAdditions={additionnalServices}
         setTotal={setTotal}
+        onRemoveService={handleRemoveService}
       />
     </Fragment>
   );

@@ -3,7 +3,7 @@ import video from '/public/images/service/video.jpg'
 
 const VServices = [
     {
-        id: 1,
+        id: 20,
         price: 1299,
         title:'Angebot 1:  1299€ für 2 Stunden',
         slug:'Angebot 1:  1299€ für 2 Stunden',
@@ -52,7 +52,7 @@ const VServices = [
         img: video
     },
     {
-        id: 2,
+        id: 21,
         price: 1699,
         title:'Angebot 2:  1699€ für 3 Stunden',
         slug:'Angebot 2:  1699€ für 3 Stunden',
@@ -101,7 +101,7 @@ const VServices = [
         img: video
     },
     {
-        id: 3,
+        id: 22,
         price: 1999,
         title:'Angebot 3:  1999€ für 4 Stunden',
         slug:'Angebot 3:  1999€ für 4 Stunden',
@@ -150,7 +150,7 @@ const VServices = [
         img: video
     },
     {
-        id: 4,
+        id: 23,
         price: 2299,
         title:'Angebot 4:  2299€ für 5 Stunden',
         slug:'Angebot 4:  2299€ für 5 Stunden',
@@ -199,7 +199,7 @@ const VServices = [
         img: video
     },
     {
-        id: 5,
+        id: 24,
         price: 2499,
         title:'Angebot 5:  2499€ für 6 Stunden',
         slug:'Angebot 5:  2499€ für 6 Stunden',
@@ -248,7 +248,7 @@ const VServices = [
         img: video
     },
     {
-        id: 6,
+        id: 25,
         price: 2789,
         title:'Angebot 6:  2789€ für 7 Stunden',
         slug:'Angebot 6:  2789€ für 7 Stunden',
@@ -297,7 +297,7 @@ const VServices = [
         img: video
     },
     {
-        id: 7,
+        id: 26,
         price: 2950,
         title:'Angebot 7: 2950€ für 8 Stunden',
         slug:'Angebot 7: 2950€ für 8 Stunden',
@@ -346,7 +346,7 @@ const VServices = [
         img: video
     },
     {
-        id: 8,
+        id: 27,
         price: 3199,
         title:'Angebot 8: 3199€ für 9 Stunden',
         slug:'Angebot 8: 3199€ für 9 Stunden',
@@ -362,7 +362,7 @@ const VServices = [
             {
                 id: 3,
                 slug: '• Anfahrt'
-            },
+        },
             {
                 id: 4,
                 slug: '• Bis zu 12h Hochzeitsbegleitung'

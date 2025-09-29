@@ -1,7 +1,7 @@
 // api/config.js
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:3008'
+const API_BASE_URL = 'https://www.fotograf-darmstdat.de/api'
 // process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3008';
 
 // Instance axios avec configuration de base
@@ -35,13 +35,13 @@ apiClient.interceptors.response.use(
   (error) => {
     // Gestion des erreurs globales
     console.error('API Error:', error.response?.data || error.message);
-    
+
     if (error.response?.status === 401) {
       // Token expiré, rediriger vers login
       localStorage.removeItem('authToken');
       window.location.href = '/login';
     }
-    
+
     return Promise.reject(error.response?.data || error);
   }
 );
