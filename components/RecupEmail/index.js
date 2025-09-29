@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { useEffect } from "react";
 import emailjs from '@emailjs/browser'
+import { useTranslation } from "react-i18next";
 
 const style = {
     position: 'absolute',
@@ -38,11 +39,11 @@ const styleMediumScreen = {
 
 export default function RecupEmail() {
     const [open, setOpen] = useState(false);
-    const [email, SetEmail] = useState({email: ''})
+    const [email, SetEmail] = useState({ email: '' })
     const [width, setWidth] = useState(window.innerWidth)
-    const [forms, setForms] = useState({email: email})
+    const [forms, setForms] = useState({ email: email })
     const [statusEmail, setStatusEmail] = useState(0)
-    
+
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
@@ -68,20 +69,20 @@ export default function RecupEmail() {
         e.preventDefault()
         console.log(e)
         setStatusEmail(1)
-        SetEmail({email: email})
+        SetEmail({ email: email })
         console.log(JSON.stringify(email))
-        emailjs.send('service_76lbexa', 'template_bm6ewab', {'user_email':email}, 'AC_DTNvzmjFi3HHjs')
-        .then((result) => {
-            console.log(result.text)
-            setStatusEmail(2)
-            localStorage.setItem('tpw-newsletter', JSON.stringify({email: email}))
-        })
-        .catch((error) => {
-            console.log(error)
-            setStatusEmail(3)
-        })
+        emailjs.send('service_76lbexa', 'template_bm6ewab', { 'user_email': email }, 'AC_DTNvzmjFi3HHjs')
+            .then((result) => {
+                console.log(result.text)
+                setStatusEmail(2)
+                localStorage.setItem('tpw-newsletter', JSON.stringify({ email: email }))
+            })
+            .catch((error) => {
+                console.log(error)
+                setStatusEmail(3)
+            })
     }
-
+    const { t } = useTranslation()
     return (
         <div>
             {/* <Button onClick={handleOpen}>Open modal</Button> */}
@@ -94,12 +95,12 @@ export default function RecupEmail() {
                 >
                     <Box sx={width > 890 ? style : (width > 420 ? styleMediumScreen : styleSmallScreen)}>
                         <Typography id="modal-modal-title" variant="h6" component="h2">
-                        Geben Sie Ihre E-Mail-Adresse ein, um ständig über unsere Neuigkeiten informiert zu werden
+                            {t('Geben Sie Ihre E-Mail-Adresse ein, um ständig über unsere Neuigkeiten informiert zu werden')}
                         </Typography>
                         <button className='event-modal-close' onClick={handleClose}><i className='fa fa-close'></i></button>
                         <section className="wpo-contact-pg-section">
-                            <div className="container">   
-                                <div className="wpo-contact-form-area"> 
+                            <div className="container">
+                                <div className="wpo-contact-form-area">
                                     <div className="modalBody modal-body">
                                         <div className="modalBody modal-body">
                                             <form className="contact-validation-active" onSubmit={handleSubmit}>
@@ -108,7 +109,7 @@ export default function RecupEmail() {
                                                         <div className="form-field">
                                                             <input
                                                                 type="email"
-                                                                placeholder="Deine E-Mail Adresse"
+                                                                placeholder={t("Deine E-Mail Adresse")}
                                                                 onChange={(e) => SetEmail(e.target.value)}
                                                                 required
                                                                 name='user_email'
@@ -118,9 +119,9 @@ export default function RecupEmail() {
                                                 </div>
                                                 <div className="submit-area">
                                                     <button type="submit" className="theme-btn">
-                                                        {statusEmail === 1 ? 'Bearbeitung...' 
-                                                        : (statusEmail === 2 ? 'Erfolgreich !'                      
-                                                        : (statusEmail === 3 ? 'Fehler !' : 'Senden'))}
+                                                        {statusEmail === 1 ? t('Bearbeitung...')
+                                                            : (statusEmail === 2 ? t('Erfolgreich !')
+                                                                : (statusEmail === 3 ? t('Fehler !') : t('Senden')))}
                                                     </button>
                                                 </div>
                                             </form>

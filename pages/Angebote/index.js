@@ -22,6 +22,7 @@ import FAQPricing from '../../components/FaqPricing/faqpricing';
 import AdditionalOption from '../../components/AdditionalOption/addOption';
 import ContactForm from '../../components/ContactFrom/ContactForm';
 import { useTranslation } from 'react-i18next';
+import FloatingCart from '../../components/FloatingCart';
 
 
 const ShopPage = ({ addToCart, addToWishList }) => {
@@ -30,10 +31,26 @@ const ShopPage = ({ addToCart, addToWishList }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const productsArray = api();
   const [total, setTotal] = useState(0); // Ajoutez cette ligne pour gérer le total
+  const [mainServices, setMainServices] = useState([])
+  const [additionnalServices, setAdditionnalServices] = useState([])
+  const handleServiceSelect = (service) => {
+    setMainServices((prevServices) => {
+      const isServiceSelected = prevServices.some((s) => s.id === service.id);
 
-  const handleServiceSelect = (price) => {
-    setTotal(Number(price));
+      if (isServiceSelected) {
+        return prevServices.filter((s) => s.id !== service.id);
+      } else {
+        return [...prevServices, service];
+      }
+    });
+    // setTotal(Number(service.price)); // This will be handled in FloatingCart
   }
+
+  const handleRemoveService = (serviceId) => {
+    setMainServices((prevServices) =>
+      prevServices.filter((service) => service.id !== serviceId)
+    );
+  };
 
   const addToCartProduct = (product, qty = 1) => {
     addToCart(product, qty);
@@ -110,14 +127,45 @@ const ShopPage = ({ addToCart, addToWishList }) => {
       <ShortAbout />
       <FeedbackVideo />
       <InvestingSection /><br />
-      <ServiceSection pbClass={'pt-0'} onServiceSelect={handleServiceSelect} />
-      <AdditionalOption total={total} />
+      <ServiceSection pbClass={'pt-0'} onServiceSelect={handleServiceSelect} selectedServices={mainServices} />
+      <AdditionalOption setAdditionalServices={setAdditionnalServices} />
       <FAQPricing />
       {/* <PartnerSection pClass={'section-padding'} />  */}
-      <FormSection />
+      <section className="wpo-contact-pg-section section-padding" id='contact-form'>
+        <div className="container">
+          <div className="wpo-contact-title">
+            <h2>{t("Haben Sie Fragen?")}</h2>
+            <p>{t("Um dieses Ziel zu erreichen, führen wir ein erstes Kennenlerngespräch, nach dem ich Ihnen ein auf Ihre Wünsche, Anregungen und Ihr Budget zugeschnittenes Angebot mache. Ich schätze die Ehre und das Vertrauen, das Sie mir entgegenbringen, um in die Intimität Ihres großen Tages einzutauchen und die wichtigen und emotionalen Momente Ihrer Hochzeit festzuhalten.")}</p>
+          </div>
+          <div className="wpo-contact-form-area">
+            <ContactForm
+              isOrderMode={true}
+              orderData={{
+                services: mainServices,
+                additions: additionnalServices,
+                total: total
+              }}
+              onOrderSuccess={(result) => {
+                setMainServices([])
+                setAdditionnalServices([])
+                setTotal(0)
+              }}
+              onOrderError={(error) => {
+                
+              }}
+            />
+          </div>
+        </div>
+      </section>
       <MapSection />
       <Footer />
       <Scrollbar />
+      <FloatingCart
+        selectedServices={mainServices}
+        selectedAdditions={additionnalServices}
+        setTotal={setTotal}
+        onRemoveService={handleRemoveService}
+      />
     </Fragment>
   );
 };

@@ -3,7 +3,7 @@ import photo_video from '/public/images/service/photo-video.jpg'
 
 const OServices = [
     {
-        id: 1,
+        id: 12,
         price: 2199,
         title:'Angebot 1: 2199€ für 2 Stunden',
         slug:'Angebot 1: 2199€ für 2 Stunden',
@@ -60,7 +60,7 @@ const OServices = [
         img: photo_video
     },
     {
-        id: 2,
+        id: 13,
         price: 2599,
         title:'Angebot 2: 2599€ für 3 Stunden',
         slug:'Angebot 2: 2599€ für 3 Stunden',
@@ -117,7 +117,7 @@ const OServices = [
         img: photo_video
     },
     {
-        id: 3,
+        id: 14,
         price: 3099,
         title:'Angebot 3: 3099€ für 4 Stunden',
         slug:'Angebot 3: 3099€ für 4 Stunden',
@@ -174,7 +174,7 @@ const OServices = [
         img: photo_video
     },
     {
-        id: 4,
+        id: 15,
         price: 3599,
         title:'Angebot 4: 3599€ für 5 Stunden',
         slug:'Angebot 4: 3599€ für 5 Stunden',
@@ -231,7 +231,7 @@ const OServices = [
         img: photo_video
     },
     {
-        id: 5,
+        id: 16,
         price: 4099,
         title:'Angebot 5: 4099€ für 6 Stunden',
         slug:'Angebot 5: 4099€ für 6 Stunden',
@@ -288,7 +288,7 @@ const OServices = [
         img: photo_video
     },
     {
-        id: 6,
+        id: 17,
         price: 4589,
         title:'Angebot 6: 4589€ für 7 Stunden',
         slug:'Angebot 6: 4589€ für 7 Stunden',
@@ -345,7 +345,7 @@ const OServices = [
         img: photo_video
     },
     {
-        id: 7,
+        id: 18,
         price: 5090,
         title:'Angebot 7: 5090€ für 8 Stunden',
         slug:'Angebot 7: 5090€ für 8 Stunden',
@@ -402,7 +402,7 @@ const OServices = [
         img: photo_video
     },
     {
-        id: 8,
+        id: 19,
         price: 5590,
         title:'Angebot 8: 5590€ für 9 Stunden',
         slug:'Angebot 8: 5590€ für 9 Stunden',
