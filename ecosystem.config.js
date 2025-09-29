@@ -1,18 +1,12 @@
-// /home/user/fotograf-frontend/ecosystem.config.js
 module.exports = {
-  apps: [
+  apps : [
     {
-      name: "fotograf-frontend",
+      name   : "ThePlug Wedding",
       exec_mode: 'fork',
       instances: 'max',
-      script: "node_modules/next/dist/bin/next",
-      args: "start -p 3007",
-      cwd: "/var/www/dev/theplugwedding",
+      script : "node_modules/next/dist/bin/next",
+      args: 'start',
       watch: true,
-      env: {
-        NODE_ENV: "production",
-        PORT: 3007
-      },
       env_local: {
         APP_ENV: 'local'
       },
