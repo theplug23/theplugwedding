@@ -22,6 +22,7 @@ import FAQPricing from '../../components/FaqPricing/faqpricing';
 import AdditionalOption from '../../components/AdditionalOption/addOption';
 import ContactForm from '../../components/ContactFrom/ContactForm';
 import { useTranslation } from 'react-i18next';
+import FloatingCart from '../../components/FloatingCart';
 
 
 const ShopPage = ({ addToCart, addToWishList }) => {
@@ -30,9 +31,12 @@ const ShopPage = ({ addToCart, addToWishList }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const productsArray = api();
   const [total, setTotal] = useState(0); // Ajoutez cette ligne pour gérer le total
-
-  const handleServiceSelect = (price) => {
-    setTotal(Number(price));
+  const [mainService, setMainService] = useState(null)
+  const [additionnalServices, setAdditionnalServices] = useState([])
+  const handleServiceSelect = (service) => {
+    setMainService(service)
+    console.log(service)
+    setTotal(Number(service.price));
   }
 
   const addToCartProduct = (product, qty = 1) => {
@@ -64,7 +68,7 @@ const ShopPage = ({ addToCart, addToWishList }) => {
     }
   };
 
-  if (!isAuthenticated) {
+  if (isAuthenticated) {
     return (
       <div style={{}}>
         <Navbar />
@@ -111,13 +115,43 @@ const ShopPage = ({ addToCart, addToWishList }) => {
       <FeedbackVideo />
       <InvestingSection /><br />
       <ServiceSection pbClass={'pt-0'} onServiceSelect={handleServiceSelect} />
-      <AdditionalOption total={total} />
+      <AdditionalOption setAdditionalServices={setAdditionnalServices} />
       <FAQPricing />
       {/* <PartnerSection pClass={'section-padding'} />  */}
-      <FormSection />
+      <section className="wpo-contact-pg-section section-padding">
+        <div className="container">
+          <div className="wpo-contact-title">
+            <h2>{t("Haben Sie Fragen?")}</h2>
+            <p>{t("Um dieses Ziel zu erreichen, führen wir ein erstes Kennenlerngespräch, nach dem ich Ihnen ein auf Ihre Wünsche, Anregungen und Ihr Budget zugeschnittenes Angebot mache. Ich schätze die Ehre und das Vertrauen, das Sie mir entgegenbringen, um in die Intimität Ihres großen Tages einzutauchen und die wichtigen und emotionalen Momente Ihrer Hochzeit festzuhalten.")}</p>
+          </div>
+          <div className="wpo-contact-form-area">
+            <ContactForm
+              isOrderMode={true}
+              orderData={{
+                service: mainService,
+                additions: additionnalServices,
+                total: total
+              }}
+              onOrderSuccess={(result) => {
+                setMainService(null)
+                setAdditionnalServices([])
+                setTotal(0)
+              }}
+              onOrderError={(error) => {
+                
+              }}
+            />
+          </div>
+        </div>
+      </section>
       <MapSection />
       <Footer />
       <Scrollbar />
+      <FloatingCart
+        selectedService={mainService}
+        selectedAdditions={additionnalServices}
+        setTotal={setTotal}
+      />
     </Fragment>
   );
 };

@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import FormSection from '../FormSection/FormSection'
 import { useTranslation } from 'react-i18next';
+import Newsletter from '../Newsletter';
 
 const ClickHandler = () => {
     window.scrollTo(10, 0);
@@ -20,6 +21,7 @@ const Footer = () => {
                                                 alt="" /></Link>
                             </div><br/>
                         </div>
+                        
                         {/* <div className="col-12">
                             <div className="footer-link">
                                 <ul>

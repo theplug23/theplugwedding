@@ -1,5 +1,3 @@
-// components/LanguageSelector/LanguageSelector.js
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const LanguageSelector = () => {
@@ -13,12 +11,12 @@ const LanguageSelector = () => {
 
     return (
         <li className="menu-item-has-children language-selector">
-            <a href="#" style={{ color: "black", fontWeight: "bold" }}>
-                {currentLanguage.toUpperCase()}
+            <a href="#" style={{ color: "black", fontWeight: "bold", display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
+                <img src={`https://hatscripts.github.io/circle-flags/flags/${currentLanguage == 'en' ? 'uk' : currentLanguage}.svg`} style={{ height: '30px', marginRight: '10px' }} />     {currentLanguage.toUpperCase()}
             </a>
             <ul className="sub-menu">
                 <li>
-                    <a 
+                    <a
                         href="#"
                         onClick={(e) => {
                             e.preventDefault();
@@ -29,7 +27,7 @@ const LanguageSelector = () => {
                     </a>
                 </li>
                 <li>
-                    <a 
+                    <a
                         href="#"
                         onClick={(e) => {
                             e.preventDefault();
@@ -40,7 +38,7 @@ const LanguageSelector = () => {
                     </a>
                 </li>
                 <li>
-                    <a 
+                    <a
                         href="#"
                         onClick={(e) => {
                             e.preventDefault();
