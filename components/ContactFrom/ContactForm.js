@@ -39,6 +39,7 @@ const ContactForm = ({
         phone: '',
         date: null, // État de date
         time: '',
+        ort:'',
         message: ''
     });
     const [validator] = useState(new SimpleReactValidator({
@@ -71,6 +72,7 @@ const ContactForm = ({
             message: contactData.message,
             eventDate: contactData.eventDate,
             duration: contactData.duration,
+            ort: contactData.ort,
             total: isOrderMode ? orderData.total : null,
             orderDetails: isOrderMode ? orderData : null
         });
@@ -100,6 +102,7 @@ const ContactForm = ({
                     message: forms.message,
                     eventDate: forms.date,
                     duration: forms.time,
+                    ort: forms.ort
                 });
 
 
@@ -113,6 +116,7 @@ const ContactForm = ({
                     phone: '',
                     date: null,
                     time: '',
+                    ort:'',
                     message: ''
                 });
 
@@ -220,6 +224,18 @@ const ContactForm = ({
                             ))}
                         </select>
                         {validator.message('time', forms.time, 'time')}
+                    </div>
+                </div>
+                <div className="col col-lg-12 col-12">
+                    <div className="form-field">
+                        <input
+                            value={forms.ort}
+                            type="text"
+                            name="ort"
+                            onBlur={changeHandler}
+                            onChange={changeHandler}
+                            placeholder={t("Ort")} />
+                        {validator.message('location', forms.ort, 'required|ort')}
                     </div>
                 </div>
                 <div className="col col-lg-12 col-12">
