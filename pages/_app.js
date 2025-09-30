@@ -20,6 +20,7 @@ import '../styles/style.css';
 import ReactGA from "react-ga4";
 import CookieConsent from '../components/CookieConsent/CookieConsent';
 import { useEffect } from 'react';
+import WhatsAppWidget from "../components/WhatsAppWidget/WhatsAppWidget";
 
 const TRACKING_ID = "G-HKH2H83L02"
 // ReactGA.initialize(TRACKING_ID) // We will initialize conditionally
@@ -39,6 +40,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
         <ToastContainer />
         <CookieConsent />
+        <WhatsAppWidget />
       </PersistGate>
     </Provider>
 
