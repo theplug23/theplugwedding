@@ -95,8 +95,8 @@ const WhatsAppWidget = () => {
           line-height: 1;
         }
         .chat-body {
-          background-image: url("/images/bg_whtp.png");
           background-color: #e5ddd5;
+          background-image: url("/images/bg_whtp.png");
           padding: 20px;
           height: 250px;
         }
