@@ -73,7 +73,8 @@ photographer Mannheim, photographer Worms, photographer Koblenz, photographer Ma
   <script dangerouslySetInnerHTML={{ __html: ` window.dataLayer=window.dataLayer || []; function
     gtag(){dataLayer.push(arguments)} gtag('js', new Date()); gtag('config', 'G-B5PGZNWSDD' ); ` }} />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5PGZNWSDD"></script>
-  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  {/* Elfsight WhatsApp Chat | Untitled WhatsApp Chat */}
+  <script src="https://elfsightcdn.com/platform.js" async></script>
   <div class="elfsight-app-d7ac4587-d61c-49dc-882e-bcdd704ce704" data-elfsight-app-lazy></div>
 
   <div style={{ position: "fixed" , bottom: "20px" , left: "20px" , zIndex: "9999" }}>
