@@ -261,7 +261,7 @@ const MobileMenu = () => {
                             </ListItem>
                         )
                     })}
-                       {/* <LanguageSelector /> */}
+                       <LanguageSelector />
                 </ul>
 
                 <div className='links'>

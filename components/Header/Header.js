@@ -100,7 +100,7 @@ const Header = (props) => {
                                         <li><Link className='item-menu' onClick={ClickHandler} href="/Blogs" style={{ color: "black", fontWeight: "bold" }}>Blog</Link></li>
                                         <li><Link className='item-menu' onClick={ClickHandler} href="/Kontakt" style={{ color: "black", fontWeight: "bold" }}>{t("KONTAKT")}</Link></li>
                                         
-                                        {/* <LanguageSelector /> */}
+                                        <LanguageSelector />
                                     </ul>
                                 </div>
                             </div>

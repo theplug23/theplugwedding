@@ -13,7 +13,7 @@ const WhatsAppWidget = () => {
       <style jsx>{`
         .whatsapp-fab {
           position: fixed;
-          bottom: 20px;
+          bottom: 80px;
           right: 20px;
           width: 60px;
           height: 60px;
@@ -47,7 +47,7 @@ const WhatsAppWidget = () => {
         }
         .widget-container {
           position: fixed;
-          bottom: 90px;
+          bottom: 150px;
           right: 20px;
           width: 350px;
           max-width: 90vw;
