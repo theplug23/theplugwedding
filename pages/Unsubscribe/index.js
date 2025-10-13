@@ -26,7 +26,7 @@ const UnsubscribePage = () => {
   console.log("unsubscribeToken", unsubscribeToken);
   const handleUnsubscribe = async () => {
     try {
-        console.log('je suis ici dans unsubscribe');
+        // console.log('je suis ici dans unsubscribe');
         
       await fetch("https://theplug-wedding.com/api/newsletter/unsubscribe", {
         method: "POST",
