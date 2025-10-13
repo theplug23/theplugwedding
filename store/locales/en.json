@@ -312,5 +312,10 @@
     "Refuser":"Refuse",
     "Remplir le formulaire":"Fill in the form",
     "Geben Sie Ihre E-Mail-Adresse ein, um ständig über unsere Neuigkeiten informiert zu werden":"Enter your email address to stay up to date with all our latest news",
-    "Ort":"Location"
+    "Ort":"Location",
+    "Abmeldung bestätigt":"Unsubscribe Confirmed",
+    "Sie wurden erfolgreich von unserem Newsletter abgemeldet":"You have been successfully unsubscribed from our newsletter",
+    "Es tut uns leid, Sie gehen zu sehen. Wenn Sie es sich anders überlegen, können Sie sich jederzeit wieder":"We're sorry to see you go. If you change your mind, you can resubscribe at any time",
+    "Zurück zur Startseite":"Back to Home"
+
 }

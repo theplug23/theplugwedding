@@ -19,7 +19,7 @@ const StoryPage = (props) => {
     return (
         <div>
             <Navbar/>
-            <PageTitle pageTitle={'404'} pagesub={'404'}/> 
+            {/* <PageTitle pageTitle={'404'} pagesub={'404'}/>  */}
             <Error/>
             <Footer/>
             <Scrollbar/>
