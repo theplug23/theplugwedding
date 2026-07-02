@@ -1,10 +1,7 @@
-import { useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { useEffect } from "react";
-import emailjs from '@emailjs/browser'
 import { useTranslation } from "react-i18next";
 
 const style = {
@@ -14,7 +11,9 @@ const style = {
     transform: 'translate(-50%, -50%)',
     bgcolor: 'background.paper',
     p: 3,
-    height: '40%'
+    width: 'min(90vw, 640px)',
+    maxHeight: '80vh',
+    overflow: 'auto'
 };
 const styleSmallScreen = {
     position: 'absolute',
@@ -23,8 +22,9 @@ const styleSmallScreen = {
     transform: 'translate(-50%, -50%)',
     bgcolor: 'background.paper',
     p: 3,
-    height: '60%',
-    width: '80%'
+    width: '80%',
+    maxHeight: '80vh',
+    overflow: 'auto'
 }
 const styleMediumScreen = {
     position: 'absolute',
@@ -33,26 +33,56 @@ const styleMediumScreen = {
     transform: 'translate(-50%, -50%)',
     bgcolor: 'background.paper',
     p: 3,
-    height: '55%',
-    width: '80%'
+    width: '80%',
+    maxHeight: '80vh',
+    overflow: 'auto'
+}
+const videoWrapperStyle = {
+    position: 'relative',
+    width: '100%',
+    aspectRatio: '16 / 9',
+    marginTop: '20px',
+    overflow: 'hidden',
+    borderRadius: '4px',
+    backgroundColor: '#000'
+}
+const videoFrameStyle = {
+    position: 'absolute',
+    inset: 0,
+    width: '100%',
+    height: '100%',
+    border: 0
+}
+const closeButtonStyle = {
+    position: 'absolute',
+    top: '10px',
+    right: '10px',
+    zIndex: 1,
+    width: '34px',
+    height: '34px',
+    lineHeight: '30px',
+    background: '#323232',
+    color: '#FFFFFF',
+    borderRadius: '50%',
+    border: 0,
+    cursor: 'pointer'
 }
 
 export default function RecupEmail() {
     const [open, setOpen] = useState(false);
-    const [email, SetEmail] = useState({ email: '' })
-    const [width, setWidth] = useState(window.innerWidth)
-    const [forms, setForms] = useState({ email: email })
-    const [statusEmail, setStatusEmail] = useState(0)
+    const [width] = useState(typeof window !== 'undefined' ? window.innerWidth : 0)
 
     const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const handleClose = () => {
+        localStorage.setItem('tpw-newsletter', JSON.stringify({ videoPopupClosed: true }))
+        setOpen(false)
+    };
 
     useEffect(() => {
         const exist = JSON.parse(localStorage.getItem('tpw-newsletter') || '{}')
-        console.log(exist)
 
         const handleScroll = () => {
-            if (!open && window.scrollY > 1000 && window.scrollY < 1005 && !exist.email) {
+            if (!open && window.scrollY > 1800 && !exist.email && !exist.videoPopupClosed) {
                 handleOpen()
             }
         }
@@ -64,28 +94,9 @@ export default function RecupEmail() {
         }
     }, [open]);
 
-    const form = useRef()
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log(e)
-        setStatusEmail(1)
-        SetEmail({ email: email })
-        console.log(JSON.stringify(email))
-        emailjs.send('service_76lbexa', 'template_bm6ewab', { 'user_email': email }, 'AC_DTNvzmjFi3HHjs')
-            .then((result) => {
-                console.log(result.text)
-                setStatusEmail(2)
-                localStorage.setItem('tpw-newsletter', JSON.stringify({ email: email }))
-            })
-            .catch((error) => {
-                console.log(error)
-                setStatusEmail(3)
-            })
-    }
     const { t } = useTranslation()
     return (
         <div>
-            {/* <Button onClick={handleOpen}>Open modal</Button> */}
             {open &&
                 <Modal
                     open={open}
@@ -95,41 +106,25 @@ export default function RecupEmail() {
                 >
                     <Box sx={width > 890 ? style : (width > 420 ? styleMediumScreen : styleSmallScreen)}>
                         <Typography id="modal-modal-title" variant="h6" component="h2">
-                            {t('Geben Sie Ihre E-Mail-Adresse ein, um ständig über unsere Neuigkeiten informiert zu werden')}
+                            {t('Das sagen unsere Brautpaare über uns')}
                         </Typography>
-                        <button className='event-modal-close' onClick={handleClose}><i className='fa fa-close'></i></button>
-                        <section className="wpo-contact-pg-section">
-                            <div className="container">
-                                <div className="wpo-contact-form-area">
-                                    <div className="modalBody modal-body">
-                                        <div className="modalBody modal-body">
-                                            <form className="contact-validation-active" onSubmit={handleSubmit}>
-                                                <div className="row">
-                                                    <div className="col-lg-12 col-12">
-                                                        <div className="form-field">
-                                                            <input
-                                                                type="email"
-                                                                placeholder={t("Deine E-Mail Adresse")}
-                                                                onChange={(e) => SetEmail(e.target.value)}
-                                                                required
-                                                                name='user_email'
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="submit-area">
-                                                    <button type="submit" className="theme-btn">
-                                                        {statusEmail === 1 ? t('Bearbeitung...')
-                                                            : (statusEmail === 2 ? t('Erfolgreich !')
-                                                                : (statusEmail === 3 ? t('Fehler !') : t('Senden')))}
-                                                    </button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                        <button
+                            type="button"
+                            aria-label="Close video popup"
+                            onClick={handleClose}
+                            style={closeButtonStyle}
+                        >
+                            <i className='fa fa-close'></i>
+                        </button>
+                        <div id="modal-modal-description" style={videoWrapperStyle}>
+                            <iframe
+                                src="https://www.youtube.com/embed/qmgF1Kq4lig"
+                                title="THEPLUG WEDDING video"
+                                style={videoFrameStyle}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            />
+                        </div>
                     </Box>
                 </Modal>
             }

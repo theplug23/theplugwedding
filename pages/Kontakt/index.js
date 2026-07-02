@@ -7,6 +7,7 @@ import Scrollbar from '../../components/scrollbar/scrollbar'
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga4';
 import AblaufSection from '../../components/AblaufSection/ablauf';
+import FeedbackVideo from '../../components/FeedbackVideo/feedbackvideo';
 
 
 const GalleryPage = (props) => {
@@ -27,6 +28,7 @@ const GalleryPage = (props) => {
             <Navbar/>
             {/* <PageTitle pageTitle={'KONTAKT UNS'} pagesub={'Kontakt'}/>  */}
             <AblaufSection />
+            <FeedbackVideo />
             <Contactpage/>
             <Footer/>
             <Scrollbar/>

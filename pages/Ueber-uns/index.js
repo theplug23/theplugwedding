@@ -10,6 +10,7 @@ import MapSection from '../../components/MapSection/MapSection';
 import FormSection from '../../components/FormSection/FormSection';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga4';
+import FeedbackVideo from '../../components/FeedbackVideo/feedbackvideo';
 
 
 const AboutPage = () => {
@@ -31,6 +32,7 @@ const AboutPage = () => {
                 <title>ÜBER UNS - THEPLUG WEDDING</title>
             </Helmet>
             <Navbar />
+            <FeedbackVideo />
             {/* <PageTitle pageTitle={'ÜBER UNS'} pagesub={'ÜBER UNS'} />  */}
             <About />
             {/* <section className={`wpo-Service-section section-padding`} id="Service">

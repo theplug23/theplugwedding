@@ -68,7 +68,7 @@ const ShopPage = ({ addToCart, addToWishList }) => {
     });
   }, []);
 
-  const password = "Theplug-Wedding2025!";
+  const password = "Theplug-Wedding2027!";
   const { t } = useTranslation()
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -121,10 +121,10 @@ const ShopPage = ({ addToCart, addToWishList }) => {
         <a href="#photo" style={{ marginRight: '20px', backgroundColor: '#b99226', color: "white", padding: "10px 15px", borderRadius: "5px" }}>{t("Angebote für Fotos")}</a>
         <a href="#video" style={{ marginRight: '20px', backgroundColor: '#b99226', color: "white", padding: "10px 15px", borderRadius: "5px" }}>{t("Angebote für Video")}</a>
         <a href="#photo-video" style={{ backgroundColor: '#b99226', color: "white", padding: "10px 15px", borderRadius: "5px" }}>{t("Angebote für Fotos & Video")}</a>
-      </div>
+      </div><br />
       {/* <PageTitle pageTitle={'ANGEBOTE'} pagesub={'Angebote'} showHero={true} heroText="EXKLUSIVE UND HERAUSRAGENDE HOCHZEITSFOTOS UND HOCHZEITSVIDEOS"/> */}
-      <Hochzeitsfilm />
-      <ShortAbout />
+      {/* <Hochzeitsfilm /> */}
+      {/* <ShortAbout /> */}
       <FeedbackVideo />
       <InvestingSection /><br />
       <ServiceSection pbClass={'pt-0'} onServiceSelect={handleServiceSelect} selectedServices={mainServices} />

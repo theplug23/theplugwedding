@@ -27,6 +27,7 @@ import ReactGA from 'react-ga4';
 import PartnerSection from '../components/PartnerSection';
 import { useTranslation } from 'react-i18next';
 import Newsletter from '../components/Newsletter';
+import FeedbackVideo from '../components/FeedbackVideo/feedbackvideo';
 
 const HomePage = (props) => {
     useEffect(() => {
@@ -125,7 +126,8 @@ const HomePage = (props) => {
             </section>
             <VideoSection />
             <Testimonial />
-            <FunFact />
+            <FeedbackVideo />
+            <FunFact /><br /><br />
             {/* <section className={`wpo-Service-section section-padding ${props.pbClass}`} id="Service">
                 <div className="container ff">
                     <SectionTitle MainTitle={'Erkunden Sie unser umfassendes Angebot an Leistungen, die auf Ihre einzigartigen Bedürfnisse zugeschnitten sind.'} subTitle={'Unsere Angebote'} />   
