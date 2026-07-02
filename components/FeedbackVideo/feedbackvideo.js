@@ -4,7 +4,7 @@ import SectionTitle from "../../components/SectionTitle";
 import Image from "next/image";
 import VideoModal from "../../components/ModalVideo/VideoModal";
 // import img from '/public/images/videos/vladi-&-sarah.jpg'
-import img from '/public/images/videos/maries.png'
+import img from '/public/images/videos/vignette.png'
 import { useTranslation } from "react-i18next";
 
 
