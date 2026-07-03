@@ -13,7 +13,7 @@ const FeedbackVideo = (props) => {
     return (
         <section className="wpo-blog-pg-section">
             <div className="container">
-                <SectionTitle MainTitle={t('WAS SAGEN MEINE BRAUTPAARE ZU IHREM VIDEO ?')} subTitle={''} />
+                <SectionTitle MainTitle={t('DAS SAGEN UNSERE BRAUTPAARE ÜBER THEPLUG WEDDING')} subTitle={''} />
                 <div className="row">
                     <div className="row col-lg-12 wpo-blog-content">
                         <div className='post format-video col-lg-12'>
