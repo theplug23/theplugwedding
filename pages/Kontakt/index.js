@@ -27,8 +27,8 @@ const GalleryPage = (props) => {
             </Helmet>
             <Navbar/>
             {/* <PageTitle pageTitle={'KONTAKT UNS'} pagesub={'Kontakt'}/>  */}
-            <AblaufSection />
             <FeedbackVideo />
+            <AblaufSection />
             <Contactpage/>
             <Footer/>
             <Scrollbar/>

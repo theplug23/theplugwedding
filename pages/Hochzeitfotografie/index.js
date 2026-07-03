@@ -9,6 +9,7 @@ import MapSection from '../../components/MapSection/MapSection';
 import FormSection from '../../components/FormSection/FormSection';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga4';
+import FeedbackVideo from '../../components/FeedbackVideo/feedbackvideo';
 
 const PortfolioMasonaryPage =() => {
 
@@ -29,6 +30,7 @@ const PortfolioMasonaryPage =() => {
             {/* <PageTitle pageTitle={'HOCHZEITENFOTOGRAFIE'} pagesub={'Hochzeitenfotografie'}/>  */}
             <PortfolioSectionS2/>
             <PartnerSection pClass={'pb-120'}/>
+            <FeedbackVideo />
             <FormSection />
             <MapSection />
             <Footer/>

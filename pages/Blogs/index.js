@@ -8,6 +8,7 @@ import MapSection from '../../components/MapSection/MapSection';
 import FormSection from '../../components/FormSection/FormSection';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga4';
+import FeedbackVideo from '../../components/FeedbackVideo/feedbackvideo';
 
 
 const BlogSingle = (props) => {
@@ -28,6 +29,7 @@ const BlogSingle = (props) => {
             <Navbar />
             {/* <PageTitle pageTitle='Letzte Neuigkeiten' pagesub="Blog" /> */}
             <BlogList/>
+            <FeedbackVideo />
             <FormSection />
             <MapSection />
             <Footer />

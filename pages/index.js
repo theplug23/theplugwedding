@@ -89,6 +89,7 @@ const HomePage = (props) => {
             <Navbar />
             <Hero />
             <About />
+            <FeedbackVideo />
             <section className={`wpo-portfolio-section-s2 section-padding ${props.prClass}`} id="gallery">
                 <div className="container-fluid">
                     <SectionTitle MainTitle={t('ENTDECKEN SIE IN BILDERN EINIGE BILDER UNSERER HOCHZEITEN')} subTitle={t('Unsere Hochzeiten')} />
@@ -126,7 +127,6 @@ const HomePage = (props) => {
             </section>
             <VideoSection />
             <Testimonial />
-            <FeedbackVideo />
             <FunFact /><br /><br />
             {/* <section className={`wpo-Service-section section-padding ${props.pbClass}`} id="Service">
                 <div className="container ff">
